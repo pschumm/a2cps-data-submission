@@ -1,0 +1,370 @@
+---
+  fieldsMatch: subset
+  missingValues: [ "" ]
+  uniqueKeys:
+    -
+      - participant_id
+      - event
+      - date_administered
+      - which_knee
+  fields:
+    - name: participant_id
+      type: string
+      title: "Locally-assigned participant ID"
+      constraints:
+        required: true
+    - name: event
+      type: string
+      title: "Name of event on which data were collected"
+    - name: date_administered
+      type: date
+      format: "%Y-%m-%d"
+      title: "Shifted date on which questionnaire was administered"
+    - name: which_knee
+      type: string
+      title: "Knee referred to when completing questionnaire"
+      categories: [left, right]
+      constraints:
+        enum: [left, right]
+    - name: dob
+      type: date
+      format: "%Y-%m-%d"
+      title: "Shifted date of birth"
+    - name: sex
+      type: string
+      title: "Sex assigned at birth"
+      categories: [Female, Intersex, Male]
+      constraints:
+        enum: [Female, Intersex, Male]
+    - name: KOOSpainFreqScl
+      type: integer
+      title: "KOOS how often knee pain is experienced"
+      description: >
+        Scale of how often the participant experiences knee pain as part of the
+        Knee Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: Never
+        - value: 1
+          label: Monthly
+        - value: 2
+          label: Weekly
+        - value: 3
+          label: Daily
+        - value: 4
+          label: Always
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": "How often do you experience knee pain?"
+    - name: KOOSpainWalkFlatScl
+      type: integer
+      title: "KOOS flat surface walking pain"
+      description: >
+        Scale of participant pain when walking on a flat surface as part of the
+        Knee Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: None
+        - value: 1
+          label: Mild
+        - value: 2
+          label: Moderate
+        - value: 3
+          label: Severe
+        - value: 4
+          label: Extreme
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": "Walking on a flat surface"
+    - name: KOOSpainStairsScl
+      type: integer
+      title: "KOOS stairs pain"
+      description: >
+        Scale of participant pain going up and down stairs as part of the Knee
+        Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: None
+        - value: 1
+          label: Mild
+        - value: 2
+          label: Moderate
+        - value: 3
+          label: Severe
+        - value: 4
+          label: Extreme
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": "Going up or down stairs"
+    - name: KOOSpainSitLyingScl
+      type: integer
+      title: "KOOS sitting or lying pain"
+      description: >
+        Scale of participant pain while sitting or lying  as part of the Knee
+        Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: None
+        - value: 1
+          label: Mild
+        - value: 2
+          label: Moderate
+        - value: 3
+          label: Severe
+        - value: 4
+          label: Extreme
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": "Sitting or lying"
+    - name: KOOSFuncDiffRiseSitScl
+      type: integer
+      title: "KOOS rising from sitting difficulty"
+      description: >
+        Scale of participant difficulty rising from sittig as part of the Knee
+        Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: None
+        - value: 1
+          label: Mild
+        - value: 2
+          label: Moderate
+        - value: 3
+          label: Severe
+        - value: 4
+          label: Extreme
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": "Rising from sitting"
+    - name: KOOSFuncDiffStandScl
+      type: integer
+      title: "KOOS standing difficulty"
+      description: >
+        Scale of participant difficulty standing as part of the Knee Injury
+        Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: None
+        - value: 1
+          label: Mild
+        - value: 2
+          label: Moderate
+        - value: 3
+          label: Severe
+        - value: 4
+          label: Extreme
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": "Standing"
+    - name: KOOSFuncDiffCarScl
+      type: integer
+      title: "KOOS getting in/out of car difficulty"
+      description: >
+        Scale of participant difficulty getting in/out of a car as part of the
+        Knee Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: None
+        - value: 1
+          label: Mild
+        - value: 2
+          label: Moderate
+        - value: 3
+          label: Severe
+        - value: 4
+          label: Extreme
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": "Getting in/out of a car"
+    - name: KOOSFunctwistPivotScl
+      type: integer
+      title: "KOOS twisting/ pivoting difficulty"
+      description: >
+        Scale of participant difficulty twisting or pivoting on their injured
+        knee as part of the Knee Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: None
+        - value: 1
+          label: Mild
+        - value: 2
+          label: Moderate
+        - value: 3
+          label: Severe
+        - value: 4
+          label: Extreme
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": "Twisting/pivoting on your injured knee"
+    - name: KOOSQOLKneeAwareScl
+      type: integer
+      title: "KOOS knee problem awareness"
+      description: >
+        Scale of participant awareness of their knee problem as part of the
+        Knee Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: Never
+        - value: 1
+          label: Monthly
+        - value: 2
+          label: Weekly
+        - value: 3
+          label: Daily
+        - value: 4
+          label: Constantly
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": "How often are you aware of your knee problem?"
+    - name: KOOSQOLlifestyleModScl
+      type: integer
+      title: "KOOS modified life style"
+      description: >
+        Scale of the extent the participant has modified their life style to
+        avoid potentially damaging activites to their knee as part of the Knee
+        Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: Not at all
+        - value: 1
+          label: Mildly
+        - value: 2
+          label: Moderately
+        - value: 3
+          label: Severely
+        - value: 4
+          label: Totally
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": >
+          Have you modified your life style to avoid potentially damaging
+          activities to your knee?
+    - name: KOOSQOLConfidenceScl
+      type: integer
+      title: "KOOS troubled with lack of confidence"
+      description: >
+        Scale of how often the particpant is troubled with lack of confidence
+        in their knee as part of the Knee Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: Not at all
+        - value: 1
+          label: Mildly
+        - value: 2
+          label: Moderately
+        - value: 3
+          label: Severely
+        - value: 4
+          label: Extremely
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": >
+          How much are you troubled with lack of confidence in your knee?
+    - name: KOOSQOLkneeDifficultyScl
+      type: integer
+      title: "KOOS difficulty with knee"
+      description: >
+        Scale of participant general difficulty they have with their knee as
+        part of the Knee Injury Osteoarthritis Outcome Score
+      categories:
+        - value: 0
+          label: None
+        - value: 1
+          label: Mild
+        - value: 2
+          label: Moderate
+        - value: 3
+          label: Severe
+        - value: 4
+          label: Extreme
+      categoriesOrdered: true
+      constraints:
+        enum: [0,1,2,3,4]
+      custom:
+        "heal:questionText": >
+          In general how much difficulty do you have with your knee?
+    - name: KOOSpainScore
+      type: number
+      title: "KOOS pain score"
+      description: >
+        Calculated pain scale score, as part of the Knee Injury Osteoarthritis
+        Outcome Score
+      constraints:
+        minimum: 0
+        maximum: 16
+    - name: KOOSpainScoreT
+      type: number
+      title: "KOOS pain score transformed"
+      description: >
+        Transformed pain scale score, as part of the Knee Injury Osteoarthritis
+        Outcome Score
+      constraints:
+        minimum: 0
+        maximum: 100
+    - name: KOOSfunctionScore
+      type: number
+      title: "KOOS Function score"
+      description: >
+        Calculated Function scale score, as part of the Knee Injury
+        Osteoarthritis Outcome Score
+      constraints:
+        minimum: 0
+        maximum: 16
+    - name: KOOSfunctionScoreT
+      type: number
+      title: "KOOS Function score transformed"
+      description: >
+        Transformed Function scale score, as part of the Knee Injury
+        Osteoarthritis Outcome Score
+      constraints:
+        minimum: 0
+        maximum: 100
+    - name: KOOSQOLScore
+      type: number
+      title: "KOOS QOL score"
+      description: >
+        Calculated QOL scale score, as part of the Knee Injury Osteoarthritis
+        Outcome Score
+      constraints:
+        minimum: 0
+        maximum: 16
+    - name: KOOSQOLScoreT
+      type: number
+      title: "KOOS QOL score transformed"
+      description: >
+        Transformed QOL scale score, as part of the Knee Injury Osteoarthritis
+        Outcome Score
+      constraints:
+        minimum: 0
+        maximum: 100
+    - name: KOOSsummaryScore
+      type: number
+      title: "KOOS Summary Score"
+      description: >
+        Calculated overall Summary score, as part of the Knee Injury
+        Osteoarthritis Outcome Score
+      constraints:
+        minimum: 0
+        maximum: 100

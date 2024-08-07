@@ -1,0 +1,9 @@
+# Tested with Python 3.11.8
+
+numpy==1.26.4
+pandas==2.2.2
+petl==1.7.15
+frictionless==5.17.0
+xmarshal @ git+https://github.com/pschumm/xmarshal.git@d980fd376b7ef3fd0c2376e62c784a54814240a8
+dataforge @ git+https://gitlab.com/pschumm/data-forge.git@618027e21ba5682f7f8c0ebffcf233c3ee231b38
+nda-tools
