@@ -103,6 +103,7 @@ class koos(Step):
                              ('KOOSQOLScore','left'),
                              ('KOOSsummaryScore','right'),
                              ('KOOSsummaryScore','left')], errors='ignore')
+              .convert_dtypes()
              )
 
         resource.schema = describe(df, type='schema')

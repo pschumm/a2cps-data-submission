@@ -60,6 +60,7 @@ class nda_required_fields(Step):
                       ),
                       version='heal_cde_1.0')
               .drop(columns=['record_id','_merge',date_admin,dob])
+              .convert_dtypes()
              )
 
         req_cols = ['subjectkey','src_subject_id','interview_date',
