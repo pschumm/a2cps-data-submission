@@ -7,7 +7,16 @@ import csv
 pipeline = Pipeline.from_descriptor({
     "steps": [{"type": "koos"},
               {"type": "nda-required-fields",
-               "guids": "ids/guids.csv"}]
+               "guids": "ids/guids.csv",
+               "nda_cols": ["subjectkey",
+                            "src_subject_id",
+                            "interview_date",
+                            "interview_age",
+                            "sex",
+                            "ageyears",
+                            "visit",
+                            "version"],
+               "version": "healcde5601_1.0"}]
 })
 
 os.makedirs('tmp/uploads', exist_ok=True)

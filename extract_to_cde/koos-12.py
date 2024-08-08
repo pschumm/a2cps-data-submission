@@ -43,6 +43,7 @@ cde = (data
                                   'koosqolscoret',
                                   'koossummaryscore'])
        .rename_axis(index={'record_id':'participant_id'})
+       .assign(instance=None)
        .rename(columns={'pdqassessdate':'date_administered',
                         'sp_surgsite':'which_knee',
                         'brthdtc':'dob',
@@ -95,13 +96,14 @@ cde = (data
                                          'Severely':3,
                                          'Extremely':4},
                  'KOOSQOLkneeDifficultyScl':codes})
-      )[['date_administered','which_knee','dob','sex','KOOSpainFreqScl',
-         'KOOSpainWalkFlatScl','KOOSpainStairsScl','KOOSpainSitLyingScl',
-         'KOOSFuncDiffRiseSitScl','KOOSFuncDiffStandScl','KOOSFuncDiffCarScl',
-         'KOOSFunctwistPivotScl','KOOSQOLKneeAwareScl','KOOSQOLlifestyleModScl',
-         'KOOSQOLConfidenceScl','KOOSQOLkneeDifficultyScl','KOOSpainScore',
-         'KOOSpainScoreT','KOOSfunctionScore','KOOSfunctionScoreT',
-         'KOOSQOLScore','KOOSQOLScoreT','KOOSsummaryScore']]
+      )[['date_administered','instance','which_knee','dob','sex',
+         'KOOSpainFreqScl','KOOSpainWalkFlatScl','KOOSpainStairsScl',
+         'KOOSpainSitLyingScl','KOOSFuncDiffRiseSitScl','KOOSFuncDiffStandScl',
+         'KOOSFuncDiffCarScl','KOOSFunctwistPivotScl','KOOSQOLKneeAwareScl',
+         'KOOSQOLlifestyleModScl','KOOSQOLConfidenceScl',
+         'KOOSQOLkneeDifficultyScl','KOOSpainScore','KOOSpainScoreT',
+         'KOOSfunctionScore','KOOSfunctionScoreT','KOOSQOLScore',
+         'KOOSQOLScoreT','KOOSsummaryScore']]
 
 # Write to delimited file
 Path('tmp/heal_cde').mkdir(parents=True, exist_ok=True)

@@ -6,6 +6,7 @@
       - participant_id
       - event
       - date_administered
+      - instance
       - which_knee
   fields:
     - name: participant_id
@@ -20,6 +21,9 @@
       type: date
       format: "%Y-%m-%d"
       title: "Shifted date on which questionnaire was administered"
+    - name: instance
+      type: string
+      title: "Name of instance when repeated within event and/or date"
     - name: which_knee
       type: string
       title: "Knee referred to when completing questionnaire"

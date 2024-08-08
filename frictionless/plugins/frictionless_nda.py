@@ -1,36 +1,43 @@
-"""Transform to NDA submission format."""
+"""Add NDA required and/or common fields."""
 
 from frictionless import Plugin, Step, system, describe
-from typing import Optional
+from typing import Optional, List
 import attrs
 import numpy as np
 import pandas as pd
 import petl as etl
-
 
 @attrs.define(kw_only=True)
 class nda_required_fields(Step):
     type = 'nda-required-fields'
 
     guids: str
+    nda_cols: List[str]
+    version: str
     pid: Optional[str] = 'participant_id'
     event: Optional[str] = 'event'
     date_admin: Optional[str] = 'date_administered'
+    instance: Optional[str] = 'instance'
     dob: Optional[str] = 'dob'
     sex: Optional[str] = 'sex'
 
     def transform_resource(self, resource):
 
         guids = self.guids
+        nda_cols = self.nda_cols
+        version = self.version
         pid = self.pid
         event = self.event
         date_admin = self.date_admin
+        instance = self.instance
         dob = self.dob
         sex = self.sex
 
         df = resource.to_pandas()
-        for col in [pid,event,date_admin,dob,sex]:
+        extra_flds = [pid, event, date_admin, instance, dob, sex]
+        for col in extra_flds:
             assert col in df
+        flds = [c for c in df.columns if c not in extra_flds]
 
         gdf = pd.read_csv(guids)
         gdf.columns = gdf.columns.str.lower()
@@ -58,14 +65,10 @@ class nda_required_fields(Step):
                                      < (x[dob].month, x[dob].day)),
                           axis=1
                       ),
-                      version='heal_cde_1.0')
+                      version=version)
               .drop(columns=['record_id','_merge',date_admin,dob])
               .convert_dtypes()
-             )
-
-        req_cols = ['subjectkey','src_subject_id','interview_date',
-                    'interview_age','sex','ageyears','visit','version']
-        df = df[req_cols + [c for c in df.columns if c not in req_cols]]
+             )[nda_cols + flds]
 
         resource.schema = describe(df, type='schema')
         resource.data = etl.fromdataframe(df)
@@ -73,9 +76,12 @@ class nda_required_fields(Step):
     metadata_profile_patch = {
         'properties': {
             'guids': {'type': 'string'},
+            'nda_cols': {'type': 'array'},
+            'version': {'type': 'string'},
             'pid': {'type': 'string'},
             'event': {'type': 'string'},
             'date_admin': {'type': 'string'},
+            'instance': {'type': 'string'},
             'dob': {'type': 'string'},
             'sex': {'type': 'string'}
         }

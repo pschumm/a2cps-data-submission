@@ -13,8 +13,8 @@ class koos(Step):
 
     def transform_resource(self, resource):
         df = resource.to_pandas().set_index(['participant_id','event',
-                                             'date_administered','which_knee',
-                                             'dob','sex'])
+                                             'date_administered','instance',
+                                             'which_knee','dob','sex'])
         columns = df.columns.tolist()
         idx = pd.MultiIndex.from_product(
                  [['right','left'],df.columns.tolist()],
@@ -25,6 +25,7 @@ class koos(Step):
               .rename(columns={('participant_id',''): 'participant_id',
                                ('event',''): 'event',
                                ('date_administered',''): 'date_administered',
+                               ('instance',''): 'instance',
                                ('dob',''): 'dob',
                                ('sex',''): 'sex',
                                ('KOOSpainFreqScl','right'): 'pain_rkfr',
