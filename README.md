@@ -37,5 +37,5 @@ To generate file in HEAL CDE format:
 
 To translate to NDA submission format (as determined by structure):
 
-    python generate_uploads/koos-12.py
+    PYTHONPATH=./frictionless/plugins python generate_uploads/koos-12.py
     vtcmd tmp/uploads/*
