@@ -65,7 +65,8 @@ class nda_required_fields(Step):
                                      < (x[dob].month, x[dob].day)),
                           axis=1
                       ),
-                      version=version)
+                      version=version,
+                      version_form=version)
               .drop(columns=['record_id','_merge',date_admin,dob])
               .convert_dtypes()
              )[nda_cols + flds]

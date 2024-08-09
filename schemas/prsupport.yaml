@@ -1,0 +1,187 @@
+---
+  fieldsMatch: subset
+  missingValues: [ "" ]
+  uniqueKeys:
+    -
+      - participant_id
+      - event
+      - date_administered
+      - instance
+  fields:
+    - name: participant_id
+      type: string
+      title: "Locally-assigned participant ID"
+      constraints:
+        required: true
+    - name: event
+      type: string
+      title: "Name of event on which data were collected"
+    - name: date_administered
+      type: date
+      format: "%Y-%m-%d"
+      title: "Shifted date on which questionnaire was administered"
+    - name: instance
+      type: string
+      title: "Name of instance when repeated within event and/or date"
+    - name: dob
+      type: date
+      format: "%Y-%m-%d"
+      title: "Shifted date of birth"
+    - name: sex
+      type: string
+      title: "Sex assigned at birth"
+      categories: [Female, Intersex, Male]
+      constraints:
+        enum: [Female, Intersex, Male]
+    - name: ESSFSomeoneListenScl
+      type: integer
+      title: "ESSF scale of having someone who will listen"
+      description: >
+        Scale of having someone who will listen to them when they need to talk,
+        as part of the PROMIS item bank v2.0 Emotional Support Short Form 6a
+        (ESSF)
+      categories:
+        - value: 1
+          label: Never
+        - value: 2
+          label: Rarely
+        - value: 3
+          label: Sometimes
+        - value: 4
+          label: Usually
+        - value: 5
+          label: Always
+      categoriesOrdered: true
+      constraints:
+        enum: [1,2,3,4,5]
+      custom:
+        "heal:questionText": "I have someone who will listen to me when I need to talk"
+    - name: ESSFSomeoneConfideScl
+      type: integer
+      title: "ESSF scale of having someone to confide in"
+      description: >
+        Scale of having someone to confide in or talk to about self or
+        problems, as part of the PROMIS item bank v2.0 Emotional Support Short
+        Form 6a (ESSF)
+      categories:
+        - value: 1
+          label: Never
+        - value: 2
+          label: Rarely
+        - value: 3
+          label: Sometimes
+        - value: 4
+          label: Usually
+        - value: 5
+          label: Always
+      categoriesOrdered: true
+      constraints:
+        enum: [1,2,3,4,5]
+      custom:
+        "heal:questionText": "I have someone to confide in or talk to about myself or my problems"
+    - name: ESSFFeelAppreciatScl
+      type: integer
+      title: "ESSF scale of having someone who makes feel appreciated"
+      description: >
+        Scale of having someone who makes the respondent feel appreciated, as
+        part of the PROMIS item bank v2.0 Emotional Support Short Form 6a
+        (ESSF)
+      categories:
+        - value: 1
+          label: Never
+        - value: 2
+          label: Rarely
+        - value: 3
+          label: Sometimes
+        - value: 4
+          label: Usually
+        - value: 5
+          label: Always
+      categoriesOrdered: true
+      constraints:
+        enum: [1,2,3,4,5]
+      custom:
+        "heal:questionText": "I have someone who makes me feel appreciated"
+    - name: ESSFTalkBadDayScl
+      type: integer
+      title: "ESSF scale of having someone to talk with when a bad day"
+      description: >
+        Scale of having someone to talk with when respondent has a bad day, as
+        part of the PROMIS item bank v2.0 Emotional Support Short Form 6a
+        (ESSF)
+      categories:
+        - value: 1
+          label: Never
+        - value: 2
+          label: Rarely
+        - value: 3
+          label: Sometimes
+        - value: 4
+          label: Usually
+        - value: 5
+          label: Always
+      categoriesOrdered: true
+      constraints:
+        enum: [1,2,3,4,5]
+      custom:
+        "heal:questionText": "I have someone to talk with when I have a bad day"
+    - name: ESSFUnderstandProbScl
+      type: integer
+      title: "ESSF scale of having someone who understands problems"
+      description: >
+        Scale of having someone who understands problems, as part of the PROMIS
+        item bank v2.0 Emotional Support Short Form 6a (ESSF)
+      categories:
+        - value: 1
+          label: Never
+        - value: 2
+          label: Rarely
+        - value: 3
+          label: Sometimes
+        - value: 4
+          label: Usually
+        - value: 5
+          label: Always
+      categoriesOrdered: true
+      constraints:
+        enum: [1,2,3,4,5]
+      custom:
+        "heal:questionText": "I have someone who understands my problems"
+    - name: ESSFTalkFeelingsScl
+      type: integer
+      title: "ESSF scale of having someone can be talked with about feelings"
+      description: >
+        Scale of having someone who the respondent trusts to talk with about
+        feelings, as part of the PROMIS item bank v2.0 Emotional Support Short
+        Form 6a (ESSF)
+      categories:
+        - value: 1
+          label: Never
+        - value: 2
+          label: Rarely
+        - value: 3
+          label: Sometimes
+        - value: 4
+          label: Usually
+        - value: 5
+          label: Always
+      categoriesOrdered: true
+      constraints:
+        enum: [1,2,3,4,5]
+      custom:
+        "heal:questionText": "I have someone I trust to talk with about my feelings"
+    - name: ESSF6aTotalScore
+      type: number
+      title: "Calculated raw total score"
+      description: >
+        Calculated raw total score for the PROMIS item bank v2.0 Emotional
+        Support Short Form 6a (ESSF)
+      constraints:
+        minimum: 6
+        maximum: 30
+    - name: ESSF6aTScore
+      type: number
+      title: "Calculated normalized score"
+      description: >
+        Normalized t-score corresponding to the raw total score for the PROMIS
+        item bank v2.0 Emotional Support Short Form 6a (ESSF)
