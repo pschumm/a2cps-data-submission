@@ -4,6 +4,7 @@
 
 from dataforge.sources.redcap import REDCapProject
 from dataforge.ids import replace_ids
+from dataforge import tools
 from pathlib import Path
 
 project = REDCapProject('A2CPSMainStudy')
@@ -13,9 +14,14 @@ data = project.data(['Postconsent Study Plan Crf V06',
                      'Knee Injury Osteoarthritis Outcome Score  (KOOS-12)'])
 
 # Replace REDCap record IDs
-data = replace_ids(data, 'ids/ids.csv', 'ids/id_map.csv')
+Path('tmp').mkdir(exist_ok=True)
+data = replace_ids(data, 'ids/ids.csv', 'tmp/id_map.csv')
 
-# TODO Shift dates (dataforge package includes functionality for this)
+# Shift dates
+shift = tools.date_offset(data.index.get_level_values(0).\
+                          to_series(name='participant_id'),
+                          offset_file='tmp/offsets.csv', seed=5398038)
+data = data.dataforge.shift_dates(shift)
 
 codes = {'None':0,
         'Mild':1,
@@ -42,7 +48,6 @@ cde = (data
                                   'koosqolscore',
                                   'koosqolscoret',
                                   'koossummaryscore'])
-       .rename_axis(index={'record_id':'participant_id'})
        .assign(instance=None)
        .rename(columns={'pdqassessdate':'date_administered',
                         'sp_surgsite':'which_knee',
@@ -106,5 +111,5 @@ cde = (data
          'KOOSQOLScoreT','KOOSsummaryScore']]
 
 # Write to delimited file
-Path('tmp/heal_cde').mkdir(parents=True, exist_ok=True)
+Path('tmp/heal_cde').mkdir(exist_ok=True)
 cde.to_csv('tmp/heal_cde/koos-12.csv')
