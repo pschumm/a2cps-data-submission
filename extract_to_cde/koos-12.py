@@ -94,7 +94,8 @@ cde = (data
                                            'Mildly':1,
                                            'Moderately':2,
                                            'Severely':3,
-                                           'Totally':4},
+                 # TODO Should be 'Totally' according to HEAL CDE and NDA structure
+                                           'Extremely':4},
                  'KOOSQOLConfidenceScl':{'Not at all':0,
                                          'Mildly':1,
                                          'Moderately':2,
