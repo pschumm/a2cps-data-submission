@@ -41,8 +41,8 @@ class nda_required_fields(Step):
 
         gdf = pd.read_csv(guids)
         gdf.columns = gdf.columns.str.lower()
-        df = df.merge(gdf[['record_id','guid']], how='left', left_on=pid,
-                      right_on='record_id', indicator=True, validate='many_to_one')
+        df = df.merge(gdf[[pid,'guid']], how='left', left_on=pid,
+                      right_on=pid, indicator=True, validate='many_to_one')
         assert (df._merge == 'both').all()
 
         df = (df
@@ -67,7 +67,7 @@ class nda_required_fields(Step):
                       ),
                       version=version,
                       version_form=version)
-              .drop(columns=['record_id','_merge',date_admin,dob])
+              .drop(columns=['_merge',date_admin,dob])
               .convert_dtypes()
              )[nda_cols + flds]
 
