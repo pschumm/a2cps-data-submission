@@ -43,7 +43,10 @@ class nda_required_fields(Step):
         gdf.columns = gdf.columns.str.lower()
         df = df.merge(gdf[[pid,'guid']], how='left', left_on=pid,
                       right_on=pid, indicator=True, validate='many_to_one')
-        assert (df._merge == 'both').all()
+        if (df._merge != 'both').any():
+            print(df.loc[df._merge != 'both', pid].to_list())
+            raise Exception(f'Values of {pid} listed above are not mapped ' +
+                            f'to GUIDs in {guids}.')
 
         df = (df
               .rename(columns={'guid':'subjectkey',
