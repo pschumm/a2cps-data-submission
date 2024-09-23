@@ -49,16 +49,16 @@ class koos(Step):
                       pain_rkn1=lambda x: x.pain_rkn1.astype('Int64'),
                       pain_rkn2=lambda x: x.pain_rkn2.astype('Int64'),
                       pain_rkn4=lambda x: x.pain_rkn4.astype('Int64'),
-                      diff_rkn3=lambda x: x.diff_rkn3.astype('Int64'),
                       diff_rkn4=lambda x: x.diff_rkn4.astype('Int64'),
                       diff_rkn7=lambda x: x.diff_rkn7.astype('Int64'),
+                      diff_rkn10=lambda x: x.diff_rkn10.astype('Int64'),
                       pain_lkfr=lambda x: x.pain_lkfr.astype('Int64'),
                       pain_lkn1=lambda x: x.pain_lkn1.astype('Int64'),
                       pain_lkn2=lambda x: x.pain_lkn2.astype('Int64'),
                       pain_lkn4=lambda x: x.pain_lkn4.astype('Int64'),
-                      diff_lkn3=lambda x: x.diff_lkn3.astype('Int64'),
                       diff_lkn4=lambda x: x.diff_lkn4.astype('Int64'),
-                      diff_lkn7=lambda x: x.diff_lkn7.astype('Int64'))
+                      diff_lkn7=lambda x: x.diff_lkn7.astype('Int64'),
+                      diff_lkn10=lambda x: x.diff_lkn10.astype('Int64'))
               # TODO NDA structure collapses these items over both knees
               .assign(qol_kn1=df[[('KOOSQOLKneeAwareScl','right'),
                                   ('KOOSQOLKneeAwareScl','left')]
