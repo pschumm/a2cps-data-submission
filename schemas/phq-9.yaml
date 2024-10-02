@@ -1,0 +1,244 @@
+  fieldsMatch: subset
+  missingValues:
+  - ''
+  uniqueKeys:
+  -
+    - participant_id
+    - event
+    - date_administered
+    - instance
+  fields:
+    - name: participant_id
+      type: string
+      title: Locally-assigned participant ID
+      constraints:
+        required: true
+    - name: event
+      type: string
+      title: Name of event on which data were collected
+    - name: date_administered
+      type: date
+      format: '%Y-%m-%d'
+      title: Shifted date on which questionnaire was administered
+    - name: instance
+      type: string
+      title: Name of instance when repeated within event and/or date
+    - name: dob
+      type: date
+      format: '%Y-%m-%d'
+      title: Shifted date of birth
+    - name: sex
+      type: string
+      title: Sex assigned at birth
+      categories:
+      - Female
+      - Intersex
+      - Male
+      constraints:
+        enum:
+        - Female
+        - Intersex
+        - Male
+    - name: language
+      type: string
+      title: Language administered (English or Spanish)
+      categories:
+      - English
+      - Spanish
+      constraints:
+        enum:
+        - English
+        - Spanish
+    - name: PHQLitIntrstScore
+      title: Patient Health Questionnaire (PHQ) - Little interest score
+      description: Score of how much the subject has been bothered by having little interest
+        or pleasure in doing things in the past two weeks, as part of the Patient Health
+        Questionnaire (PHQ).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103705
+    - name: PHQDeprssnScore
+      title: Patient Health Questionnaire (PHQ) - Depressed score
+      description: Score of how much the subject has been feeling down and depressed in
+        the past two weeks, as part of the Patient Health Questionnaire (PHQ).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103706
+    - name: PHQSleepImpairScore
+      title: Patient Health Questionnaire (PHQ) - Sleep impairment score
+      description: Score of how much the subject has been bothered with troubling falling/staying
+        asleep or sleeping too much in the past two weeks, as part of the Patient Health
+        Questionnaire (PHQ).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103707
+    - name: PHQTirdLittleEnrgyScore
+      title: ' Patient Health Questionnaire (PHQ) - Tired little energy score'
+      description: Score of how much the subject has been feeling tired in the past two
+        weeks, as part of the Patient Health Questionnaire (PHQ).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103708
+    - name: PHQAbnrmlDietScore
+      title: Patient Health Questionnaire (PHQ) - Abnormal diet score
+      description: Score of how much the subject  has been bothered by abnormal diet/appetite
+        in the past two weeks, as part of the Patient Health Questionnaire (PHQ).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103709
+    - name: PHQFlngFailrScore
+      title: Patient Health Questionnaire (PHQ) - Feeling failure score
+      description: Score of how much the subject has been feeling bad for himself/herself
+        in the past two weeks, as part of the Patient Health Questionnaire (PHQ).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103710
+    - name: PHQConcntrtnImprmntScore
+      title: Patient Health Questionnaire (PHQ) - Concentration impairment score
+      description: Score of how much the subject has been bothered with troubling concentrating
+        in the past two weeks, as part of the Patient Health Questionnaire (PHQ).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103711
+    - name: PHQMovmntSpchImprmntScore
+      title: Patient Health Questionnaire (PHQ) - Movement speech impairment score
+      description: Score of how much the subject has been suffering with moving or speaking
+        too slowly in the past two weeks, as part of the Patient Health Questionnaire
+        (PHQ).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103712
+    - name: PHQBttrDdThghtScore
+      title: Patient Health Questionnaire (PHQ) - Better dead thought score
+      description: Score of how much the subject has been suffering with the thoughts
+        of that he/she would be better off dead to hurt, as part of the Patient Health
+        Questionnaire (PHQ).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103713
