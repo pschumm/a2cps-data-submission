@@ -1,0 +1,36 @@
+{
+    "steps": [{"type": "field-update",
+               "name": "PCQPainAwfulOvrwhlmScl",
+               "descriptor": {"name": "pcs_04"}},
+              {"type": "field-update",
+               "name": "PCQFeelCantWithstandScl",
+               "descriptor": {"name": "pcs_05"}},
+              {"type": "field-update",
+               "name": "PCQAfraidPainWorseScl",
+               "descriptor": {"name": "pcs_06"}},
+              {"type": "field-update",
+               "name": "PCQHurtScl",
+               "descriptor": {"name": "pcs_10"}},
+              {"type": "field-update",
+               "name": "PCQPainStopScl",
+               "descriptor": {"name": "pcs_11"}},
+              {"type": "field-update",
+               "name": "PCQSeriousScl",
+               "descriptor": {"name": "pcs_13"}},
+              {"type": "field-remove",
+               "names": ["PCQTotalScoreVal"]},
+              {"type": "nda-required-fields",
+               "guids": "ids/guids.csv",
+               "nda_cols": ["subjectkey",
+                            "src_subject_id",
+                            "interview_date",
+                            "interview_age",
+                            "sex"],
+               "version": "healcdePCS6_2.0"}]
+}
+
+
+
+
+
+
