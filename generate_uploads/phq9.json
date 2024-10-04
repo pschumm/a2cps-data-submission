@@ -48,6 +48,6 @@
                             "sex"],
                "version": "healcde5376_1.0"},
                {"type": "table-write",
-               "path":  "tests/output_nda_structure/phq9_result.csv"}
+               "path":  "output_nda_structure/phq9_result.csv"}
      ]
 }

@@ -26,7 +26,10 @@
                             "interview_date",
                             "interview_age",
                             "sex"],
-               "version": "healcdePCS6_2.0"}]
+               "version": "healcdePCS6_2.0"},
+               {"type": "table-write",
+               "path":  "output_nda_structure/pcs6_result.csv"}
+    ]
 }
 
 

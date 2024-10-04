@@ -40,5 +40,8 @@
                             "interview_date",
                             "interview_age",
                             "sex"],
-               "version": "healcde5051_1.0"}]
+               "version": "healcde5051_1.0"},
+               {"type": "table-write",
+               "path":  "output_nda_structure/psd_result.csv"}
+     ]
 }
