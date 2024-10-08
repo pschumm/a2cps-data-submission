@@ -66,7 +66,8 @@ def generate_phq9_test():
     return df
 
 
-def generate_psd_test():
+# For PROMIS Sleep Disturbance
+def generate_promis_test():
     cols = ['PROMISSleepQualityScl',
             'PROMISSleepWasRefreshScl',
             'PROMISProblemWithSlpScl',
@@ -164,8 +165,8 @@ test_df.to_csv('../input_healcde_structure/gad7_test.csv', index=False)
 test_df = generate_phq9_test()
 test_df.to_csv('../input_healcde_structure/phq9_test.csv', index=False)
 
-test_df = generate_psd_test()
-test_df.to_csv('../input_healcde_structure/psd_test.csv', index=False)
+test_df = generate_promis_test()
+test_df.to_csv('../input_healcde_structure/promis_sleep_disturbance_test.csv', index=False)
 
 test_df = generate_pcs_test()
 test_df.to_csv('../input_healcde_structure/pcs6_test.csv', index=False)

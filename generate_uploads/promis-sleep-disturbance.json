@@ -42,6 +42,6 @@
                             "sex"],
                "version": "healcde5051_1.0"},
                {"type": "table-write",
-               "path":  "output_nda_structure/psd_result.csv"}
+               "path":  "output_nda_structure/promis_sleep_disturbance_result.csv"}
      ]
 }
