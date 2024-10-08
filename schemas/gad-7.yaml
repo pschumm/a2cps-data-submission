@@ -1,0 +1,199 @@
+---
+  fieldsMatch: subset
+  missingValues: [ "" ]
+  uniqueKeys:
+    -
+      - participant_id
+      - event
+      - date_administered
+      - instance
+  fields:
+    - name: participant_id
+      type: string
+      title: Locally-assigned participant ID
+      constraints:
+        required: true
+    - name: event
+      type: string
+      title: Name of event on which data were collected
+    - name: date_administered
+      type: date
+      format: '%Y-%m-%d'
+      title: Shifted date on which questionnaire was administered
+    - name: instance
+      type: string
+      title: Name of instance when repeated within event and/or date
+    - name: dob
+      type: date
+      format: '%Y-%m-%d'
+      title: Shifted date of birth
+    - name: sex
+      type: string
+      title: Sex assigned at birth
+      categories:
+      - Female
+      - Intersex
+      - Male
+      constraints:
+        enum:
+        - Female
+        - Intersex
+        - Male
+    - name: language
+      type: string
+      title: Language administered (English or Spanish)
+      categories:
+        - English
+        - Spanish
+      constraints:
+        enum:
+          - English
+          - Spanish
+    - name: GAD2FeelNervScl
+      title: 'Generalized Anxiety Disorder (GAD-7) - feeling nervous scale '
+      description: 'Scale describing how often participant/subject has been bothered by
+        feeling nervous, anxious or on edge, as a part of Generalized Anxiety Disorder
+        (GAD-7). '
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103565
+    - name: GAD2NotStopWryScl
+      title: Generalized Anxiety Disorder (GAD-7) - not stop worry scale
+      description: Scale describing how often participant/subject has not been able to
+        stop or control worrying, as a part of Generalized Anxiety Disorder (GAD-7).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103566
+    - name: GAD7WryTooMchScl
+      title: Generalized Anxiety Disorder (GAD-7) - worry too much scale
+      description: Scale describing how often participant/subject worries too much about
+        different things, as a part of Generalized Anxiety Disorder (GAD-7).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103567
+    - name: GAD7TroubRelxScl
+      title: Generalized Anxiety Disorder (GAD-7) - trouble relax scale
+      description: Scale describing how often participant/subject has trouble relaxing,
+        as a part of Generalized Anxiety Disorder (GAD-7).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103568
+    - name: GAD7RstlessScl
+      title: Generalized Anxiety Disorder (GAD-7) - restless scale
+      description: Scale describing how often participant/subject is so restless that
+        it is hard to sit still, as a part of Generalized Anxiety Disorder (GAD-7).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103569
+    - name: GAD7EasyAnnoyedScl
+      title: Generalized Anxiety Disorder (GAD-7) - easily annoyed scale
+      description: Scale describing how often participant/subject becomes easily annoyed
+        or irritable, as a part of Generalized Anxiety Disorder (GAD-7).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103570
+    - name: GAD7FeelAfrdScl
+      title: Generalized Anxiety Disorder (GAD-7) - feeling afraid scale
+      description: Scale describing how often participant/subject feels afraid as if something
+        awful might happen, as a part of Generalized Anxiety Disorder (GAD-7).
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+      enumLabels:
+        '0': Not at all
+        '1': Several days
+        '2': More than half the days
+        '3': Nearly every day
+      standardsMappings:
+      - item:
+          source: CDISC
+          id: C103571

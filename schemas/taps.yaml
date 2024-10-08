@@ -1,0 +1,146 @@
+  fieldsMatch: subset
+  missingValues: [ "" ]
+  uniqueKeys:
+  -
+    - participant_id
+    - event
+    - date_administered
+    - instance
+  fields:
+  - name: participant_id
+    type: string
+    title: Locally-assigned participant ID
+    constraints:
+      required: true
+  - name: event
+    type: string
+    title: Name of event on which data were collected
+  - name: date_administered
+    type: date
+    format: '%Y-%m-%d'
+    title: Shifted date on which questionnaire was administered
+  - name: instance
+    type: string
+    title: Name of instance when repeated within event and/or date
+  - name: dob
+    type: date
+    format: '%Y-%m-%d'
+    title: Shifted date of birth
+  - name: sex
+    type: string
+    title: Sex assigned at birth
+    categories:
+    - Female
+    - Intersex
+    - Male
+    constraints:
+      enum:
+      - Female
+      - Intersex
+      - Male
+  - name: TAPSTobaccoProductScl
+    title: Tobacco Alcohol Prescription medications and other Substance (TAPS) -  Tobacco product use scale
+    description: Status indicating the participant's tobacco use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+    enumLabels:
+      '0': Daily or Almost Daily
+      '1': Weekly
+      '2': Monthly
+      '3': Less Than Monthly
+      '4': Never
+  - name: TAPSAlcoholUseMaleScl
+    title: Tobacco Alcohol Prescription medications and other Substance (TAPS) - Alcohol use male scale
+    description: Status indicating the male participant's alcohol use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '9'
+    enumLabels:
+      '0': Daily or Almost Daily
+      '1': Weekly
+      '2': Monthly
+      '3': Less Than Monthly
+      '4': Never
+      '9': Not Applicable
+  - name: TAPSAlcoholUseFemaleScl
+    title: Tobacco Alcohol Prescription medications and other Substance (TAPS) - Alcohol use female scale
+    description: Status indicating the female participant's alcohol use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '9'
+    enumLabels:
+      '0': Daily or Almost Daily
+      '1': Weekly
+      '2': Monthly
+      '3': Less Than Monthly
+      '4': Never
+      '9': Not Applicable
+  - name: TAPSDrugUseScl
+    title: Tobacco Alcohol Prescription medications and other Substance (TAPS) - Drug use scale
+    description: Status indicating the participant's drug use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+    enumLabels:
+      '0': Daily or Almost Daily
+      '1': Weekly
+      '2': Monthly
+      '3': Less Than Monthly
+      '4': Never
+  - name: TAPSPrescriptionMedUseScl
+    title: Tobacco Alcohol Prescription medications and other Substance (TAPS) - Prescription medication use scale
+    description: Status indicating the participant's perscription medication use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+    enumLabels:
+      '0': Daily or Almost Daily
+      '1': Weekly
+      '2': Monthly
+      '3': Less Than Monthly
+      '4': Never
+  - name: TAPSOverallYN
+    title: Tobacco Alcohol Prescription medications and other Substance (TAPS) - Overall TAPS possible substance use indicator
+    description: Indicator evaluating the overall set of responses to the Tobacco Alcohol Prescription medications and other Substance (TAPS) part 1
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '0'
+        - '1'
+    enumLabels:
+      '0': Negative screening
+      '1': Positive screening (possible substance use)

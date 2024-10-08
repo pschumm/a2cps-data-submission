@@ -1,0 +1,153 @@
+---
+  fieldsMatch: subset
+  missingValues: [ "" ]
+  uniqueKeys:
+    -
+      - participant_id
+      - event
+      - date_administered
+      - instance
+  fields:
+    - name: participant_id
+      type: string
+      title: "Locally-assigned participant ID"
+      constraints:
+        required: true
+    - name: event
+      type: string
+      title: "Name of event on which data were collected"
+    - name: date_administered
+      type: date
+      format: "%Y-%m-%d"
+      title: "Shifted date on which questionnaire was administered"
+    - name: instance
+      type: string
+      title: "Name of instance when repeated within event and/or date"
+    - name: dob
+      type: date
+      format: '%Y-%m-%d'
+      title: Shifted date of birth
+    - name: sex
+      type: string
+      title: Sex assigned at birth
+      categories:
+      - Female
+      - Intersex
+      - Male
+      constraints:
+        enum:
+        - Female
+        - Intersex
+        - Male
+    - name: PCQPainAwfulOvrwhlmScl
+      title: Pain Catastrophizing Questionnaire - pain awful overwhelms scale
+      description: Scale of the severity of the participant/subject feelings and thoughts concerning the statement, "When I'm in pain it’s awful and I feel that it overwhelms me"
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+      enumLabels:
+        '0': not at all
+        '1': to a slight degree
+        '2': to a moderate degree
+        '3': to a great degree
+        '4': all the time
+    - name: PCQFeelCantWithstandScl
+      title: Pain Catastrophizing Questionnaire - feel cannot withstand scale
+      description: Scale of the severity of the participant/subject feelings and thoughts concerning the statement, "When I'm in pain I feel I can’t stand it anymore"
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+      enumLabels:
+        '0': not at all
+        '1': to a slight degree
+        '2': to a moderate degree
+        '3': to a great degree
+        '4': all the time
+    - name: PCQAfraidPainWorseScl
+      title: Pain Catastrophizing Questionnaire - afraid pain will get worse scale
+      description: Scale of the severity of the participant/subject feelings and thoughts concerning the statement, "When I'm in pain I become afraid that the pain will get worse"
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+      enumLabels:
+        '0': not at all
+        '1': to a slight degree
+        '2': to a moderate degree
+        '3': to a great degree
+        '4': all the time
+    - name: PCQHurtScl
+      title: Pain Catastrophizing Questionnaire - keep thinking how much it hurts scale
+      description: Scale of the severity of the participant/subject feelings and thoughts concerning the statement, "When I'm in pain I keep thinking about how much it hurts"
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+      enumLabels:
+        '0': not at all
+        '1': to a slight degree
+        '2': to a moderate degree
+        '3': to a great degree
+        '4': all the time
+    - name: PCQPainStopScl
+      title: Pain Catastrophizing Questionnaire - keep thinking want the pain to stop scale
+      description: Pain Catastrophizing Questionnaire - keep thinking want the pain to stop scale
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+      enumLabels:
+        '0': not at all
+        '1': to a slight degree
+        '2': to a moderate degree
+        '3': to a great degree
+        '4': all the time
+    - name: PCQSeriousScl
+      title: Pain Catastrophizing Questionnaire - wonder whether something serious may happen scale
+      description: Pain Catastrophizing Questionnaire - wonder whether something serious may happen scale
+      type: integer
+      constraints:
+        pattern: ''
+        enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+      enumLabels:
+        '0': not at all
+        '1': to a slight degree
+        '2': to a moderate degree
+        '3': to a great degree
+        '4': all the time
+    - name: PCQTotalScoreVal
+      title: Pain Catastrophizing Questionnaire - total score value
+      description: Total sum value of the scores from all queries from the Pain Catastrophizing Questionnaire
+      type: integer

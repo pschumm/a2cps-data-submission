@@ -1,0 +1,156 @@
+  fieldsMatch: subset
+  missingValues: [ "" ]
+  uniqueKeys:
+  -
+    - participant_id
+    - event
+    - date_administered
+    - instance
+  fields:
+  - name: participant_id
+    type: string
+    title: Locally-assigned participant ID
+    constraints:
+      required: true
+  - name: event
+    type: string
+    title: Name of event on which data were collected
+  - name: date_administered
+    type: date
+    format: '%Y-%m-%d'
+    title: Shifted date on which questionnaire was administered
+  - name: instance
+    type: string
+    title: Name of instance when repeated within event and/or date
+  - name: dob
+    type: date
+    format: '%Y-%m-%d'
+    title: Shifted date of birth
+  - name: sex
+    type: string
+    title: Sex assigned at birth
+    categories:
+    - Female
+    - Intersex
+    - Male
+    constraints:
+      enum:
+      - Female
+      - Intersex
+      - Male
+  - name: PROMISSleepQualityScl
+    title: Patient-Reported Outcome Measurement Information System (PROMIS) - Sleep quality assessment past week scale
+    description: Scale which represents the participant's description of his/her sleep quality in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '5'
+        - '4'
+        - '3'
+        - '2'
+        - '1'
+    enumLabels:
+      '5': Very Poor
+      '4': Poor
+      '3': Fair
+      '2': Good
+      '1': Very Good
+  - name: PROMISSleepWasRefreshScl
+    title: Patient-Reported Outcome Measurement Information System (PROMIS) - Sleep refresh assessment past week scale
+    description: Scale which represents how often the participant's sleep was refreshing in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '5'
+        - '4'
+        - '3'
+        - '2'
+        - '1'
+    enumLabels:
+      '5': Not at all
+      '4': A little bit
+      '3': Somewhat
+      '2': Quite a bit
+      '1': Very much
+  - name: PROMISProblemWithSlpScl
+    title: Patient-Reported Outcome Measurement Information System (PROMIS) - Sleep problem assessment past week scale
+    description: Scale which represents how often the participant had a problem with sleep in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+    enumLabels:
+      '1': Not at all
+      '2': A little bit
+      '3': Somewhat
+      '4': Quite a bit
+      '5': Very much
+  - name: PROMISDifficltFallAslpScl
+    title: Patient-Reported Outcome Measurement Information System (PROMIS) - Sleep difficulty assessment past week scale
+    description: Scale which represents how often the participant had difficulty falling asleep in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+    enumLabels:
+      '1': Not at all
+      '2': A little bit
+      '3': Somewhat
+      '4': Quite a bit
+      '5': Very much
+  - name: PROMISSlpWasRestlessScl
+    title: Patient-Reported Outcome Measurement Information System (PROMIS) - Sleep restlessness assessment past week scale
+    description: Scale which represents how often the participant's sleep was restless in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+    enumLabels:
+      '1': Not at all
+      '2': A little bit
+      '3': Somewhat
+      '4': Quite a bit
+      '5': Very much
+  - name: PROMISTryHardGetToSlpScl
+    title: Patient-Reported Outcome Measurement Information System (PROMIS) - Sleep determination assessment past week scale
+    description: Scale which represents the extent to which the participant tried hard to get to sleep in the past 7 days, as a part of the Patient-Reported Outcome Measurement Information System (PROMIS).
+    type: integer
+    constraints:
+      pattern: ''
+      enum:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+        - '5'
+    enumLabels:
+      '1': Not at all
+      '2': A little bit
+      '3': Somewhat
+      '4': Quite a bit
+      '5': Very much
+  - name: PROMISSlpDist6TotalScore
+    title: Patient-Reported Outcome Measurement Information System (PROMIS) - sleep disturbance 6a item total
+    description: Calculated raw total score for the PROMIS Sleep Disturbance 6a items
+    type: integer
+  - name: PROMISSlpDist6TScore
+    title: Patient-Reported Outcome Measurement Information System (PROMIS) - sleep disturbance 6a item total t-score
+    description: Normalized t-score corresponding to the raw total score for the PROMIS Sleep Disturbance 6a items
+    type: integer
