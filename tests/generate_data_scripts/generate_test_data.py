@@ -159,6 +159,36 @@ def generate_taps_test():
     return df
 
 
+def generate_prscale_test():
+
+    cols1 = ['PRSbackOutScl', 'PRSworkGoalsScl', 'PRSpushThroughScl', 'PRScontWorkScl', 'PRSStayActiveScl',
+             'PRSfocusPositiveScl', 'PRSposAttitudeScl', 'PRSnotAffectHappyScl', 'PRSfindJoyScl',
+             'PRShopefulScl', 'PRSNotGetDownScl', 'PRSNotUpsetScl', 'PRSavoidNegativeScl', 'PRSStayRelaxScl']
+
+    cols2 = ['PRSscore', 'PRSBehPersScore', 'PRSCognitiveScore']
+
+    guids = pd.read_csv("../../ids/guids.csv")
+
+    df = pd.DataFrame()
+
+    df['participant_id'] = list(guids['participant_id'])[0:100]
+    df['date_administered'] = [date(2015, 6, 3)] * 100
+    df['sex'] = ['Male', 'Female'] * 50
+    df['dob'] = [date(1985, 4, 23)] * 100
+    df['event'] = ['1'] * 100
+    df['instance'] = ['1'] * 100
+
+    for i in range(0, len(cols1)):
+        df[cols1[i]] = [randint(0, 4) for p in range(0, 100)]
+
+
+    df[cols2[0]] = [randint(0, 56) for p in range(0, 100)]
+    df[cols2[1]] = [randint(0, 20) for p in range(0, 100)]
+    df[cols2[2]] = [randint(0, 36) for p in range(0, 100)]
+
+    return df
+
+
 test_df = generate_gad7_test()
 test_df.to_csv('../input_healcde_structure/gad7_test.csv', index=False)
 
@@ -173,6 +203,9 @@ test_df.to_csv('../input_healcde_structure/pcs6_test.csv', index=False)
 
 test_df = generate_taps_test()
 test_df.to_csv('../input_healcde_structure/taps_test.csv', index=False)
+
+test_df = generate_prscale_test()
+test_df.to_csv('../input_healcde_structure/prscale_test.csv', index=False)
 
 print(test_df.head(10))
 #print(np.min(test_df))
