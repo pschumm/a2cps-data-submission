@@ -4,9 +4,9 @@ import pandas as pd
 import numpy as np
 import petl as etl
 
-class pain_resilience_scale(Step):
+class prscale(Step):
 
-        type = 'pain_resilience_scale'
+        type = 'prscale'
 
         def transform_resource(self, resource):
 
@@ -25,10 +25,10 @@ class pain_resilience_scale(Step):
 class PRScalePlugin(Plugin):
 
         def select_step_class(self, type):
-                if type == 'pain_resilience_scale':
-                        return pain_resilience_scale
+                if type == 'prscale':
+                        return prscale
 
 
-system.register('pain_resilience_scale', PRScalePlugin())
+system.register('prscale', PRScalePlugin())
 
 
