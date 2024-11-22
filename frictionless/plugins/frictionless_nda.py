@@ -56,7 +56,8 @@ class nda_required_fields(Step):
               .replace({'sex':{'Female':'F',
                                'Intersex':'O',
                                'Male':'M',
-                               np.nan:'NR'}})
+                               np.nan:'NR',
+                               'Unknown': 'NR'}})
               .assign(interview_date=df[date_admin].dt.strftime('%m/%d/%Y'),
                       interview_age=(df[date_admin].dt.year*12
                                      + df[date_admin].dt.month
