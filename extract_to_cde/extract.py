@@ -187,53 +187,6 @@ def extract_taps1(data):
    taps.to_csv('tmp/heal_cde/taps1.csv')
    return
 
-# taps2 ['dt_header',
-#             'taps2tobaccoyn',
-#             'taps2_dt1',
-#             'taps2tobaccogr10yn',
-#             'taps2tobaccogr10ycnt',
-#             'taps2tobaccowakingyn',
-#             'taps2alcoholyn',
-#             'taps2_dt2',
-#             'taps2alcoholfem4yn',
-#             'taps2alcoholmale5yn',
-#             'taps2alcoholfailyn',
-#             'taps2alcoholconcernyn',
-#             'taps2mjuseyn',
-#             'taps2_dt3',
-#             'taps2mjweeklyyn',
-#             'taps2mjconcernyn',
-#             'taps2stimulantyn',
-#             'taps2_dt4',
-#             'taps2stimulantweeklyyn',
-#             'taps2stimulntconcernyn',
-#             'taps2heroinyn',
-#             'taps2_dt5',
-#             'taps2heroinfailyn',
-#             'taps2heroinconcernyn',
-#             'taps2rxopiateyn',
-#             'taps2_dt6',
-#             'taps2rxopiatefailyn',
-#             'taps2rxopiateconcernyn',
-#             'taps2anxietyslpmedyn',
-#             'taps2_dt7',
-#             'taps2anxietyslpweeklyyn',
-#             'taps2anxietyslpconcyn',
-#             'taps2adhdmedyn',
-#             'taps2_dt8',
-#             'taps2adhdmedweeklyyn',
-#             'taps2adhdmedconcernyn',
-#             'taps2otherdrugsyn',
-#             'taps2_dt9',
-#             'taps2otherdrugstxt',
-#             'tap2tobaccoscore',
-#             'tap2alcoholscore',
-#             'tap2cannabisscore',
-#             'tap2stimulantscore',
-#             'tap2heroinscore',
-#             'tap2opioidscore',
-#             'tap2sedativescore',
-#             'tap2rxstimscore']
 
 def main():
    project = REDCapProject('A2CPSMainStudy')
@@ -251,18 +204,8 @@ def main():
    # baseline only
    events = ['Baseline Visit']
    data = filter_records_events(data, record_ids, events)
-
-   #data['participant_id'] = data.index.get_level_values(0)
    data.index.names = ['participant_id', 'event']
 
-   # Replace REDCap record IDs
-   # Path('tmp').mkdir(exist_ok=True)
-   # data = replace_ids(data, 'ids/ids.csv', 'tmp/id_map.csv')
-
-   # Shift dates
-   # shift = tools.date_offset(data.index.get_level_values(0).\
-   #                           to_series(name='participant_id'),
-   #                           offset_file='tmp/offsets.csv', seed=5398038)
 
    # load set offset from env file
    load_dotenv()
@@ -275,8 +218,8 @@ def main():
    data = data.dataforge.shift_dates(shift)
    data.dropna(axis=0, how='any', subset=['pdqassessdate','brthdtc'], inplace=True)
 
-   #extract_koos(data)
-   #extract_promis(data)
+   extract_koos(data)
+   extract_promis(data)
    extract_taps1(data)
 
 
