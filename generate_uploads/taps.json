@@ -2,19 +2,19 @@
     "steps": [{"type": "taps"},
                {"type": "field-add",
                "name": "past12mo_tobacco_use",
-               "formula": "int(TAPSTobaccoProductScl) + 1",
+               "formula": "TAPSTobaccoProductScl + 1",
                "descriptor": {"type": "integer"}},
                {"type": "field-add",
                "name": "past12mo_malefemale_alc",
-               "formula": "int(TAPSAlcoholUseScl) + 1",
+               "formula": "TAPSAlcoholUseScl + 1",
                "descriptor": {"type": "integer"}},
                {"type": "field-add",
                "name": "past12mo_drugs",
-               "formula": "int(TAPSDrugUseScl) + 1",
+               "formula": "TAPSDrugUseScl + 1",
                "descriptor": {"type": "integer"}},
                {"type": "field-add",
                "name": "past12mo_prescriptionmeds",
-               "formula": "int(TAPSPrescriptionMedUseScl) + 1",
+               "formula": "TAPSPrescriptionMedUseScl + 1",
                "descriptor": {"type": "integer"}},
               {"type": "field-remove",
                "names": ["TAPSTobaccoProductScl", "TAPSAlcoholUseScl", "TAPSDrugUseScl", "TAPSPrescriptionMedUseScl", "TAPSOverallYN"]},
@@ -27,7 +27,8 @@
                             "sex"],
                "version": "healcde5071_1.0"},
                {"type": "table-write",
-               "path":  "output_nda_structure/phq9_result.csv"}
+               "headers": ["taps", "01"],
+               "path":  "output_nda_structure/taps1.csv"}
     ]
 }
 
