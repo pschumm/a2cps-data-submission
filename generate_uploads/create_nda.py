@@ -37,6 +37,7 @@ def output_taps(filepath='tmp/uploads/taps.csv',
 
 
 def main(arg_vals):
+    os.makedirs('tmp/uploads', exist_ok=True)
     output_methods = {'koos': output_koos,
                       'prsupport': output_prsupport,
                       'taps': output_taps}
