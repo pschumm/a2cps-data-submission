@@ -25,10 +25,7 @@
                             "interview_age",
                             "interview_date",
                             "sex"],
-               "version": "healcde5071_1.0"},
-               {"type": "table-write",
-               "headers": ["taps", "01"],
-               "path":  "output_nda_structure/taps1.csv"}
+               "version": "healcde5071_1.0"}
     ]
 }
 
