@@ -1,0 +1,69 @@
+{
+    "steps": [{"type": "field-add",
+               "name": "promis57_pfa11",
+               "formula": "5 - int(PFADoChoresScl) + 1",
+               "descriptor": {"type": "integer"}},
+              {"type": "field-add",
+               "name": "promis57_pfa21",
+               "formula": "5 - int(PFAstairsScl) + 1",
+               "descriptor": {"type": "integer"}},
+              {"type": "field-add",
+               "name": "promis57_pfa23",
+               "formula": "5 - int(PFAWalkScl) + 1",
+               "descriptor": {"type": "integer"}},
+              {"type": "field-add",
+               "name": "promis57_pfa53",
+               "formula": "5 - int(PFARunErrandsScl) + 1",
+               "descriptor": {"type": "integer"}},
+              {"type": "field-add",
+               "name": "promis57_pfc12",
+               "formula": "5 - int(PFAPhysLaborLimitScl) + 1",
+               "descriptor": {"type": "integer"}},
+              {"type": "field-add",
+               "name": "promis57_pfb1",
+               "formula": "5 - int(PFAModWrkLimitScl) + 1",
+               "descriptor": {"type": "integer"}},
+              {"type": "field-add",
+               "name": "promis57_5",
+               "formula": "5 - int(PFAGrocLiftLimitScl) + 1",
+               "descriptor": {"type": "integer"}},
+              {"type": "field-add",
+               "name": "promis57_4",
+               "formula": "5 - int(PFAHeavyWorkLimitScl) + 1",
+               "descriptor": {"type": "integer"}},
+              {"type": "field-remove",
+               "names": ["PFADoChoresScl", "PFAstairsScl", "PFAWalkScl", "PFARunErrandsScl", "PFAPhysLaborLimitScl", "PFAModWrkLimitScl", "PFAGrocLiftLimitScl", "PFAHeavyWorkLimitScl", "PFATotalScore", "PFATScore"]},
+              {"type": "nda-required-fields",
+               "guids": "ids/guids.csv",
+               "nda_cols": ["subjectkey",
+                            "src_subject_id",
+                            "interview_date",
+                            "interview_age",
+                            "sex",
+                            "version_form"],
+               "version": "healcde8016_1.0"},
+               {"type": "table-write",
+               "path":  "output_nda_structure/promis_physical_function_result.csv"}]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
