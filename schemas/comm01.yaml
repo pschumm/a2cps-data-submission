@@ -1,0 +1,499 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: COMMTrbThkClrPast30DayScl
+  title: Current Opioid Misuse Measure (COMM) - trouble thinking clearly past 30 day
+    scale
+  description: Scale describing how often participant had trouble with thinking clearly
+    or memory problems in the past 30 days, as a part of Current Opioid Misuse Measure
+    (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMCompTaskPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - complete task past 30 day scale '
+  description: Scale describing how often participant had people complain that he/she
+    is not completing necessary tasks in the past 30 days, as a part of Current Opioid
+    Misuse Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMOthPhyscMedPst30DyScl
+  title: 'Current Opioid Misuse Measure (COMM) - other physician medication past 30
+    day scale '
+  description: Scale describing how often participant had to go to someone other than
+    their prescribing physician to get sufficient pain relief from medications in
+    the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMTakMedDifPast30DayScl
+  title: Current Opioid Misuse Measure (COMM) - taken medication differently past
+    30 day scale
+  description: Scale describing how often participant had taken medications differently
+    from how they are prescribed in the past 30 days, as a part of Current Opioid
+    Misuse Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMHurtSelfPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - hurt self past 30 day scale '
+  description: Scale describing how often participant had seriously thought about
+    hurting themself in the past 30 days, as a part of Current Opioid Misuse Measure
+    (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMOpiThkPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - opiod thinking past 30 day scale '
+  description: Scale describing how much time participant had spent thinking about
+    opiod medications in the past 30 days, as a part of Current Opioid Misuse Measure
+    (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMArgOftPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - argue often past 30 day scale '
+  description: Scale describing how often participant was in an argument in the past
+    30 days, as a part of Current Opioid Misuse Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMAngConPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - anger control past 30 day scale '
+  description: Scale describing how often participant had trouble controlling anger
+    in the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMSomElsMedPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - someone else medicationpast 30 day
+    scale '
+  description: Scale describing how often participant needed to take medications belonging
+    to someone else in the past 30 days, as a part of Current Opioid Misuse Measure
+    (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMHanMedWorPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - handling medication worry past 30
+    day scale '
+  description: Scale describing how often participant worried about how they were
+    handling their medications in the past 30 days, as a part of Current Opioid Misuse
+    Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMOthWorryPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - others worry past 30 day scale '
+  description: Scale describing how often others worried about how participantt was
+    handling their medications in the past 30 days, as a part of Current Opioid Misuse
+    Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMEmeCalAppPast30DayScl
+  title: Current Opioid Misuse Measure (COMM) - emergency call appointment past 30
+    day scale
+  description: Scale describing how often participant had to make an emergency phone
+    call or show up at a clinic without an appointment in the past 30 days, as a part
+    of Current Opioid Misuse Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMAngrOftnPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - angry often past 30 day scale '
+  description: Scale describing how often participant had gotten angry with people
+    in the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMTakMorMedPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - take more medication past 30 day
+    scale '
+  description: Scale describing how often participant had to take more medication
+    than prescribed in the past 30 days, as a part of Current Opioid Misuse Measure
+    (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMBorMedPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - borrow medication past 30 day scale '
+  description: Scale describing how often participant borrowed pain medication from
+    someone else in the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMOthSymPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - other symptoms past 30 day scale '
+  description: Scale describing how often participant used pain medicine for symptoms
+    other than pain in the past 30 days, as a part of Current Opioid Misuse Measure
+    (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMEmergRmPast30DayScl
+  title: 'Current Opioid Misuse Measure (COMM) - emergency room past 30 day scale '
+  description: Scale describing how often participant had to visit the emergency room
+    in the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Never
+    '1': Seldom
+    '2': Sometimes
+    '3': Often
+    '4': Very Often
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: COMMtotalScore
+  title: Current Opioid Misuse Measure (COMM) - total score
+  description: Calculated overall total score for the Current Opioid Misuse Measure
+    (COMM).
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 68
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
