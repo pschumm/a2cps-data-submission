@@ -1,0 +1,58 @@
+{
+    "steps": [{"type": "field-update",
+               "name": "ACEAdInHmHFrOfF18YrInCode",
+               "descriptor": {"name": "b_ace_q1"}},
+              {"type": "field-update",
+               "name": "ACEAdPhyAbsInFr18YrInCode",
+               "descriptor": {"name": "b_ace_q2"}},
+              {"type": "field-update",
+               "name": "ACESxlAbsFr18YrInCode",
+               "descriptor": {"name": "b_ace_q3"}},
+              {"type": "field-update",
+               "name": "ACEFlLcEmSpOfFr18YrInCode",
+               "descriptor": {"name": "b_ace_q4"}},
+              {"type": "field-update",
+               "name": "ACEFlNgDHPrOfFr18YrInCode",
+               "descriptor": {"name": "b_ace_q5"}},
+              {"type": "field-update",
+               "name": "ACEPrEvSpDvFr18YrInCode",
+               "descriptor": {"name": "tesi_s_165"}},
+              {"type": "field-update",
+               "name": "ACEMtDmVlFr18YrInCode",
+               "descriptor": {"name": "b_ace_q7"}},
+              {"type": "field-update",
+               "name": "ACEAlDrUsLvFr18YrInCode",
+               "descriptor": {"name": "b_ace_q8"}},
+              {"type": "field-update",
+               "name": "ACEDpMnIScHsMbFr18YInCode",
+               "descriptor": {"name": "b_ace_q9"}},
+              {"type": "field-update",
+               "name": "ACEHsMmPrFr18YrInCode",
+               "descriptor": {"name": "ceahd15"}},
+              {"type": "field-update",
+               "name": "ACEAdvChlExpQstTtlScore",
+               "descriptor": {"name": "b_ace_totscore"}},
+              {"type": "nda-required-fields",
+               "guids": "ids/guids.csv",
+               "nda_cols": ["subjectkey",
+                            "src_subject_id",
+                            "interview_age",
+                            "interview_date",
+                            "sex"],
+               "version": "healcde7036_1.0"},
+               {"type": "table-write",
+               "path":  "output_nda_structure/ace01_result.csv"}
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
