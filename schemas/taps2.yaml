@@ -1,0 +1,762 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: TAPS2tobaccoYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance (TAPS-2)
+    tobacco indicator
+  description: Indicator of smoking tobacco products in the past 3 months in the Tobacco,
+    Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2tobaccoGr10YN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) tobacco more than 10 cigarettes indicator
+  description: Indicator of usually smoking more than 3 cigarettes in a day in the
+    past 3 months in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2tobaccoWakingYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) tobacco use within 30 minutes of waking indicator
+  description: Indicator of smoking/tobacco use within 30 min of waking in the past
+    3 months in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2alcoholYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) alcohol indicator
+  description: Indicator of drinking alcohol in the past 3 months in the Tobacco,
+    Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2alcoholFem4YN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) female 4 or more drinks indicator
+  description: Indicator of 4 or more drinks in females in the past 3 months  in the
+    Tobacco, Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2alcoholMale5YN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2)male 5 or more drinks indicator
+  description: Indicator of 5 or more drinks in males in the past 3 months in the
+    Tobacco, Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2alcoholFailYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) alcohol failed to stop drinking indicator
+  description: Indicator of failure to control or cut down on drinking in the past
+    3 months in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2alcoholConcernYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) alcohol anyone express concern about drinking indicator
+  description: Indicator of anyone expressing concern about your alcohol use in the
+    past 3 months the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2mjUseYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) marijuana use indicator
+  description: Indicator of marijuana use in the past 3 months in the Tobacco, Alcohol,
+    Prescription medications, and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2mjWeeklyYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) marijuana weekly use indicator
+  description: Indicator of stronge urge or desire to use marijuana once or more per
+    week in the past 3 months in the Tobacco, Alcohol, Prescription medications, and
+    other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2mjConcernYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance (TAPS-2)
+    marijuana anyone express concern indicator
+  description: Indicator of anyone expressing concern about your marijuana use in
+    the past 3 months in the Tobacco, Alcohol, Prescription medications, and other
+    Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2stimulantYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) stimulants (cocaine, crack, meth) indicator
+  description: Indicator of using illicit stimulants (cocaine, crack, meth) in the
+    past 3 months  in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2stimulantWeeklyYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) stimulants weekly indicator
+  description: Indicator of of stimulant (crack, cocaine, or meth) in use once or
+    more per week in the past 3 months in the Tobacco, Alcohol, Prescription medications,
+    and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2stimulntConcernYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) anyone express concern about stimulants indicator
+  description: Indicator of anyone expressing concern about your upper (cocaine, crack,
+    meth) use in the past 3 months in the Tobacco, Alcohol, Prescription medications,
+    and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2heroinYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) heroin indicator
+  description: Indicator of heroin use in the last 3 months in the Tobacco, Alcohol,
+    Prescription medications, and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2heroinFailYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance (TAPS-2)
+    heroin failed to cut down indicator
+  description: Indicator of failure to control or cut down on heroin use in the past
+    3 months in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2heroinConcernYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) anyone express concern about herion use indicator
+  description: Indicator of anyone expressing concern about your heroin use in the
+    past 3 months in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2RxOpiateYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) prescription opiate abuse indicator
+  description: Indicator of prescription opiate abuse in the past 3 months in the
+    Tobacco, Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2RxOpiateFailYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) prescription opiate failed to cut down indicator
+  description: Indicator of failure to control or cut down on opiate use in the past
+    3 months in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2RxOpiateConcernYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) anyone express concern about opiate use indicator
+  description: Indicator of anyone expressing concern about your opiate use in the
+    past 3 months in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2anxietySlpMedYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) anxiety or sleep medication abuse indicator
+  description: Indicator of sleep or anxiety medication abuse/mis-use in the past
+    3 months in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2anxietySlpWeeklyYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) anxiety or sleep medication weekly indicator
+  description: Indicator of strong deire or urge to use sleep or anxiety medications
+    weekly or more often in the past 3 months in the Tobacco, Alcohol, Prescription
+    medications, and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2anxietySlpConcYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2)anyone expess concern about anxiety or sleep medication use indicator
+  description: Indicator of anyone expressing concern about your anxiety or sleep
+    medication use in the past 3 months in the Tobacco, Alcohol, Prescription medications,
+    and other Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2adhdMedYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) ADHD medication indicator
+  description: Indicator of ADHD medication abuse or mis-use in the past 3 monthsin
+    the Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2adhdMedWeeklyYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) ADHD medication weekly indicator
+  description: Indicator of ADHD medication use once per week or more in the past
+    3 months in the Tobacco, Alcohol, Prescription medications, and other Substance
+    Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2adhdMedConcernYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) anyone express concern about ADHD medication use indicator
+  description: Indicator of anyone expressing concern about your ADHD medication use
+    in the past 3 months in the Tobacco, Alcohol, Prescription medications, and other
+    Substance Tool part 2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2otherDrugsYN
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) other illegal or recreational drugs indicator
+  description: Indicator of other illegal or recreational drugs in in the past 3 months
+    the Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2otherDrugsTxt
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) other illegal or recreational drugs free-text
+  description: Free-text of other illegal or recreational drugs in the past 3 months
+    in the Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2)
+  type: string
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: ''
+    minimum: ''
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAPS2commentsTxt
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) comments free-text
+  description: Free-text comments in the Tobacco, Alcohol, Prescription medications,
+    and other Substance Tool part 2 (TAPS-2)
+  type: string
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: ''
+    minimum: ''
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAP2tobaccoScore
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) Tobacco score
+  description: Calculated score for tobacco usage
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - 0 to 3
+    maximum: 3
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAP2alcoholScore
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) Alcohol score
+  description: Calculated score for alcohol usage
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - 0 to 4
+    maximum: 4
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAP2cannabisScore
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) Cannabis score
+  description: Calculated score for cannabis/marijuana usage
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - 0 to 3
+    maximum: 3
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAP2stimulantScore
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) Stimulant score
+  description: Calculated score for stimulant (street drugs such as cocaine, crach,meth)
+    usage
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - 0 to 3
+    maximum: 3
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAP2heroinScore
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) Heroin score
+  description: Calculated score for heroin usage
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - 0 to 3
+    maximum: 3
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAP2opioidScore
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) opioid score
+  description: Calculated score for opioid usage
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - 0 to 3
+    maximum: 3
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAP2sedativeScore
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) sedative score
+  description: Calculated score for sedative usage
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - 0 to 3
+    maximum: 3
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: TAP2RXstimScore
+  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+    2 (TAPS-2) prescription stimulant score
+  description: Calculated score for prescription stimulant usage
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - 0 to 3
+    maximum: 3
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
