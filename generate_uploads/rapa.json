@@ -1,0 +1,60 @@
+{
+    "steps": [{"type": "field-update",
+               "name": "rapa_rarly",
+               "descriptor": {"name": "rapa1_t4"}},
+               {"type": "field-update",
+               "name": "rapa_light",
+               "descriptor": {"name": "rapa2_t4"}},
+               {"type": "field-update",
+               "name": "rapa_lightweekly",
+               "descriptor": {"name": "rapa3_t4"}},
+               {"type": "field-update",
+               "name": "rapa_mod",
+               "descriptor": {"name": "rapa4_t4"}},
+               {"type": "field-update",
+               "name": "rapa_vig",
+               "descriptor": {"name": "rapa5_t4"}},
+               {"type": "field-update",
+               "name": "rapa_modweekly",
+               "descriptor": {"name": "rapa6_t4"}},
+               {"type": "field-update",
+               "name": "rapa_vigweekly",
+               "descriptor": {"name": "rapa7_t4"}},
+               {"type": "field-update",
+               "name": "rapa_strength",
+               "descriptor": {"name": "rapa8_t4"}},
+               {"type": "field-update",
+               "name": "rapa_flex",
+               "descriptor": {"name": "rapa9_t4"}},
+               {"type": "field-update",
+               "name": "rapa_1Score",
+               "descriptor": {"name": "rapa1tot_t4"}},
+               {"type": "field-update",
+               "name": "rapa_2Score",
+               "descriptor": {"name": "rapa2tot_t4"}},
+              {"type": "field-remove",
+               "names": ["rapa_1Cat"]},
+              {"type": "nda-required-fields",
+               "guids": "ids/guids.csv",
+               "nda_cols": ["subjectkey",
+                            "src_subject_id",
+                            "interview_age",
+                            "interview_date",
+                            "sex"],
+               "version": "healcde8271_1.0"},
+               {"type": "table-write",
+               "path":  "output_nda_structure/rapa_result.csv"}
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+

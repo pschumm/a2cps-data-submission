@@ -1,0 +1,281 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: PFADoChoresScl
+  title: PROMIS Physical Function - Short Form 8b (PFA) do chores scale
+  description: Scale of difficulty doing chores such as vacuuming or yard work, in
+    the PROMIS Physical Function - Short Form 8b (PFA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PFAstairsScl
+  title: PROMIS Physical Function - Short Form 8b (PFA) stairs scale
+  description: Scale of difficulty going up and down stairs at a normal pace, in the
+    PROMIS Physical Function - Short Form 8b (PFA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PFAWalkScl
+  title: PROMIS Physical Function - Short Form 8b (PFA) - walk scale
+  description: Scale of  ability to walk at least 15 min, the Physical Function -
+    Short Form 8b (PFA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PFARunErrandsScl
+  title: PROMIS Physical Function - Short Form 8b (PFA) - run errands scale
+  description: Scale of ability to run errands or shop, in the PROMIS Physical Function
+    - Short Form 8b (PFA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PFAPhysLaborLimitScl
+  title: Physical Function - Short Form 8b (PFA) - physical labor limitation scale
+  description: Scale of limitation in doing physical labor for 2 hours, in the PROMIS
+    Physical Function - Short Form 8b (PFA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PFAModWrkLimitScl
+  title: Physical Function - Short Form 8b (PFA-SF8b) - moderate work limitation scale
+  description: Scale of limitation in moderate work around house in the PROMIS Physical
+    Function - Short Form 8b (PFA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PFAGrocLiftLimitScl
+  title: Physical Function - Short Form 8b (PFA) - grocery lifting limitation scale
+  description: Scale of limitation in lifting groceries, in the PROMIS Physical Function
+    - Short Form 8b (PFA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PFAHeavyWorkLimitScl
+  title: Physical Function - Short Form 8b (PFA) - heavy work limitation scale
+  description: Scale of limitation in heavy work, in the PROMIS Physical Function
+    - Short Form 8b (PFA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PFATotalScore
+  title: PROMIS Physical Function - Short Form 8b (PFA) item total
+  description: Calculated raw total score for the PROMIS Physical Function - Short
+    Form 8b (PFA) items
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - 8 to 40
+    maximum: 40
+    minimum: 8
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PFATScore
+  title: PROMIS Physical Function - Short Form 8b (PFA)  item total t-score
+  description: Normalized t-score corresponding to the raw total score for the PROMIS
+    Physical Function - Short Form 8b (PFA) items
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Without any difficulty
+    '4': With a little difficulty
+    '3': With some difficulty
+    '2': With much difficulty
+    '1': Unable to do
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''

@@ -47,7 +47,7 @@ To generate and validate file for upload to NDA:
 
 To generate new NDA template and definitions files for submitting data without and existing NDA structure:
 
-    python generate_nda_templates/painrscale.py --input-vlmd Pain_Resilience_Scale_7601.json --output-file painrscale
+    python generate_nda_templates/create_nda_structuers.py --input-vlmd <CDE-VLMD.json> --output-file <NDA-shortname>
 
 Note: Validation of NDA upload will show "Invalid GUID" errors unless you use
 the [NDA GUID Tool](https://nda.nih.gov/nda/nda-tools) to generate valid
