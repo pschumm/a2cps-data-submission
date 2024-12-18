@@ -52,7 +52,7 @@
                         "promis57_pfa11",
                         "promis57_pfa21",
                         "promis57_pfa23",
-                        "promis57_pfa53", 
+                        "promis57_pfa53",
                         "promis57_pfc12",
                         "promis57_pfb1",
                         "promis57_5",
@@ -60,25 +60,3 @@
                {"type": "table-write",
                "path":  "output_nda_structure/promis_physical_function_result.csv"}]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
