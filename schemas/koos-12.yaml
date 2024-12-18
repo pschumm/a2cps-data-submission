@@ -37,9 +37,9 @@
     - name: sex
       type: string
       title: "Sex assigned at birth"
-      categories: [Female, Intersex, Male]
+      categories: [Female, Intersex, Male, Unknown]
       constraints:
-        enum: [Female, Intersex, Male]
+        enum: [Female, Intersex, Male, Unknown]
     - name: KOOSpainFreqScl
       type: integer
       title: "KOOS how often knee pain is experienced"
