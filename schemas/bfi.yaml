@@ -1,0 +1,365 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: BFI10reserveScl
+  title: 'Big Five Inventory-10 (BFI-10) reserved scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who is reserved ; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10trustScl
+  title: 'Big Five Inventory-10 (BFI-10) trusting scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who is generally trusting ; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10lazyScl
+  title: 'Big Five Inventory-10 (BFI-10) lazy scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who tends to be lazy ; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10relaxScl
+  title: 'Big Five Inventory-10 (BFI-10) relaxed scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who is relaxed, handles stress well ; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10artisticScl
+  title: 'Big Five Inventory-10 (BFI-10) few artistic interests scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who  has few artstic interests ; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10outgoingScl
+  title: 'Big Five Inventory-10 (BFI-10) outgoing scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who is outgoing, sociable ; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10faultScl
+  title: 'Big Five Inventory-10 (BFI-10) find fault scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who  tends to find fault in others; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10thoroughScl
+  title: 'Big Five Inventory-10 (BFI-10) thorough scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who does a thorough job ; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10nervousScl
+  title: 'Big Five Inventory-10 (BFI-10) nervous scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who gets nervous easily ; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10actImaginScl
+  title: 'Big Five Inventory-10 (BFI-10) active imagination scale '
+  description: Scale of the extent to which the participant sees  their self as someone
+    who  has an active imagination; as part of the Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Disagree Strongly
+    '2': Disagree a little
+    '3': Neither agree or disagree
+    '4': Agree a little
+    '5': Agree strongly
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10extravertScr
+  title: Big Five Inventory-10 (BFI-10) extraversion score
+  description: Summary score for the dimension of extraversion, as part of the  Big
+    Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 10
+    minimum: 2
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10agreeableScr
+  title: Big Five Inventory-10 (BFI-10) agreeableness score
+  description: Summary score for the dimension of agreeableness, as part of the  Big
+    Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 10
+    minimum: 2
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10conscientScr
+  title: Big Five Inventory-10 (BFI-10) conscientiousness score
+  description: Summary score for the dimension of conscientiousness, as part of the  Big
+    Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 10
+    minimum: 2
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10neuroticScr
+  title: Big Five Inventory-10 (BFI-10) neuroticism score
+  description: Summary score for the dimension of neuroticism, as part of the  Big
+    Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 10
+    minimum: 2
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: BFI10openExperScr
+  title: Big Five Inventory-10 (BFI-10) openness to experience score
+  description: Summary score for the dimension of openness to experience, as part
+    of the  Big Five Inventory-10 (BFI-10)
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 10
+    minimum: 2
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
