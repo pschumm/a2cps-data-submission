@@ -1,0 +1,35 @@
+---
+  fieldsMatch: subset
+  missingValues: [ "" ]
+  uniqueKeys:
+    -
+      - participant_id
+      - event
+      - date_administered
+      - instance
+  fields:
+    - name: participant_id
+      type: string
+      title: "Locally-assigned participant ID"
+      constraints:
+        required: true
+    - name: event
+      type: string
+      title: "Name of event on which data were collected"
+    - name: date_administered
+      type: date
+      format: "%Y-%m-%d"
+      title: "Shifted date on which questionnaire was administered"
+    - name: instance
+      type: string
+      title: "Name of instance when repeated within event and/or date"
+    - name: dob
+      type: date
+      format: "%Y-%m-%d"
+      title: "Shifted date of birth"
+    - name: sex
+      type: string
+      title: "Sex assigned at birth"
+      categories: [ Female, Intersex, Male ]
+      constraints:
+        enum: [ Female, Intersex, Male ]
