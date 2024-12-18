@@ -32,13 +32,13 @@ def generate_template(vlmd_file_name, output_file):
                 value_ranges[i] = f"{vlmd_df['constraints.minimum'][i]}:{vlmd_df['constraints.maximum'][i]}"
 
             elif _enum:
-
-                if len(vlmd_df['constraints.enum'][i]) > 0:
-                    values = list(map(int, vlmd_df['constraints.enum'][i]))
+                values = [int(x) for x in vlmd_df['constraints.enum'][i] if x.isdigit()]
+                if len(values) > 0:
                     value_ranges[i] = f"{min(values)}::{max(values)}"
+
         elif _enum:
-            if len(vlmd_df['constraints.enum'][i]) > 0:
-                values = list(map(int, vlmd_df['constraints.enum'][i]))
+            values = [int(x) for x in vlmd_df['constraints.enum'][i] if x.isdigit()]
+            if len(values) > 0:
                 value_ranges[i] = f"{min(values)}::{max(values)}"
 
     df['ValueRange'] = value_ranges
