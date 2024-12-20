@@ -1,0 +1,20 @@
+{
+    "steps": [{"type": "field-update", "name": "bpipainintfrgnrlactvtyscl", "descriptor": {"name": "bpi_q9a_activity"}},
+              {"type": "field-update", "name": "bpipainmdIntfrrncscl", "descriptor": {"name": "bpi_q9b_mood"}},
+              {"type": "field-update", "name": "bpipainintfrwlkablscl", "descriptor": {"name": "bpi_q9c_walking"}},
+              {"type": "field-update", "name": "bpipainnormwrkIntfrrncscl", "descriptor": {"name": "bpi_q9d_work"}},
+              {"type": "field-update", "name": "bpipainrelationsintrfrscl", "descriptor": {"name": "bpi_q9e_relations"}},
+              {"type": "field-update", "name": "bpipainsleepintrfrscl", "descriptor": {"name": "bpi_q9f_sleep"}},
+              {"type": "field-update", "name": "bpipainenjoymntintrfrscl", "descriptor": {"name": "bpi_q9g_life"}},
+             {"type": "nda-required-fields",
+               "guids": "ids/guids.csv",
+               "nda_cols": ["subjectkey",
+                            "src_subject_id",
+                            "interview_age",
+                            "interview_date",
+                            "sex"],
+               "version": "healcde8671_1.0"},
+             {"type": "table-write",
+               "path":  "output_nda_structure/bpi_interference_result.csv"}
+    ]
+}

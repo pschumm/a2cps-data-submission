@@ -1,0 +1,292 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: bpipainintfrgnrlactvtyscl
+  title: 1. General Activity
+  description: ''
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Does not interfere
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+    '8': '8'
+    '9': '9'
+    '10': Completely interferes
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: bpipainmdIntfrrncscl
+  title: '2. Mood '
+  description: ''
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Does not interfere
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+    '8': '8'
+    '9': '9'
+    '10': Completely interferes
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: bpipainintfrwlkablscl
+  title: '3. Walking ability '
+  description: ''
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Does not interfere
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+    '8': '8'
+    '9': '9'
+    '10': Completely interferes
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: bpipainnormwrkIntfrrncscl
+  title: 4. Normal work or school (includes both work outside the home and housework)
+  description: ''
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Does not interfere
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+    '8': '8'
+    '9': '9'
+    '10': Completely interferes
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: bpipainrelationsintrfrscl
+  title: '5. Relations with other people '
+  description: ''
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Does not interfere
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+    '8': '8'
+    '9': '9'
+    '10': Completely interferes
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: bpipainsleepintrfrscl
+  title: 6. Sleep
+  description: ''
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Does not interfere
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+    '8': '8'
+    '9': '9'
+    '10': Completely interferes
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: bpipainenjoymntintrfrscl
+  title: 7. Enjoyment of Life
+  description: ''
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Does not interfere
+    '1': '1'
+    '2': '2'
+    '3': '3'
+    '4': '4'
+    '5': '5'
+    '6': '6'
+    '7': '7'
+    '8': '8'
+    '9': '9'
+    '10': Completely interferes
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''

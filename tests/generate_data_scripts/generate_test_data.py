@@ -400,7 +400,66 @@ def generate_sacq_test():
     return df
 
 
+def generate_bpi_4965():
+    cols = ['BPIWrstPain7dRtngScale', 'BPILstPain7dRtngScale', 'BPIAvgPain7dRtngScale',
+            'BPICurntPainRtngScale', 'BPIPainSeverityScore']
 
+    guids = pd.read_csv("../../ids/guids.csv")
+
+    df = pd.DataFrame()
+
+    df['participant_id'] = list(guids['participant_id'])[0:100]
+    df['date_administered'] = [date(2015, 6, 3)] * 100
+    df['sex'] = ['Male', 'Female'] * 50
+    df['dob'] = [date(1985, 4, 23)] * 100
+    df['event'] = ['1'] * 100
+    df['instance'] = ['1'] * 100
+
+    for i in range(0, len(cols)):
+        df[cols[i]] = [randint(0, 10) for p in range(0, 100)]
+
+    return df
+
+
+def generate_bpi_5086():
+    cols = ['BPIWrstPain7dRtngScale', 'BPILstPain7dRtngScale', 'BPIAvgPain7dRtngScale', 'BPICurntPainRtngScale']
+
+    guids = pd.read_csv("../../ids/guids.csv")
+
+    df = pd.DataFrame()
+
+    df['participant_id'] = list(guids['participant_id'])[0:100]
+    df['date_administered'] = [date(2015, 6, 3)] * 100
+    df['sex'] = ['Male', 'Female'] * 50
+    df['dob'] = [date(1985, 4, 23)] * 100
+    df['event'] = ['1'] * 100
+    df['instance'] = ['1'] * 100
+
+    for i in range(0, len(cols)):
+        df[cols[i]] = [randint(0, 10) for p in range(0, 100)]
+
+    return df
+
+
+def generate_bpi_interference():
+    cols = ['bpipainintfrgnrlactvtyscl', 'bpipainmdIntfrrncscl', 'bpipainintfrwlkablscl', 'bpipainnormwrkIntfrrncscl',
+            'bpipainrelationsintrfrscl', 'bpipainsleepintrfrscl', 'bpipainenjoymntintrfrscl']
+
+    guids = pd.read_csv("../../ids/guids.csv")
+
+    df = pd.DataFrame()
+
+    df['participant_id'] = list(guids['participant_id'])[0:100]
+    df['date_administered'] = [date(2015, 6, 3)] * 100
+    df['sex'] = ['Male', 'Female'] * 50
+    df['dob'] = [date(1985, 4, 23)] * 100
+    df['event'] = ['1'] * 100
+    df['instance'] = ['1'] * 100
+
+    for i in range(0, len(cols)):
+        df[cols[i]] = [randint(0, 10) for p in range(0, 100)]
+
+    return df
 
 #test_df = generate_gad7_test()
 #test_df.to_csv('../input_healcde_structure/gad7_test.csv', index=False)
@@ -439,8 +498,19 @@ def generate_sacq_test():
 #test_df = generate_ace_test()
 #test_df.to_csv('../input_healcde_structure/ace_test.csv', index=False)
 
-test_df = generate_sacq_test()
-test_df.to_csv('../input_healcde_structure/sacq_test.csv', index=False)
+#test_df = generate_sacq_test()
+#test_df.to_csv('../input_healcde_structure/sacq_test.csv', index=False)
+
+test_df = generate_bpi_4965()
+test_df.to_csv('../input_healcde_structure/bpi_4956_test.csv', index=False)
+
+test_df = generate_bpi_5086()
+test_df.to_csv('../input_healcde_structure/bpi_5086_test.csv', index=False)
+
+test_df = generate_bpi_interference()
+test_df.to_csv('../input_healcde_structure/bpi_interference_test.csv', index=False)
+
+generate_bpi_5086()
 
 
 print(test_df.head(10))
