@@ -362,6 +362,44 @@ def generate_ace_test():
     return df
 
 
+def generate_sacq_test():
+    cols = ['SCQHeartDx', 'SCQHeartDxTreat', 'SCQHeartDxActivLmt', 'SCQHtnDx', 'SCQHtnTreat', 'SCQHtnActivLmt',
+            'SCQLungDx', 'SCQLungDxTreat', 'SCQLungDxActivLmt', 'SCQDM', 'SCQDMTreat', 'SCQDMActivLmt', 'SCQStomachDx',
+            'SCQStomachDxTreat', 'SCQStomachDxActivLmt', 'SCQKidneyDx', 'SCQKidneyDxTreat', 'SCQKidneyDxActivLmt',
+            'SCQLiverDx', 'SCQLiverDxTreat', 'SCQLiverDxActivLmt', 'SCQBloodDx', 'SCQBloodDxTreat',
+            'SCQBloodDxActivLmt', 'SCQCancer', 'SCQCancerTreat', 'SCQCancerActivLmt', 'SCQDepressn', 'SCQDepressnTreat',
+            'SCQDepressnActivLmt', 'SCQOA', 'SCQOAtreat', 'SCQOAActivLmt', 'SCQBackPain', 'SCQBackPainTreat',
+            'SCQBackPainActivLmt', 'SCQRA', 'SCQRATreat', 'SCQRAActivLmt', 'SCQOther1', 'SCQOther1Name',
+            'SCQOther1Treat', 'SCQOther1ActivLmt', 'SCQOther2', 'SCQOther2Name', 'SCQOther2Treat', 'SCQOther2ActivLmt',
+            'SCQtotalAllScore', 'SCQtotalListedScore']
+
+    guids = pd.read_csv("../../ids/guids.csv")
+
+    df = pd.DataFrame()
+
+    df['participant_id'] = list(guids['participant_id'])[0:100]
+    df['date_administered'] = [date(2015, 6, 3)] * 100
+    df['sex'] = ['Male', 'Female'] * 50
+    df['dob'] = [date(1985, 4, 23)] * 100
+    df['event'] = ['1'] * 100
+    df['instance'] = ['1'] * 100
+
+    for i in range(0, len(cols)):
+        if i == 40:
+            df[cols[i]] = 'test'
+        elif i == 44:
+            df[cols[i]] = 'test'
+        elif i == 47:
+            df[cols[i]] = [randint(0, 45) for p in range(0, 100)]
+        elif i == 48:
+            df[cols[i]] = [randint(0, 39) for p in range(0, 100)]
+
+        else:
+            df[cols[i]] = [randint(0, 1) for p in range(0, 100)]
+
+    return df
+
+
 
 
 #test_df = generate_gad7_test()
@@ -373,8 +411,8 @@ def generate_ace_test():
 #test_df = generate_promis_sleep_test()
 #test_df.to_csv('../input_healcde_structure/promis_sleep_disturbance_test.csv', index=False)
 
-test_df = generate_promis_physical_func_test()
-test_df.to_csv('../input_healcde_structure/promis_physical_func_test.csv', index=False)
+#test_df = generate_promis_physical_func_test()
+#test_df.to_csv('../input_healcde_structure/promis_physical_func_test.csv', index=False)
 
 #test_df = generate_pcs_test()
 #test_df.to_csv('../input_healcde_structure/pcs6_test.csv', index=False)
@@ -386,20 +424,23 @@ test_df.to_csv('../input_healcde_structure/promis_physical_func_test.csv', index
 #test_df.to_csv('../input_healcde_structure/prscale_test.csv', index=False)
 
 
-test_df = generate_rapa_test()
-test_df.to_csv('../input_healcde_structure/rapa_test.csv', index=False)
+#test_df = generate_rapa_test()
+#test_df.to_csv('../input_healcde_structure/rapa_test.csv', index=False)
 
-test_df = generate_bfi_test()
-test_df.to_csv('../input_healcde_structure/bfi_test.csv', index=False)
+#test_df = generate_bfi_test()
+#test_df.to_csv('../input_healcde_structure/bfi_test.csv', index=False)
 
-test_df = generate_taps2_test()
-test_df.to_csv('../input_healcde_structure/taps2_test.csv', index=False)
+#test_df = generate_taps2_test()
+#test_df.to_csv('../input_healcde_structure/taps2_test.csv', index=False)
 
-test_df = generate_comm01_test()
-test_df.to_csv('../input_healcde_structure/comm01_test.csv', index=False)
+#test_df = generate_comm01_test()
+#test_df.to_csv('../input_healcde_structure/comm01_test.csv', index=False)
 
-test_df = generate_ace_test()
-test_df.to_csv('../input_healcde_structure/ace_test.csv', index=False)
+#test_df = generate_ace_test()
+#test_df.to_csv('../input_healcde_structure/ace_test.csv', index=False)
+
+test_df = generate_sacq_test()
+test_df.to_csv('../input_healcde_structure/sacq_test.csv', index=False)
 
 
 print(test_df.head(10))
