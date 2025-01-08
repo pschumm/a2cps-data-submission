@@ -461,6 +461,56 @@ def generate_bpi_interference():
 
     return df
 
+
+def generate_promis_fatigue():
+    cols = ['FAT7AtiredScl', 'FAT7AExhaustionScl', 'FAT7AnoEnergytScl', 'FAT7AworkLimitScl', 'FAT7AthinkClearScl',
+            'FAT7AbathScl', 'FAT7AexerciseScl', 'FAT7aTotalScore', 'FAT7aTScore']
+
+    guids = pd.read_csv("../../ids/guids.csv")
+
+    df = pd.DataFrame()
+
+    df['participant_id'] = list(guids['participant_id'])[0:100]
+    df['date_administered'] = [date(2015, 6, 3)] * 100
+    df['sex'] = ['Male', 'Female'] * 50
+    df['dob'] = [date(1985, 4, 23)] * 100
+    df['event'] = ['1'] * 100
+    df['instance'] = ['1'] * 100
+
+    for i in range(0, len(cols)):
+        if i > 6:
+            df[cols[i]] = [randint(0, 35) for p in range(0, 100)]
+        else:
+            df[cols[i]] = [randint(0, 5) for p in range(0, 100)]
+
+    return df
+
+
+def generate_promis_support():
+    cols = ['ISSFConfinedBedScl', 'ISSFDoctorVisitScl', 'ISSFChoresHelpScl', 'ISSFErrandsHelpScl',
+            'ISSFMealPrepScl', 'ISSFResponsibleScl', 'ISSFTotalScore', 'ISSFTScore']
+
+
+
+    guids = pd.read_csv("../../ids/guids.csv")
+
+    df = pd.DataFrame()
+
+    df['participant_id'] = list(guids['participant_id'])[0:100]
+    df['date_administered'] = [date(2015, 6, 3)] * 100
+    df['sex'] = ['Male', 'Female'] * 50
+    df['dob'] = [date(1985, 4, 23)] * 100
+    df['event'] = ['1'] * 100
+    df['instance'] = ['1'] * 100
+
+    for i in range(0, len(cols)):
+        if i > 5:
+            df[cols[i]] = [randint(0, 30) for p in range(0, 100)]
+        else:
+            df[cols[i]] = [randint(0, 5) for p in range(0, 100)]
+
+    return df
+
 #test_df = generate_gad7_test()
 #test_df.to_csv('../input_healcde_structure/gad7_test.csv', index=False)
 
@@ -501,16 +551,21 @@ def generate_bpi_interference():
 #test_df = generate_sacq_test()
 #test_df.to_csv('../input_healcde_structure/sacq_test.csv', index=False)
 
-test_df = generate_bpi_4965()
-test_df.to_csv('../input_healcde_structure/bpi_4956_test.csv', index=False)
+#test_df = generate_bpi_4965()
+#test_df.to_csv('../input_healcde_structure/bpi_4956_test.csv', index=False)
 
-test_df = generate_bpi_5086()
-test_df.to_csv('../input_healcde_structure/bpi_5086_test.csv', index=False)
+#test_df = generate_bpi_5086()
+#test_df.to_csv('../input_healcde_structure/bpi_5086_test.csv', index=False)
 
-test_df = generate_bpi_interference()
-test_df.to_csv('../input_healcde_structure/bpi_interference_test.csv', index=False)
+#test_df = generate_bpi_interference()
+#test_df.to_csv('../input_healcde_structure/bpi_interference_test.csv', index=False)
 
-generate_bpi_5086()
+test_df = generate_promis_fatigue()
+test_df.to_csv('../input_healcde_structure/promis_fatigue_test.csv', index=False)
+
+test_df = generate_promis_support()
+test_df.to_csv('../input_healcde_structure/promis_support_test.csv', index=False)
+
 
 
 print(test_df.head(10))

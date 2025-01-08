@@ -1,0 +1,223 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: ISSFConfinedBedScl
+  title: PROMIS Instrumental Support Short Form 6a (ISSF) confined to bed scale
+  description: 'Scale of how often somone is available to help the participant if
+    they are confined to bed, as part of the PROMIS Instrumental Support Short Form
+    6a (ISSF) '
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Usually
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ISSFDoctorVisitScl
+  title: PROMIS Instrumental Support Short Form 6a (ISSF) doctor visit scale
+  description: Scale of how often somone is available to take the participant to the
+    doctor if needed, as part of the PROMIS Instrumental Support Short Form 6a (ISSF)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Usually
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ISSFChoresHelpScl
+  title: PROMIS Instrumental Support Short Form 6a (ISSF) chores help scale
+  description: Scale of how often somone is available to help the participant with
+    daily chores if they are sick, as part of the PROMIS Instrumental Support Short
+    Form 6a (ISSF)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Usually
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ISSFErrandsHelpScl
+  title: PROMIS Instrumental Support Short Form 6a (ISSF) errands help scale
+  description: 'Scale of how often somone is available to run errands if needed, as
+    part of the PROMIS Instrumental Support Short Form 6a (ISSF) '
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Usually
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ISSFMealPrepScl
+  title: PROMIS Instrumental Support Short Form 6a (ISSF) meal prep scale
+  description: "Scale of how often you have someone to prepare your meals if you are\
+    \ unable to do it yourself, as part of the PROMIS Instrumental Support \u2013\
+    \ Short Form 6a (ISSF) "
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Usually
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ISSFResponsibleScl
+  title: PROMIS Instrumental Support Short Form 6a (ISSF)  responsibilities scale
+  description: Scale of someone to take over all of your responsibilities if needed,
+    as part of the PROMIS Instrumental Support Short Form 6a (ISSF)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Usually
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ISSFTotalScore
+  title: PROMIS Instrumental Support Short Form 6a (ISSF) item total
+  description: Calculated raw total score for the PROMIS Instrumental Support Short
+    Form 6a (ISSF) items
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 30
+    minimum: 6
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ISSFTScore
+  title: PROMIS Instrumental Support Short Form 6a (ISSF) item total t-score
+  description: Normalized t-score corresponding to the raw total score for the PROMIS
+    Instrumental Support Short Form 6a (ISSF) items
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: ''
+    minimum: ''
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
