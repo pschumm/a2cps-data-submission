@@ -35,12 +35,20 @@ def output_taps(filepath='tmp/uploads/taps.csv',
     output_nda(filepath, header, descriptor, heal_cde)
     return
 
+def output_gad(filepath='tmp/uploads/gad7.csv',
+                header='cde_gad7,01\n',
+                descriptor='generate_uploads/gad7.json',
+                heal_cde='tmp/heal_cde/gad7.csv'):
+    output_nda(filepath, header, descriptor, heal_cde)
+    return
+
 
 def main(arg_vals):
     os.makedirs('tmp/uploads', exist_ok=True)
     output_methods = {'koos': output_koos,
                       'prsupport': output_prsupport,
-                      'taps': output_taps}
+                      'taps': output_taps,
+                      'gad': output_gad}
     
     if arg_vals["nda_outputs"] == 'all':
         print('outputing all')
@@ -57,7 +65,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("nda_outputs", 
                         nargs="*",
-                        choices=['all', 'prsupport', 'koos', 'taps'],
+                        choices=['all', 'prsupport', 'koos', 'taps', 'gad'],
                         default='all',
                         help="List of NDA structure to output, defaults to all, \
                         but can pass multiple as well, ex: python generate_uploads/create_nda.py koos prsupport taps")

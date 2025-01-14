@@ -7,6 +7,7 @@ from pathlib import Path
 from filter import filter_records_events, get_filter_list, reformat_to_cde
 import csv
 import pandas as pd
+import numpy as np
 import os
 from dotenv import load_dotenv
 
@@ -188,19 +189,78 @@ def extract_taps1(data):
    return
 
 
+def extract_gad7(data):
+   g7codes = {'Over half the days': 2,
+            'Nearly every day': 3,
+            'Not at all': 0,
+            'Several days': 1,
+            np.NaN: -9
+            }
+
+   gad7 = reformat_to_cde(data,
+            drop_if_all_null=['gad2feelnervscl',
+                              'gad2notstopwryscl',
+                              'gad7wrytoomchscl',
+                              'gad7troubrelxscl',
+                              'gad7rstlessscl',
+                              'gad7easyannoyedscl',
+                              'gad7feelafrdscl',
+                              # 'gad7_tot_not_sure',
+                              # 'gad7_tot_several',
+                              # 'gad7_tot_over_half',
+                              # 'gad7_tot_every_day',
+                              # 'gad7totscore',
+                              # 'gad7difficulttowork'
+               ],
+            null_assignments = {"instance": None },#, "GAD7TotScore": None},
+            rename_columns={'pdqassessdate':'date_administered',
+                     'brthdtc':'dob',
+                     'contact_language': 'language',
+                     'gad2feelnervscl':'GAD2FeelNervScl',
+                     'gad2notstopwryscl':'GAD2NotStopWryScl',
+                     'gad7easyannoyedscl':'GAD7EasyAnnoyedScl',
+                     'gad7feelafrdscl': 'GAD7FeelAfrdScl',
+                     'gad7rstlessscl': 'GAD7RstlessScl',
+                     'gad7troubrelxscl': 'GAD7TroubRelxScl',
+                     'gad7wrytoomchscl': 'GAD7WryTooMchScl',
+                     },
+            replace_values={'GAD7EasyAnnoyedScl': g7codes,
+                     'GAD7RstlessScl': g7codes,
+                     'GAD7TroubRelxScl': g7codes,
+                     'GAD2NotStopWryScl': g7codes,
+                     'GAD2FeelNervScl': g7codes,
+                     'GAD7FeelAfrdScl': g7codes,
+                     'GAD7WryTooMchScl': g7codes,
+            },
+            output_columns=['date_administered','instance','dob','sex', 'language',
+                     'GAD2FeelNervScl', 'GAD2NotStopWryScl', 'GAD7WryTooMchScl',
+                     'GAD7TroubRelxScl', 'GAD7RstlessScl', 'GAD7EasyAnnoyedScl',
+                     'GAD7FeelAfrdScl', #'GAD7TotScore'
+                     ]
+         )
+
+   # Write to delimited file
+   gad7.to_csv('tmp/heal_cde/gad7.csv')
+   return
+
+
 def main():
    project = REDCapProject('A2CPSMainStudy')
    #project = REDCapProject('A2CPSMCC2TKA')
+   #project = REDCapProject('A2CPSMCC1Thoracic')
    data = project.data(['Postconsent Study Plan Crf V06',
                         'Patient Demographics Baseline v0.3 (Demographics I)',
                         'Pain Detect Questionnaire (PD-Q)',
                         'Knee Injury Osteoarthritis Outcome Score  (KOOS-12)',
                         'PROMIS SF v2.0 - Emotional Support 6a',
                         'TAPS-1',
-                        'TAPS-2'
+                        'TAPS-2',
+                        'Generalized Anxiety Disorder 7 Item (GAD7) Scale Score',
+                        # needed to get language
+                        'Consented Participant Information'
                         ])
    # get freeze ids 
-   record_ids = get_filter_list('/Users/urrutia/Downloads/DataFreeze_2_022924.csv')
+   record_ids = get_filter_list('/Users/urrutia/Downloads/DataFreeze_1_022823.csv')
    # baseline only
    events = ['Baseline Visit']
    data = filter_records_events(data, record_ids, events)
@@ -221,6 +281,7 @@ def main():
    extract_koos(data)
    extract_promis(data)
    extract_taps1(data)
+   extract_gad7(data)
 
 
 

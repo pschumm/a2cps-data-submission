@@ -56,17 +56,18 @@
         (GAD-7). '
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -77,17 +78,18 @@
         stop or control worrying, as a part of Generalized Anxiety Disorder (GAD-7).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -98,17 +100,18 @@
         different things, as a part of Generalized Anxiety Disorder (GAD-7).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -119,17 +122,18 @@
         as a part of Generalized Anxiety Disorder (GAD-7).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -140,17 +144,18 @@
         it is hard to sit still, as a part of Generalized Anxiety Disorder (GAD-7).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -161,17 +166,18 @@
         or irritable, as a part of Generalized Anxiety Disorder (GAD-7).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -182,17 +188,18 @@
         awful might happen, as a part of Generalized Anxiety Disorder (GAD-7).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
