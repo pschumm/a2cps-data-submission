@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 import os
 from dotenv import load_dotenv
+import argparse
 
 def extract_koos(data):
    # TODO Do we want to recompute the scale scores here, for replicability?
@@ -107,7 +108,7 @@ def extract_koos(data):
    koos.to_csv('tmp/heal_cde/koos-12.csv')
    return
 
-def extract_promis(data):
+def extract_prsupport(data):
    codes = {'Never':1,
             'Rarely':2,
             'Sometimes':3,
@@ -244,7 +245,67 @@ def extract_gad7(data):
    return
 
 
-def main():
+
+def extract_pcs6(data):
+   codes = {'All the time': 4,
+            'Not at all': 0,
+            'To a great degree': 3,
+            'To a moderate degree': 2,
+            'To a slight degree': 1}
+
+   pcs6 = reformat_to_cde(
+            data,
+            drop_if_all_null=[
+               #'pcs_dt_1',
+               'pcqpainawfulovrwhlmscl',
+               'pcqfeelcantwithstandscl',
+               'pcqafraidpainworsescl',
+               'pcqhurtscl',
+               'pcqpainstopscl',
+               'pcqseriousscl',
+               'pcqtotalscoreval',
+               #'pain_catastrophizing_questionnaire_pcs6_complete'
+            ],
+            null_assignments = {
+               "instance": None
+            },
+            rename_columns={
+               'pdqassessdate':'date_administered',
+               'brthdtc':'dob',
+               'pcqafraidpainworsescl': 'PCQAfraidPainWorseScl',
+               'pcqfeelcantwithstandscl':'PCQFeelCantWithstandScl',
+               'pcqhurtscl': 'PCQHurtScl',
+               'pcqpainawfulovrwhlmscl': 'PCQPainAwfulOvrwhlmScl',
+               'pcqpainstopscl': 'PCQPainStopScl',
+               'pcqseriousscl': 'PCQSeriousScl',
+               'pcqtotalscoreval': 'PCQTotalScoreVal'
+            },
+            replace_values={
+               'PCQPainAwfulOvrwhlmScl': codes,
+               'PCQSeriousScl': codes,
+               'PCQPainStopScl': codes,
+               'PCQHurtScl': codes,
+               'PCQFeelCantWithstandScl': codes,
+               'PCQAfraidPainWorseScl': codes,
+            },
+            output_columns=[
+               'date_administered','instance','dob','sex',
+               'PCQPainAwfulOvrwhlmScl',
+               'PCQFeelCantWithstandScl',
+               'PCQAfraidPainWorseScl',
+               'PCQHurtScl',
+               'PCQPainStopScl',
+               'PCQSeriousScl',
+               'PCQTotalScoreVal',
+            ]
+         )
+
+   # Write to delimited file
+   pcs6.to_csv('tmp/heal_cde/pcs6.csv')
+   return
+
+
+def main(arg_vals):
    project = REDCapProject('A2CPSMainStudy')
    #project = REDCapProject('A2CPSMCC2TKA')
    #project = REDCapProject('A2CPSMCC1Thoracic')
@@ -257,7 +318,8 @@ def main():
                         'TAPS-2',
                         'Generalized Anxiety Disorder 7 Item (GAD7) Scale Score',
                         # needed to get language
-                        'Consented Participant Information'
+                        'Consented Participant Information',
+                        'Pain Catastrophizing Questionnaire (PCS6)'
                         ])
    # get freeze ids 
    record_ids = get_filter_list('/Users/urrutia/Downloads/DataFreeze_1_022823.csv')
@@ -278,12 +340,37 @@ def main():
    data = data.dataforge.shift_dates(shift)
    data.dropna(axis=0, how='any', subset=['pdqassessdate','brthdtc'], inplace=True)
 
-   extract_koos(data)
-   extract_promis(data)
-   extract_taps1(data)
-   extract_gad7(data)
+   output_methods = {'koos': extract_koos,
+                      'prsupport': extract_prsupport,
+                      'taps': extract_taps1,
+                      'gad': extract_gad7,
+                      'pcs': extract_pcs6}
+    
+   if arg_vals["extract_heal"] == 'all':
+      print('outputing all')
+      for k,v in output_methods.items():
+         v(data)
+   else: 
+      for output in arg_vals["extract_heal"]:
+         print("outputing", output)
+         output_methods[output](data)
+   
 
 
 
 if __name__ == '__main__':
-    main()
+   parser = argparse.ArgumentParser()
+   parser.add_argument("extract_heal", 
+                     nargs="*",
+                     choices=['all', 'prsupport', 'koos', 'taps', 'gad', 'pcs'],
+                     default='all',
+                     help="List of HEAL structures to extract, defaults to all, \
+                     but can pass multiple as well, ex: python generate_uploads/create_nda.py koos prsupport taps")
+   args = parser.parse_args()
+   main(vars(args))
+
+
+
+
+
+
