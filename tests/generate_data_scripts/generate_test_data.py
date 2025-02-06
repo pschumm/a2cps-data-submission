@@ -462,6 +462,39 @@ def generate_bpi_interference():
     return df
 
 
+def generate_bpi_sf():
+    cols = ["bpipainothrevrdykdindcode", "bpipainanatsiteareatxt", "bpipainareahurtmosttxt", "bpiwrstpnlast24hrtngscl",
+            "bpileastpnlst24hrtngscl", "bpiavgpainrtngscl", "bpicurrentpainrtngscl", "bpipaintreatmntrecvtxt",
+            "bpipaintreatmntrelfscl", "bpipain_des01", "bpipainintfrgnrlactvtyscl", "bpipainintfrmoodscl",
+            "bpipainintfrwlkablscl", "bpipainnrmlwrkintrfrscl", "bpipainrelationsintrfrscl", "bpipainsleepintrfrscl",
+            "bpipainenjoymntintrfrscl"]
+
+
+
+    guids = pd.read_csv("../../ids/guids.csv")
+
+    df = pd.DataFrame()
+
+    df['participant_id'] = list(guids['participant_id'])[0:100]
+    df['date_administered'] = [date(2015, 6, 3)] * 100
+    df['sex'] = ['Male', 'Female'] * 50
+    df['dob'] = [date(1985, 4, 23)] * 100
+    df['event'] = ['1'] * 100
+    df['instance'] = ['1'] * 100
+
+    for i in range(0, len(cols)):
+        if i < 3:
+            df[cols[i]] = 100*['test']
+        elif i == 8:
+            df[cols[i]] = 100*['test']
+        if i == 10:
+            df[cols[i]] = 100*['test']
+        else:
+            df[cols[i]] = [randint(0, 10) for p in range(0, 100)]
+
+    return df
+
+
 def generate_promis_fatigue():
     cols = ['FAT7AtiredScl', 'FAT7AExhaustionScl', 'FAT7AnoEnergytScl', 'FAT7AworkLimitScl', 'FAT7AthinkClearScl',
             'FAT7AbathScl', 'FAT7AexerciseScl', 'FAT7aTotalScore', 'FAT7aTScore']
@@ -532,7 +565,6 @@ def generate_promis_support():
 #test_df = generate_prscale_test()
 #test_df.to_csv('../input_healcde_structure/prscale_test.csv', index=False)
 
-
 #test_df = generate_rapa_test()
 #test_df.to_csv('../input_healcde_structure/rapa_test.csv', index=False)
 
@@ -560,11 +592,16 @@ def generate_promis_support():
 #test_df = generate_bpi_interference()
 #test_df.to_csv('../input_healcde_structure/bpi_interference_test.csv', index=False)
 
-test_df = generate_promis_fatigue()
-test_df.to_csv('../input_healcde_structure/promis_fatigue_test.csv', index=False)
+test_df = generate_bpi_sf()
+test_df.to_csv('../input_healcde_structure/bpi_sf_test.csv', index=False)
 
-test_df = generate_promis_support()
-test_df.to_csv('../input_healcde_structure/promis_support_test.csv', index=False)
+#test_df = generate_promis_fatigue()
+#test_df.to_csv('../input_healcde_structure/promis_fatigue_test.csv', index=False)
+
+#test_df = generate_promis_support()
+#test_df.to_csv('../input_healcde_structure/promis_support_test.csv', index=False)
+
+
 
 
 
