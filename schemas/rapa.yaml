@@ -1,0 +1,282 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: rapa_rarly
+  title: Rapid assesment of physical activity Rarely
+  description: 'Scale to assess physical activity of the patient or participant: rarely
+    or never do physical activity, as part of the Rapid Assessment of Physical Activity
+    (RAPA)'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_light
+  title: Rapid assesment of physical activity light
+  description: 'Scale to assess physical activity of the patient or participant: light
+    or moderate physical activities but not every week, as part of the Rapid Assessment
+    of Physical Activity (RAPA)'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_lightweekly
+  title: Rapid assesment of physical activity light weekly
+  description: 'Scale to assess physical activity of the patient or participant: light
+    physical activities every week, as part of the Rapid Assessment of Physical Activity
+    (RAPA)'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_mod
+  title: Rapid assesment of physical activity moderate
+  description: 'Scale to assess physical activity of the patient or participant: moderate
+    activity less than 30 minutes a day or 5 days a week, as part of the Rapid Assessment
+    of Physical Activity (RAPA)'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_vig
+  title: Rapid assesment of physical activity vigorous
+  description: 'Scale to assess physical activity of the patient or participant: vigorous
+    activity, as part of the Rapid Assessment of Physical Activity (RAPA)'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_modweekly
+  title: Rapid assesment of physical activity moderate weekly
+  description: 'Scale to assess physical activity of the patient or participant: moderate
+    activity 30 min per day 5 or more days a week, as part of the Rapid Assessment
+    of Physical Activity (RAPA)'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_vigweekly
+  title: Rapid assesment of physical activity vigorous weekly
+  description: 'Scale to assess physical activity of the patient or participant: vigorous
+    activity at least 20 min a day 3 or more days per week, as part of the Rapid Assessment
+    of Physical Activity (RAPA)'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_strength
+  title: Rapid assesment of physical activity strength
+  description: 'Scale to assess physical activity of the patient or participant: activity
+    to increase muscle strength, as part of the Rapid Assessment of Physical Activity
+    (RAPA)'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_flex
+  title: Rapid assesment of physical activity flexibiilty
+  description: 'Scale to assess physical activity of the patient or participant: activity
+    to increase flexibility, as part of the Rapid Assessment of Physical Activity
+    (RAPA)'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_1Score
+  title: Rapid assesment of physical activity RAPA1 score
+  description: Overall derived score for the Rapid Assessment of Physical Activity
+    (RAPA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 7
+    minimum: 1
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_1Cat
+  title: Rapid assesment of physical activity RAPA1 category
+  description: Overall categorical score for the Rapid Assessment of Physical Activity
+    (RAPA)
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': sedentary
+    '2': under-active
+    '3': under-active regular-light activity
+    '4': under-active regular
+    '5': active
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: rapa_2Score
+  title: Rapid assesment of physical activity RAPA 2
+  description: 'Overall derived score for the Rapid Assessment of Physical Activity
+    (RAPA) part 2: Strength & Flexibility'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': strength only
+    '2': flexibility only
+    '3': both
+    '4': neither
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''

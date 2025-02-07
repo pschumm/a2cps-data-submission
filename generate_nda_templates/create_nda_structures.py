@@ -1,6 +1,7 @@
-import numpy as np
 import pandas as pd
+import numpy as np
 import json
+import fnmatch
 import argparse
 
 
@@ -16,18 +17,46 @@ def generate_template(vlmd_file_name, output_file):
     df['ElementName'] = vlmd_df['name']
     df['DataType'] = vlmd_df['type'].str.capitalize()
     df['Size'] = ''
-    df['Required'] = 'Recommended'
+    df['Required'] = 'Required'
     df['ElementDescription'] = vlmd_df['description']
 
-    # needs to improve
-    df['ValueRange'] = ["1::4" if vlmd_df['constraints.maximum'][i] == ""
-                        else f"{vlmd_df['constraints.minimum'][i]}:{vlmd_df['constraints.maximum'][i]}"
-                        for i in range(0, len(vlmd_df))]
+    ### Parse Value Ranges ###
+    value_ranges = [''] * len(vlmd_df)
+    columns = vlmd_df.columns
+    for i in range(0, len(vlmd_df)):
+        _maxmin = ('constraints.minimum' in columns) & ('constraints.maximum' in columns)
+        _enum = ('constraints.enum' in columns)
 
-    Notes = vlmd_df['constraints.enum'][0].copy()
-    for i in range(0, len(vlmd_df['constraints.enum'][0])):
-        Notes[i] = Notes[i] + "=" + vlmd_df[f'enumLabels.{Notes[i]}'][0] + ";"
-    df['Notes'] = ' '.join(Notes)
+        if _maxmin:
+            if (vlmd_df['constraints.maximum'][i] != "") & (vlmd_df['constraints.minimum'][i] != ""):
+                value_ranges[i] = f"{vlmd_df['constraints.minimum'][i]}:{vlmd_df['constraints.maximum'][i]}"
+
+            elif _enum:
+                values = [int(x) for x in vlmd_df['constraints.enum'][i] if x.isdigit()]
+                if len(values) > 0:
+                    value_ranges[i] = f"{min(values)}::{max(values)}"
+
+        elif _enum:
+            values = [int(x) for x in vlmd_df['constraints.enum'][i] if x.isdigit()]
+            if len(values) > 0:
+                value_ranges[i] = f"{min(values)}::{max(values)}"
+
+    df['ValueRange'] = value_ranges
+
+    ### Parse Value Labels ###
+    labels = []
+    filtered = fnmatch.filter(vlmd_df.columns, 'enumLabels.?')
+    filtered = filtered + fnmatch.filter(vlmd_df.columns, 'enumLabels.??')
+    for i in range(0, len(vlmd_df)):
+        vals = []
+        for col in filtered:
+            if str(vlmd_df.iloc[i][col]) == 'nan':
+                continue
+            else:
+                vals.append(col.split('.')[-1] + "=" + vlmd_df.iloc[i][col] + ";")
+        labels.append(' '.join(vals).strip())
+    df['Notes'] = labels
+
     df['Aliases'] = ''
 
     ### Create required rows for NDA definition file ###
@@ -59,7 +88,6 @@ def generate_template(vlmd_file_name, output_file):
     labels = [output_file, '01'] + ['']*(len(fields) - 2)
     template_df = pd.DataFrame(list(zip(labels, fields))).T
     template_df.to_csv(f'background/nda/{output_file}01_template.csv', index=False, header=False)
-
 
     return
 
