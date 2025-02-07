@@ -48,8 +48,8 @@
                "guids": "ids/guids.csv",
                "nda_cols": ["subjectkey",
                             "src_subject_id",
-                            "interview_age",
                             "interview_date",
+                            "interview_age",
                             "sex"],
                "version": "healcde6546_1.0"},
              {"type": "mapping",
@@ -65,8 +65,3 @@
                "path":  "output_nda_structure/sacq01_result.csv"}
     ]
 }
-
-
-
-
-

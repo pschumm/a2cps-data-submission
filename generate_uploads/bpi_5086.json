@@ -7,18 +7,11 @@
                "guids": "ids/guids.csv",
                "nda_cols": ["subjectkey",
                             "src_subject_id",
-                            "interview_age",
                             "interview_date",
+                            "interview_age",
                             "sex"],
                "version": "healcde5086_1.0"},
              {"type": "table-write",
                "path":  "output_nda_structure/bpi_5086_result.csv"}
     ]
 }
-
-
-
-
-
-
-

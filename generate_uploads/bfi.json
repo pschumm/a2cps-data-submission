@@ -51,8 +51,8 @@
              {"type": "reorder",
                "cols": ["subjectkey",
                         "src_subject_id",
-                        "interview_age",
                         "interview_date",
+                        "interview_age",
                         "sex",
                         "bfi10_6",
                         "bfi10_4",
@@ -69,6 +69,3 @@
                "path":  "output_nda_structure/bfi-10_result.csv"}
     ]
 }
-
-
-
