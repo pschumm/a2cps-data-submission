@@ -33,8 +33,8 @@ Install [Microsoft's C++ Build Tools](https://visualstudio.microsoft.com/visual-
 ### Configuration
 To export data from REDCap using API:
 
-    redcap_export -t "[API token]" -p A2CPS_Main_Study_MCC1 https://redcap.uchicago.edu/api/
-    redcap_export -t "[API token]" -p A2CPS_Main_Study_MCC2 https://redcap.uchicago.edu/api/
+    redcap_export -t "[API token]" -p A2CPS_Main_Study_MCC1 https://redcap.tacc.utexas.edu/api/
+    redcap_export -t "[API token]" -p A2CPS_Main_Study_MCC2 https://redcap.tacc.utexas.edu/api/
     redcap_export -t "[API token]" -p A2CPS_TKA_MCC2 https://redcap.tacc.utexas.edu/api/
     redcap_export -t "[API token]" -p A2CPS_Thoracic_MCC1 https://redcap.tacc.utexas.edu/api/
 
