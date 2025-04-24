@@ -1,0 +1,297 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: bpipainothrevrdykdindcode
+  title: Throughout our lives most of us have had pain from time to time (such as
+    minor headaches, sprains, and toothaches). Have you had pain other than these
+    everyday kinds of pain today?
+  description: n/a
+  type: string
+- name: bpipainanatsiteareatxt
+  title: On the diagram, please click on the areas of the body where you have pain.
+  description: n/a
+  type: string
+- name: bpipainareahurtmosttxt
+  title: Click on the area of the body where you have the most pain.
+  description: n/a
+  type: string
+- name: bpiwrstpnlast24hrtngscl
+  title: Please rate your pain by marking the number that best describes your pain
+    at its worst in the last 24 hours.
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = No Pain | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6 = 6 | 7 =
+      7 | 8 = 8 | 9 = 9 | 10 = Pain as bad as you can imagine
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpileastpnlst24hrtngscl
+  title: Please rate your pain by marking the number that best describes your pain
+    at its least in the last 24 hours.
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = No Pain | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6 = 6 | 7 =
+      7 | 8 = 8 | 9 = 9 | 10 = Pain as bad as you can imagine
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpiavgpainrtngscl
+  title: Please rate your pain by marking the number that best describes your pain
+    on average
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = No Pain | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6 = 6 | 7 =
+      7 | 8 = 8 | 9 = 9 | 10 = Pain as bad as you can imagine
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpicurrentpainrtngscl
+  title: Please rate your pain by marking the number that tells how much pain you
+    have right now.
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = No Pain | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6 = 6 | 7 =
+      7 | 8 = 8 | 9 = 9 | 10 = Pain as bad as you can imagine
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpipaintreatmntrecvtxt
+  title: What treatments or medications are you receiving for pain?
+  description: n/a
+  type: string
+- name: bpipaintreatmntrelfscl
+  title: In the last 24 hours how much relief have pain treatments or medications
+    provided? Please choose the percentage that most shows how much relief you have
+    received.
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = No relief | 10 = 10% | 20 = 20% | 30 = 30% | 40 = 40% | 50 = 50%
+      | 60 = 60% | 70 = 70% | 80 = 80% | 90 = 90% | 100 = Complete relief
+    enum:
+    - '0'
+    - '10'
+    - '20'
+    - '30'
+    - '40'
+    - '50'
+    - '60'
+    - '70'
+    - '80'
+    - '90'
+    - '100'
+- name: bpipain_des01
+  title: 'Mark the number that describes how, during the past 24 hours, pain has interfered
+    with your:'
+  description: n/a
+  type: string
+- name: bpipainintfrgnrlactvtyscl
+  title: General activity
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = Does not interfere | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6
+      = 6 | 7 = 7 | 8 = 8 | 9 = 9 |10 = Completely interferes
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpipainintfrmoodscl
+  title: Mood
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = Does not interfere | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6
+      = 6 | 7 = 7 | 8 = 8 | 9 = 9 |10 = Completely interferes
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpipainintfrwlkablscl
+  title: Walking ability
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = Does not interfere | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6
+      = 6 | 7 = 7 | 8 = 8 | 9 = 9 |10 = Completely interferes
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpipainnrmlwrkintrfrscl
+  title: Normal work or school (includes both work outside the home and housework)
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = Does not interfere | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6
+      = 6 | 7 = 7 | 8 = 8 | 9 = 9 |10 = Completely interferes
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpipainrelationsintrfrscl
+  title: Relations with other people
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = Does not interfere | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6
+      = 6 | 7 = 7 | 8 = 8 | 9 = 9 |10 = Completely interferes
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpipainsleepintrfrscl
+  title: Sleep
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = Does not interfere | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6
+      = 6 | 7 = 7 | 8 = 8 | 9 = 9 |10 = Completely interferes
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+- name: bpipainenjoymntintrfrscl
+  title: Enjoyment of life
+  description: n/a
+  type: integer
+  constraints:
+    enumLabels: 0 = Does not interfere | 1 = 1 | 2 = 2 | 3 = 3 | 4 = 4 | 5 = 5 | 6
+      = 6 | 7 = 7 | 8 = 8 | 9 = 9 |10 = Completely interferes
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'

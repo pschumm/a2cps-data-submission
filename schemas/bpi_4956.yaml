@@ -1,0 +1,171 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: BPIWrstPain7dRtngScale
+  title: Brief Pain Inventory (BPI) - worst pain rating scale
+  description: Scale indicating the rating of the worst pain, as part of the Brief
+    Pain Inventory (BPI) form.
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+  enumLabels:
+    '0': No pain
+    '10': Pain as bad as you can imagine
+  standardsMappings:
+  - item:
+      source: CDISC
+      id: C100303
+    instrument:
+      url: https://heal.nih.gov/files/CDEs/2023-05/bpi-pain-severity-7d-cde-pediatric.xlsx
+      id: '4956'
+- name: BPILstPain7dRtngScale
+  title: Brief Pain Inventory (BPI) - least pain rating scale
+  description: Scale indicating the rating of the least pain experienced by the subject,
+    as part of the Brief Pain Inventory (BPI) form.
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+  enumLabels:
+    '0': No pain
+    '10': Pain as bad as you can imagine
+  standardsMappings:
+  - item:
+      source: CDISC
+      id: C100304
+    instrument:
+      url: https://heal.nih.gov/files/CDEs/2023-05/bpi-pain-severity-7d-cde-pediatric.xlsx
+      id: '4956'
+- name: BPIAvgPain7dRtngScale
+  title: Brief Pain Inventory (BPI) - average pain rating scale
+  description: Scale indicating the rating of the average pain experienced by the
+    subject, as part of the Brief Pain Inventory (BPI) form.
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+  enumLabels:
+    '0': No pain
+    '10': Pain as bad as you can imagine
+  standardsMappings:
+  - item:
+      source: CDISC
+      id: C100305
+    instrument:
+      url: https://heal.nih.gov/files/CDEs/2023-05/bpi-pain-severity-7d-cde-pediatric.xlsx
+      id: '4956'
+- name: BPICurntPainRtngScale
+  title: Brief Pain Inventory (BPI) - current pain rating scale
+  description: Scale rating the pain the subject is feeling right now, as part of
+    the Brief Pain Inventory (BPI) form.
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+  enumLabels:
+    '0': No pain
+    '10': Pain as bad as you can imagine
+  standardsMappings:
+  - item:
+      source: CDISC
+      id: C100362
+    instrument:
+      url: https://heal.nih.gov/files/CDEs/2023-05/bpi-pain-severity-7d-cde-pediatric.xlsx
+      id: '4956'
+- name: BPIPainSeverityScore
+  title: Brief Pain Inventory (BPI) - pain severity subscale score
+  description: Calculated score for the Brief Pain Inventory (BPI) Pain Severity items
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+    instrument:
+      url: ''
+      id: ''

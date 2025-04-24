@@ -31,5 +31,22 @@
                             "interview_age",
                             "sex",
                             "version_form"],
-               "version": "healcde6181_1.0"}]
+               "version": "healcde6181_1.0"},
+              {"type": "reorder",
+               "cols": ["subjectkey",
+                        "src_subject_id",
+                        "interview_date",
+                        "interview_age",
+                        "sex",
+                        "prsupport13",
+                        "prsupport16",
+                        "prsupport20",
+                        "prsupport21",
+                        "prsupport24",
+                        "prsupport40",
+                        "prsupport41",
+                        "prsupport28"]},
+              {"type": "table-write",
+               "path":  "output_nda_structure/prsupport_result.csv"}
+    ]
 }

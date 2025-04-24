@@ -1,0 +1,278 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: ACEAdInHmHFrOfF18YrInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Adult insult humiliate
+    hurt fear often first 18 years indicator code
+  description: Code indicating if the participant had a parent or other adult in the
+    household often swear at them, insult them, put them down, humiliate them, or
+    act in a way that made participant afraid that they might be physically hurt during
+    his/her first 18 years of life, as part of the Adverse Childhood Experience Questionnaire
+    (ACE).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACEAdPhyAbsInFr18YrInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Adult physical abuse injure
+    first 18 years indicator code
+  description: Code indicating if the participant had a parent or other adult in the
+    household often push, grab, slap, throw something at them, or ever hit them so
+    hard that they had marks or were injured during his/her first 18 years of life,
+    as part of the Adverse Childhood Experience Questionnaire (ACE).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACESxlAbsFr18YrInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Sexual abuse first 18
+    years indicator code
+  description: Code indicating if the participant had an adult or person at least
+    5 years older ever touch or fondle them, touch their body in a sexual way, or
+    try to or actually have oral, anal, or vaginal sex with the participant during
+    his/her first 18 years of life, as part of the Adverse Childhood Experience Questionnaire
+    (ACE).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACEFlLcEmSpOfFr18YrInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Feel lack emotional support
+    often first 18 years indicator code
+  description: "Code indicating if the participant had often felt that no one in their\
+    \ family loved them, thought they were important or special, their family didn\u2019\
+    t look out for each other, felt close to each other, or support each other during\
+    \ their first 18 years of life, as part of the Adverse Childhood Experience Questionnaire\
+    \ (ACE)."
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACEFlNgDHPrOfFr18YrInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Feel neglect drunk high
+    parents often first 18 years indicator code
+  description: "Code indicating if the participant often felt that they didn\u2019\
+    t have enough to eat, had to wear dirty clothes, and had no one to protect them,\
+    \ or had parents that were too drunk or high to take care of them or take them\
+    \ to the doctor when necessary during their first 18 years of life, as part of\
+    \ the Adverse Childhood Experience Questionnaire (ACE)."
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACEPrEvSpDvFr18YrInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Parents ever separated
+    divorce first 18 years indicator code
+  description: Code indicating if the participant's parents ever separated or divorced
+    during their first 18 years of life, as part of the Adverse Childhood Experience
+    Questionnaire (ACE).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACEMtDmVlFr18YrInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Mother domestic violence
+    first 18 years indicator code
+  description: Code indicating if the participant's mother or stepmother experienced
+    domestic violence, as defined by often getting pushed, grabbed, slapped, or had
+    something thrown at her, sometimes or often kicked, bitten, or hit with something
+    hard, or ever repeatedly hit over at least a few minutes or threatened with a
+    gun or knife.
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACEAlDrUsLvFr18YrInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Alcoholic drug user live
+    first 18 years indicator code
+  description: Code indicating if the participant lived with anyone who was a problem
+    drinker or alcoholic or used street drugs during his/her first 18 years of life,
+    as part of the Adverse Childhood Experience Questionnaire (ACE).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACEDpMnIScHsMbFr18YInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Depression mentally ill
+    suicide household member first 18 years indicator code
+  description: Code indicating if the participant lived with a depressed or mentally
+    ill household member, or a household member who attempted suicide during his/her
+    first 18 years of life, as part of the Adverse Childhood Experience Questionnaire
+    (ACE).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACEHsMmPrFr18YrInCode
+  title: Adverse Childhood Experience Questionnaire (ACE) - Household member prison
+    first 18 years indicator code
+  description: Code indicating if the participant ever had a household member go to
+    prison during his/her first 18 years of life, as part of the Adverse Childhood
+    Experience Questionnaire (ACE).
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': 'No'
+    '1': 'Yes'
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: ACEAdvChlExpQstTtlScore
+  title: Adverse Childhood Experience Questionnaire (ACE) - Adverse childhood experience
+    questionnaire total score
+  description: The score of total "yes" responses, as part of the Adverse Childhood
+    Experience Questionnaire (ACE).
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: ''
+    minimum: ''
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''

@@ -1,0 +1,244 @@
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: FAT7AtiredScl
+  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a tired scale
+  description: 'Scale of extent to which the participant felt   tired within the last
+    7 days as part of the PROMIS Fatigue - Short Form 7a '
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Often
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: FAT7AExhaustionScl
+  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a exhaustion scale
+  description: 'Scale of extent to which the participant experienced extreme exhaustion
+    within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Often
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: FAT7AnoEnergytScl
+  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a run out of energy scale
+  description: 'Scale of how often the participant ran out of energy within the last
+    7 days as part of the PROMIS Fatigue - Short Form 7a '
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Often
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: FAT7AworkLimitScl
+  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a work limitation scale
+  description: 'Scale of how often fatigue limited work (including work at home) within
+    the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Often
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: FAT7AthinkClearScl
+  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a think clearly scale
+  description: 'Scale of how often the participant was too tired to think clearly
+    within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Often
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: FAT7AbathScl
+  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a bath or shower scale
+  description: 'Scale how often the participant was too tired to take a bath or a
+    shower within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '1': Never
+    '2': Rarely
+    '3': Sometimes
+    '4': Often
+    '5': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: FAT7AexerciseScl
+  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a excercise scale
+  description: 'Scale of how often the participant had enough energy to exercise strenuously
+    within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '5'
+    - '4'
+    - '3'
+    - '2'
+    - '1'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '5': Never
+    '4': Rarely
+    '3': Sometimes
+    '2': Often
+    '1': Always
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: FAT7aTotalScore
+  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a overall total score
+  description: 'Calculated total (raw) score for the PROMIS Fatigue - Short Form 7a '
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: ''
+    minimum: ''
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: FAT7aTScore
+  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a normalized t-score
+  description: 'Calculated normalized t-score for the PROMIS Fatigue - Short Form
+    7a '
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: ''
+    minimum: ''
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''

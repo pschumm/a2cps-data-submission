@@ -1,0 +1,450 @@
+
+---
+fieldsMatch: subset
+missingValues:
+- ''
+uniqueKeys:
+- - participant_id
+  - event
+  - date_administered
+  - instance
+fields:
+- name: participant_id
+  type: string
+  title: Locally-assigned participant ID
+  constraints:
+    required: true
+- name: event
+  type: string
+  title: Name of event on which data were collected
+- name: date_administered
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date on which questionnaire was administered
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
+- name: dob
+  type: date
+  format: '%Y-%m-%d'
+  title: Shifted date of birth
+- name: sex
+  type: string
+  title: Sex assigned at birth
+  categories:
+  - Female
+  - Intersex
+  - Male
+  constraints:
+    enum:
+    - Female
+    - Intersex
+    - Male
+- name: PRSbackOutScl
+  title: Pain Resilience Scale get back out scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I will get back out there.'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSworkGoalsScl
+  title: Pain Resilience Scale work goals scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I still work to accomplish my goals'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSpushThroughScl
+  title: Pain Resilience Scale push through scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I push through it.'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRScontWorkScl
+  title: Pain Resilience Scale continue working scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I try to continue working.'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSStayActiveScl
+  title: Pain Resilience Scale stay active scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I like to stay active.'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSfocusPositiveScl
+  title: Pain Resilience Scale focus positive scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I focus on positive attitude.'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSposAttitudeScl
+  title: Pain Resilience Scale positive attitude scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I keep a positive attitude'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSnotAffectHappyScl
+  title: Pain Resilience Scale does not affect happiness scale
+  description: "Pain Resilience Scale question regarding extent to which the statement\
+    \ describes how participant responds when faced with intense or prolonged pain:\
+    \ It doesn\u2019t affect my happiness."
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSfindJoyScl
+  title: Pain Resilience Scale find joy scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I still find joy in my life.'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRShopefulScl
+  title: Pain Resilience Scale hopeful scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I keep a hopeful attitude.'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSNotGetDownScl
+  title: Pain Resilience Scale do not get down scale
+  description: "Pain Resilience Scale question regarding extent to which the statement\
+    \ describes how participant responds when faced with intense or prolonged pain:\
+    \ I don\u2019t let it get me down."
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSNotUpsetScl
+  title: Pain Resilience Scale not upset scale
+  description: "Pain Resilience Scale question regarding extent to which the statement\
+    \ describes how participant responds when faced with intense or prolonged pain:\
+    \ I don\u2019t let it upset me."
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSavoidNegativeScl
+  title: Pain Resilience Scale avoid negative scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I avoid negative thoughts.'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSStayRelaxScl
+  title: Pain Resilience Scale stay relaxed scale
+  description: 'Pain Resilience Scale question regarding extent to which the statement
+    describes how participant responds when faced with intense or prolonged pain:
+    I try to stay relaxed.'
+  type: integer
+  constraints:
+    pattern: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    maximum: ''
+    minimum: ''
+  enumLabels:
+    '0': Not at all
+    '1': To a slight degree
+    '2': To a moderate degree
+    '3': To a great degree
+    '4': All the time
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSscore
+  title: Pain Resilience Scale total score
+  description: 'Calculated total (summed) score for the Pain Resilience Score'
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 56
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSBehPersScore
+  title: Pain Resilience Scale Behavioral Perserverence Score
+  description: 'Calculated subscale score for Behavioral Perserverence, as part of
+    the Pain Resilience Score'
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 20
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''
+- name: PRSCognitiveScore
+  title: Pain Resilience Scale Cognitive/Affective Score
+  description: 'Calculated subscale score for Cognitive/Affective, as part of the Pain
+    Resilience Score'
+  type: integer
+  constraints:
+    pattern: ''
+    enum: ''
+    maximum: 36
+    minimum: 0
+  enumLabels: ''
+  standardsMappings:
+  - item:
+      source: ''
+      id: ''

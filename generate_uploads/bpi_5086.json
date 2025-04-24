@@ -1,0 +1,17 @@
+{
+    "steps": [{"type": "field-update", "name": "BPIWrstPain7dRtngScale", "descriptor": {"name": "rateworst1wk"}},
+              {"type": "field-update", "name": "BPILstPain7dRtngScale", "descriptor": {"name": "bpi_q4_least1wk"}},
+              {"type": "field-update", "name": "BPIAvgPain7dRtngScale", "descriptor": {"name": "rateavg1wk"}},
+              {"type": "field-update", "name": "BPICurntPainRtngScale", "descriptor": {"name": "bpi_pain_now"}},
+             {"type": "nda-required-fields",
+               "guids": "ids/guids.csv",
+               "nda_cols": ["subjectkey",
+                            "src_subject_id",
+                            "interview_date",
+                            "interview_age",
+                            "sex"],
+               "version": "healcde5086_1.0"},
+             {"type": "table-write",
+               "path":  "output_nda_structure/bpi_5086_result.csv"}
+    ]
+}
