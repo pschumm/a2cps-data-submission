@@ -1,2 +1,6 @@
 /tmp
 .env
+build_example.ipynb
+ids/guids.csv
+ids/DataFreeze_1_022823.csv
+ids/DataFreeze_2_022924.csv
