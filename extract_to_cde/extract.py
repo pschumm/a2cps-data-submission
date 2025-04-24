@@ -11,6 +11,78 @@ from dotenv import load_dotenv
 from filter import filter_records_events, get_filter_list, reformat_to_cde
 
 
+def extract_ace(data):
+    codes = {"No": 0, "Yes": 1, np.NaN: -9, None: -9}
+
+    ace = reformat_to_cde(
+        data,
+        drop_if_all_null=[
+            "aceadinhmhfroff18yrincode",
+            "aceadphyabsinfr18yrincode",
+            "acesxlabsfr18yrincode",
+            "acefllcemspoffr18yrincode",
+            "aceflngdhproffr18yrincode",
+            "aceprevspdvfr18yrincode",
+            "acemtdmvlfr18yrincode",
+            "acealdruslvfr18yrincode",
+            "acedpmnischsmbfr18yincode",
+            "acehsmmprfr18yrincode",
+            "aceadvchlexpqstttlscore",
+        ],
+        null_assignments={"instance": None},
+        rename_columns={
+            "brthdtc": "dob",
+            "pdqassessdate": "date_administered",
+            "aceadinhmhfroff18yrincode": "ACEAdInHmHFrOfF18YrInCode",
+            "aceadphyabsinfr18yrincode": "ACEAdPhyAbsInFr18YrInCode",
+            "acesxlabsfr18yrincode": "ACESxlAbsFr18YrInCode",
+            "acefllcemspoffr18yrincode": "ACEFlLcEmSpOfFr18YrInCode",
+            "aceflngdhproffr18yrincode": "ACEFlNgDHPrOfFr18YrInCode",
+            "aceprevspdvfr18yrincode": "ACEPrEvSpDvFr18YrInCode",
+            "acemtdmvlfr18yrincode": "ACEMtDmVlFr18YrInCode",
+            "acealdruslvfr18yrincode": "ACEAlDrUsLvFr18YrInCode",
+            "acedpmnischsmbfr18yincode": "ACEDpMnIScHsMbFr18YInCode",
+            "acehsmmprfr18yrincode": "ACEHsMmPrFr18YrInCode",
+            "aceadvchlexpqstttlscore": "ACEAdvChlExpQstTtlScore",
+        },
+        replace_values={
+            "sex": {np.NaN: "Unknown", None: "Unknown"},
+            "ACESxlAbsFr18YrInCode": codes,
+            "ACEAlDrUsLvFr18YrInCode": codes,
+            "ACEFlNgDHPrOfFr18YrInCode": codes,
+            "ACEDpMnIScHsMbFr18YInCode": codes,
+            "ACEHsMmPrFr18YrInCode": codes,
+            "ACEAdPhyAbsInFr18YrInCode": codes,
+            "ACEFlLcEmSpOfFr18YrInCode": codes,
+            "ACEMtDmVlFr18YrInCode": codes,
+            "ACEAdInHmHFrOfF18YrInCode": codes,
+            "ACEAdvChlExpQstTtlScore": {np.NaN: -9, None: -9},
+            "ACEPrEvSpDvFr18YrInCode": codes,
+        },
+        output_columns=[
+            "date_administered",
+            "instance",
+            "dob",
+            "sex",
+            "ACEAdInHmHFrOfF18YrInCode",
+            "ACEAdPhyAbsInFr18YrInCode",
+            "ACESxlAbsFr18YrInCode",
+            "ACEFlLcEmSpOfFr18YrInCode",
+            "ACEFlNgDHPrOfFr18YrInCode",
+            "ACEPrEvSpDvFr18YrInCode",
+            "ACEMtDmVlFr18YrInCode",
+            "ACEAlDrUsLvFr18YrInCode",
+            "ACEDpMnIScHsMbFr18YInCode",
+            "ACEHsMmPrFr18YrInCode",
+            "ACEAdvChlExpQstTtlScore",
+        ],
+    )
+    # Write to delimited file
+    Path("tmp/heal_cde").mkdir(exist_ok=True)
+    ace.to_csv("tmp/heal_cde/ace.csv")
+    return
+
+
 def extract_koos(data):
     # TODO Do we want to recompute the scale scores here, for replicability?
     codes = {"None": 0, "Mild": 1, "Moderate": 2, "Severe": 3, "Extreme": 4}
@@ -137,7 +209,13 @@ def extract_koos(data):
 
 
 def extract_prsupport(data):
-    codes = {"Never": 1, "Rarely": 2, "Sometimes": 3, "Usually": 4, "Always": 5}
+    codes = {
+        "Never": 1,
+        "Rarely": 2,
+        "Sometimes": 3,
+        "Usually": 4,
+        "Always": 5,
+    }
     prsupport = reformat_to_cde(
         data,
         drop_if_all_null=[
@@ -546,6 +624,7 @@ def main(arg_vals):
             "Pain Catastrophizing Questionnaire (PCS6)",
             "Patient Health Questionnaire Depression Scale (PHQ) Scored",
             "PROMIS SF v1.0 - Sleep Disturbance 6a (Sleep I)",
+            "Adverse Childhood Experience Questionnaire (ACE)",
         ]
     )
 
@@ -574,7 +653,9 @@ def main(arg_vals):
     # Dates and ages are a required field, so we drop anyone who is missing those
     # as they will not validate against NDA
     # TODO: find and fix subjects with missing dates
-    data.dropna(axis=0, how="any", subset=["pdqassessdate", "brthdtc"], inplace=True)
+    data.dropna(
+        axis=0, how="any", subset=["pdqassessdate", "brthdtc"], inplace=True
+    )
 
     # mapping of argument name to function name
     output_methods = {
@@ -585,6 +666,7 @@ def main(arg_vals):
         "pcs": extract_pcs6,
         "phq": extract_phq9,
         "prsleep": extract_prsleep,
+        "ace": extract_ace,
     }
 
     if arg_vals["extract_heal"] == "all":
@@ -602,7 +684,17 @@ if __name__ == "__main__":
     parser.add_argument(
         "extract_heal",
         nargs="*",
-        choices=["all", "prsupport", "koos", "taps", "gad", "pcs", "phq", "prsleep"],
+        choices=[
+            "all",
+            "prsupport",
+            "koos",
+            "taps",
+            "gad",
+            "pcs",
+            "phq",
+            "prsleep",
+            "ace",
+        ],
         default="all",
         help="List of HEAL structures to extract, defaults to all, \
                      but can pass multiple as well, ex: python generate_uploads/create_nda.py koos prsupport taps",

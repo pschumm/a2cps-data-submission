@@ -5,93 +5,140 @@ import os
 import csv
 import argparse
 
+
 def output_nda(filepath, header, descriptor, heal_cde):
     print(filepath)
-    with open(filepath, 'w') as f:
+    with open(filepath, "w") as f:
         f.write(header)
-        pipeline = Pipeline.from_descriptor( descriptor)
-        Resource(heal_cde).transform(pipeline).\
-            to_pandas().to_csv(f, index=False)
+        pipeline = Pipeline.from_descriptor(descriptor)
+        Resource(heal_cde).transform(pipeline).to_pandas().to_csv(
+            f, index=False
+        )
     return
 
-def output_koos(filepath='tmp/uploads/oai_koos_womac01.csv', 
-                header='oai_koos_womac,01\n',
-                descriptor='generate_uploads/koos-12.json',
-                heal_cde='tmp/heal_cde/koos-12.csv'):
-    output_nda(filepath, header,  descriptor, heal_cde)
-    return
 
-def output_prsupport(filepath='tmp/uploads/prsupport.csv', 
-                header='prsupport,01\n',
-                descriptor='generate_uploads/prsupport.json',
-                heal_cde='tmp/heal_cde/prsupport.csv'):
+def output_ace(
+    filepath="tmp/uploads/ace.csv",
+    header="ache,01\n",
+    descriptor="generate_uploads/ace.json",
+    heal_cde="tmp/heal_cde/ace.csv",
+):
     output_nda(filepath, header, descriptor, heal_cde)
     return
 
-def output_taps(filepath='tmp/uploads/taps.csv', 
-                header='taps,01\n',
-                descriptor='generate_uploads/taps.json',
-                heal_cde='tmp/heal_cde/taps1.csv'):
+
+def output_koos(
+    filepath="tmp/uploads/oai_koos_womac01.csv",
+    header="oai_koos_womac,01\n",
+    descriptor="generate_uploads/koos-12.json",
+    heal_cde="tmp/heal_cde/koos-12.csv",
+):
     output_nda(filepath, header, descriptor, heal_cde)
     return
 
-def output_gad(filepath='tmp/uploads/gad7.csv',
-                header='cde_gad7,01\n',
-                descriptor='generate_uploads/gad7.json',
-                heal_cde='tmp/heal_cde/gad7.csv'):
+
+def output_prsupport(
+    filepath="tmp/uploads/prsupport.csv",
+    header="prsupport,01\n",
+    descriptor="generate_uploads/prsupport.json",
+    heal_cde="tmp/heal_cde/prsupport.csv",
+):
     output_nda(filepath, header, descriptor, heal_cde)
     return
 
-def output_pcs(filepath='tmp/uploads/pcs6.csv',
-                header='paincscale,01\n',
-                descriptor='generate_uploads/pcs6.json',
-                heal_cde='tmp/heal_cde/pcs6.csv'):
+
+def output_taps(
+    filepath="tmp/uploads/taps.csv",
+    header="taps,01\n",
+    descriptor="generate_uploads/taps.json",
+    heal_cde="tmp/heal_cde/taps1.csv",
+):
     output_nda(filepath, header, descriptor, heal_cde)
     return
 
-def output_phq(filepath='tmp/uploads/phq9.csv',
-                header='cde_phq9,01\n',
-                descriptor='generate_uploads/phq9.json',
-                heal_cde='tmp/heal_cde/phq9.csv'):
+
+def output_gad(
+    filepath="tmp/uploads/gad7.csv",
+    header="cde_gad7,01\n",
+    descriptor="generate_uploads/gad7.json",
+    heal_cde="tmp/heal_cde/gad7.csv",
+):
     output_nda(filepath, header, descriptor, heal_cde)
     return
 
-def output_prsleep(filepath='tmp/uploads/prsleep.csv',
-                header='prsld,01\n',
-                descriptor='generate_uploads/promis-sleep-disturbance.json',
-                heal_cde='tmp/heal_cde/prsleep.csv'):
+
+def output_pcs(
+    filepath="tmp/uploads/pcs6.csv",
+    header="paincscale,01\n",
+    descriptor="generate_uploads/pcs6.json",
+    heal_cde="tmp/heal_cde/pcs6.csv",
+):
+    output_nda(filepath, header, descriptor, heal_cde)
+    return
+
+
+def output_phq(
+    filepath="tmp/uploads/phq9.csv",
+    header="cde_phq9,01\n",
+    descriptor="generate_uploads/phq9.json",
+    heal_cde="tmp/heal_cde/phq9.csv",
+):
+    output_nda(filepath, header, descriptor, heal_cde)
+    return
+
+
+def output_prsleep(
+    filepath="tmp/uploads/prsleep.csv",
+    header="prsld,01\n",
+    descriptor="generate_uploads/promis-sleep-disturbance.json",
+    heal_cde="tmp/heal_cde/prsleep.csv",
+):
     output_nda(filepath, header, descriptor, heal_cde)
     return
 
 
 def main(arg_vals):
-    os.makedirs('tmp/uploads', exist_ok=True)
-    output_methods = {'koos': output_koos,
-                      'prsupport': output_prsupport,
-                      'taps': output_taps,
-                      'gad': output_gad,
-                      'pcs': output_pcs,
-                      'phq': output_phq,
-                      'prsleep': output_prsleep}
-    
-    if arg_vals["nda_outputs"] == 'all':
-        print('outputing all')
-        for k,v in output_methods.items():
+    os.makedirs("tmp/uploads", exist_ok=True)
+    output_methods = {
+        "koos": output_koos,
+        "prsupport": output_prsupport,
+        "taps": output_taps,
+        "gad": output_gad,
+        "pcs": output_pcs,
+        "phq": output_phq,
+        "prsleep": output_prsleep,
+        "ace": output_ace,
+    }
+
+    if arg_vals["nda_outputs"] == "all":
+        print("outputing all")
+        for k, v in output_methods.items():
             v()
-    else: 
+    else:
         for output in arg_vals["nda_outputs"]:
             print("outputing", output)
             output_methods[output]()
-    
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("nda_outputs", 
-                        nargs="*",
-                        choices=['all', 'prsupport', 'koos', 'taps', 'gad', 'pcs', 'phq', 'prsleep'],
-                        default='all',
-                        help="List of NDA structure to output, defaults to all, \
-                        but can pass multiple as well, ex: python generate_uploads/create_nda.py koos prsupport taps")
+    parser.add_argument(
+        "nda_outputs",
+        nargs="*",
+        choices=[
+            "all",
+            "prsupport",
+            "koos",
+            "taps",
+            "gad",
+            "pcs",
+            "phq",
+            "prsleep",
+            "ace",
+        ],
+        default="all",
+        help="List of NDA structure to output, defaults to all, \
+                        but can pass multiple as well, ex: python generate_uploads/create_nda.py koos prsupport taps",
+    )
     args = parser.parse_args()
     main(vars(args))

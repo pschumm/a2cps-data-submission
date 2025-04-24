@@ -41,6 +41,7 @@ def print_schema_mappings(schema):
             i["name"]: {v: int(k) for k, v in i["enumLabels"].items()}
             for i in schema["fields"]
             if i.get("enumLabels") is not None
+            and not isinstance(i.get("enumLabels"), str)
         }
     )
     return

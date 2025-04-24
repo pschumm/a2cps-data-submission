@@ -33,11 +33,13 @@ fields:
   - Female
   - Intersex
   - Male
+  - Unknown
   constraints:
     enum:
     - Female
     - Intersex
     - Male
+    - Unknown
 - name: ACEAdInHmHFrOfF18YrInCode
   title: Adverse Childhood Experience Questionnaire (ACE) - Adult insult humiliate
     hurt fear often first 18 years indicator code
@@ -48,15 +50,16 @@ fields:
     (ACE).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -70,15 +73,16 @@ fields:
     as part of the Adverse Childhood Experience Questionnaire (ACE).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -93,15 +97,16 @@ fields:
     (ACE).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -116,15 +121,16 @@ fields:
     \ (ACE)."
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -139,15 +145,16 @@ fields:
     \ the Adverse Childhood Experience Questionnaire (ACE)."
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -160,15 +167,16 @@ fields:
     Questionnaire (ACE).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -183,15 +191,16 @@ fields:
     gun or knife.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -204,15 +213,16 @@ fields:
     as part of the Adverse Childhood Experience Questionnaire (ACE).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -226,15 +236,16 @@ fields:
     (ACE).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -247,15 +258,16 @@ fields:
     Experience Questionnaire (ACE).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
+    - '-9'
     maximum: ''
     minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
+    '-9': 'Missing'
   standardsMappings:
   - item:
       source: ''
@@ -267,11 +279,8 @@ fields:
     Experience Questionnaire (ACE).
   type: integer
   constraints:
-    pattern: ''
-    enum: ''
-    maximum: ''
-    minimum: ''
-  enumLabels: ''
+    maximum: '10'
+    minimum: '0'
   standardsMappings:
   - item:
       source: ''
