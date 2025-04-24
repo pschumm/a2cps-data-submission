@@ -7,3 +7,4 @@ frictionless==5.17.0
 xmarshal @ git+https://github.com/pschumm/xmarshal.git@d980fd376b7ef3fd0c2376e62c784a54814240a8
 dataforge @ git+https://gitlab.com/pschumm/data-forge.git@372d1b0737c49872352fb7161b2ca0fda8a61801
 nda-tools
+python-dotenv

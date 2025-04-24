@@ -56,17 +56,18 @@
         Questionnaire (PHQ).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -77,17 +78,18 @@
         the past two weeks, as part of the Patient Health Questionnaire (PHQ).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -99,17 +101,18 @@
         Questionnaire (PHQ).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -120,17 +123,18 @@
         weeks, as part of the Patient Health Questionnaire (PHQ).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -141,17 +145,18 @@
         in the past two weeks, as part of the Patient Health Questionnaire (PHQ).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -162,17 +167,18 @@
         in the past two weeks, as part of the Patient Health Questionnaire (PHQ).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -183,17 +189,18 @@
         in the past two weeks, as part of the Patient Health Questionnaire (PHQ).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -205,17 +212,18 @@
         (PHQ).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC
@@ -227,17 +235,18 @@
         Questionnaire (PHQ).
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
         - '2'
         - '3'
+        - '-9'
       enumLabels:
         '0': Not at all
         '1': Several days
         '2': More than half the days
         '3': Nearly every day
+        '-9': Missing
       standardsMappings:
       - item:
           source: CDISC

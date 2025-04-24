@@ -44,7 +44,6 @@
       description: Scale of the severity of the participant/subject feelings and thoughts concerning the statement, "When I'm in pain it’s awful and I feel that it overwhelms me"
       type: integer
       constraints:
-        pattern: ''
         enum:
         - '0'
         - '1'
@@ -62,7 +61,6 @@
       description: Scale of the severity of the participant/subject feelings and thoughts concerning the statement, "When I'm in pain I feel I can’t stand it anymore"
       type: integer
       constraints:
-        pattern: ''
         enum:
           - '0'
           - '1'
@@ -80,7 +78,6 @@
       description: Scale of the severity of the participant/subject feelings and thoughts concerning the statement, "When I'm in pain I become afraid that the pain will get worse"
       type: integer
       constraints:
-        pattern: ''
         enum:
           - '0'
           - '1'
@@ -98,7 +95,6 @@
       description: Scale of the severity of the participant/subject feelings and thoughts concerning the statement, "When I'm in pain I keep thinking about how much it hurts"
       type: integer
       constraints:
-        pattern: ''
         enum:
           - '0'
           - '1'
@@ -116,7 +112,6 @@
       description: Pain Catastrophizing Questionnaire - keep thinking want the pain to stop scale
       type: integer
       constraints:
-        pattern: ''
         enum:
           - '0'
           - '1'
@@ -134,7 +129,6 @@
       description: Pain Catastrophizing Questionnaire - wonder whether something serious may happen scale
       type: integer
       constraints:
-        pattern: ''
         enum:
           - '0'
           - '1'

@@ -43,25 +43,25 @@
     description: Scale which represents the participant's description of his/her sleep quality in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '5'
         - '4'
         - '3'
         - '2'
         - '1'
+        - '-997'
     enumLabels:
       '5': Very Poor
       '4': Poor
       '3': Fair
       '2': Good
       '1': Very Good
+      '-997': Missing
   - name: PROMISSleepWasRefreshScl
     title: Patient-Reported Outcome Measurement Information System (PROMIS) - Sleep refresh assessment past week scale
     description: Scale which represents how often the participant's sleep was refreshing in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '5'
         - '4'
@@ -79,7 +79,6 @@
     description: Scale which represents how often the participant had a problem with sleep in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
     type: integer
     constraints:
-      pattern: ''
       enum:
       - '1'
       - '2'
@@ -97,7 +96,6 @@
     description: Scale which represents how often the participant had difficulty falling asleep in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '1'
         - '2'
@@ -115,7 +113,6 @@
     description: Scale which represents how often the participant's sleep was restless in the past 7 days, as part of the Patient-Reported Outcome Measurement Information System (PROMIS).
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '1'
         - '2'
@@ -133,7 +130,6 @@
     description: Scale which represents the extent to which the participant tried hard to get to sleep in the past 7 days, as a part of the Patient-Reported Outcome Measurement Information System (PROMIS).
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '1'
         - '2'

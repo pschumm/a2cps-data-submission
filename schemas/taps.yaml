@@ -43,7 +43,6 @@
     description: Status indicating the participant's tobacco use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '0'
         - '1'
@@ -61,7 +60,6 @@
     description: Status indicating the male participant's alcohol use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '0'
         - '1'
@@ -81,7 +79,6 @@
     description: Status indicating the female participant's alcohol use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '0'
         - '1'
@@ -101,7 +98,6 @@
     description: Status indicating the participant's drug use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '0'
         - '1'
@@ -119,7 +115,6 @@
     description: Status indicating the participant's perscription medication use in the past 12 months as a part of the Tobacco Alcohol and Prescription medications and other Substance (TAPS)
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '0'
         - '1'
@@ -137,7 +132,6 @@
     description: Indicator evaluating the overall set of responses to the Tobacco Alcohol Prescription medications and other Substance (TAPS) part 1
     type: integer
     constraints:
-      pattern: ''
       enum:
         - '0'
         - '1'
