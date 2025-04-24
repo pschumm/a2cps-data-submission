@@ -125,9 +125,24 @@ Often during the validation step, I notice an issue with the schema, like a valu
 
 Similarly sometimes the steps in the frictionless pipeline validation need to be edited as well, see `generate_uploads/promis-sleep-distrubance.json` [here](https://github.com/a2cps/a2cps-data-submission/commit/95c945ecad35977fb603672c250cf73ba5d940ca#diff-74c8c6db01581519b99b438ddf1a6bced19d5508b33b8f0edc5d681480229ebdL13) but this is relatively uncommon and for the most part these are good to go. 
 
+Now to create the NDA outputs you'll need to add a parameter option to `generate_uploads/create_nda.py` [here](https://github.com/a2cps/a2cps-data-submission/blob/95c945ecad35977fb603672c250cf73ba5d940ca/generate_uploads/create_nda.py#L92)
+
+and add the function mapping simliar to how we did before in the extract script, [here](https://github.com/a2cps/a2cps-data-submission/blob/95c945ecad35977fb603672c250cf73ba5d940ca/generate_uploads/create_nda.py#L75)
+
+and add a simple output function to define the file names ex [here](https://github.com/a2cps/a2cps-data-submission/blob/95c945ecad35977fb603672c250cf73ba5d940ca/generate_uploads/create_nda.py#L59), 
+define a output filepath in the tmp/uploads directory, 
+the "header" line which you can find in the Submission template for a given Data Structure, ex:
+https://nda.nih.gov/data-structure/prsld01
+and pass the path to the HEAL CDE (also in the tmp folder)
+
+After that you can test if the conversion was successful following the "Export, Transform, Validate" section above
+
+
 
 ## Helpful links:
 - https://a2cps-pain.slack.com/files/U017H6H7XGW/F082HPR3UJD/heal_cdes.zip 
 - https://heal.nih.gov/data/common-data-elements-repository 
+- https://nda.nih.gov/general-query.html?q=query=data-structure%20~and~%20searchTerm=prsleep%20~and~%20orderBy=shortName%20~and~%20orderDirection=Ascending%20~and~%20resultsView=tiled-view
+- https://a2cps.atlassian.net/wiki/spaces/DIRC/pages/442990601/NDA+Data+Structure+Status
 
 
