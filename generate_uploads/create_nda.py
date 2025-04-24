@@ -49,6 +49,20 @@ def output_pcs(filepath='tmp/uploads/pcs6.csv',
     output_nda(filepath, header, descriptor, heal_cde)
     return
 
+def output_phq(filepath='tmp/uploads/phq9.csv',
+                header='cde_phq9,01\n',
+                descriptor='generate_uploads/phq9.json',
+                heal_cde='tmp/heal_cde/phq9.csv'):
+    output_nda(filepath, header, descriptor, heal_cde)
+    return
+
+def output_prsleep(filepath='tmp/uploads/prsleep.csv',
+                header='prsld,01\n',
+                descriptor='generate_uploads/promis-sleep-disturbance.json',
+                heal_cde='tmp/heal_cde/prsleep.csv'):
+    output_nda(filepath, header, descriptor, heal_cde)
+    return
+
 
 def main(arg_vals):
     os.makedirs('tmp/uploads', exist_ok=True)
@@ -56,7 +70,9 @@ def main(arg_vals):
                       'prsupport': output_prsupport,
                       'taps': output_taps,
                       'gad': output_gad,
-                      'pcs': output_pcs}
+                      'pcs': output_pcs,
+                      'phq': output_phq,
+                      'prsleep': output_prsleep}
     
     if arg_vals["nda_outputs"] == 'all':
         print('outputing all')
@@ -73,7 +89,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("nda_outputs", 
                         nargs="*",
-                        choices=['all', 'prsupport', 'koos', 'taps', 'gad', 'pcs'],
+                        choices=['all', 'prsupport', 'koos', 'taps', 'gad', 'pcs', 'phq', 'prsleep'],
                         default='all',
                         help="List of NDA structure to output, defaults to all, \
                         but can pass multiple as well, ex: python generate_uploads/create_nda.py koos prsupport taps")

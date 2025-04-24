@@ -30,9 +30,9 @@
     - name: sex
       type: string
       title: "Sex assigned at birth"
-      categories: [Female, Intersex, Male]
+      categories: [Female, Intersex, Male, Unknown]
       constraints:
-        enum: [Female, Intersex, Male]
+        enum: [Female, Intersex, Male, Unknown]
     - name: ESSFSomeoneListenScl
       type: integer
       title: "ESSF scale of having someone who will listen"
