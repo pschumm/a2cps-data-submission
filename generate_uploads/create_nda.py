@@ -1,9 +1,19 @@
 # Transform data for KOOS-12 from HEAL CDE to NDA structure
 
-from frictionless import Pipeline, Resource
-import os
-import csv
 import argparse
+import os
+
+from frictionless import Pipeline, Resource
+
+
+def output_taps2(
+    filepath="tmp/uploads/taps2.csv",
+    header="taps,01\n",
+    descriptor="generate_uploads/taps2.json",
+    heal_cde="tmp/heal_cde/taps2.csv",
+):
+    output_nda(filepath, header, descriptor, heal_cde)
+    return
 
 
 def output_nda(filepath, header, descriptor, heal_cde):
@@ -11,9 +21,7 @@ def output_nda(filepath, header, descriptor, heal_cde):
     with open(filepath, "w") as f:
         f.write(header)
         pipeline = Pipeline.from_descriptor(descriptor)
-        Resource(heal_cde).transform(pipeline).to_pandas().to_csv(
-            f, index=False
-        )
+        Resource(heal_cde).transform(pipeline).to_pandas().to_csv(f, index=False)
     return
 
 
@@ -108,6 +116,8 @@ def main(arg_vals):
         "phq": output_phq,
         "prsleep": output_prsleep,
         "ace": output_ace,
+        # TO DO: combine taps1 and taps2
+        "taps2": output_taps2,
     }
 
     if arg_vals["nda_outputs"] == "all":
@@ -135,6 +145,7 @@ if __name__ == "__main__":
             "phq",
             "prsleep",
             "ace",
+            "taps2",
         ],
         default="all",
         help="List of NDA structure to output, defaults to all, \
