@@ -33,11 +33,13 @@ fields:
   - Female
   - Intersex
   - Male
+  - Unknown
   constraints:
     enum:
     - Female
     - Intersex
     - Male
+    - Unknown
 - name: TAPS2tobaccoYN
   title: Tobacco, Alcohol, Prescription medications, and other Substance (TAPS-2)
     tobacco indicator
@@ -45,12 +47,9 @@ fields:
     Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -66,12 +65,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -87,12 +83,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -107,12 +100,9 @@ fields:
     Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -127,12 +117,9 @@ fields:
     Tobacco, Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -147,12 +134,9 @@ fields:
     Tobacco, Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -168,12 +152,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -189,12 +170,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -209,12 +187,9 @@ fields:
     Prescription medications, and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -230,12 +205,9 @@ fields:
     other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -251,12 +223,9 @@ fields:
     Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -272,12 +241,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -293,12 +259,9 @@ fields:
     and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -314,12 +277,9 @@ fields:
     and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -334,12 +294,9 @@ fields:
     Prescription medications, and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -355,12 +312,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -376,12 +330,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -396,12 +347,9 @@ fields:
     Tobacco, Alcohol, Prescription medications, and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -417,12 +365,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -438,12 +383,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
-    - '1'
-    maximum: ''
-    minimum: ''
+    - '1'    
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -459,12 +401,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -480,12 +419,9 @@ fields:
     medications, and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -501,12 +437,9 @@ fields:
     and other Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -522,12 +455,9 @@ fields:
     2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -543,12 +473,9 @@ fields:
     Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -564,12 +491,9 @@ fields:
     Substance Tool part 2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -585,12 +509,9 @@ fields:
     2 (TAPS-2)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -605,41 +526,35 @@ fields:
     in the Tobacco, Alcohol, Prescription medications, and other Substance Tool part
     2 (TAPS-2)
   type: string
-  constraints:
-    pattern: ''
-    enum: ''
-    maximum: ''
-    minimum: ''
   enumLabels: ''
   standardsMappings:
   - item:
       source: ''
       id: ''
-- name: TAPS2commentsTxt
-  title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
-    2 (TAPS-2) comments free-text
-  description: Free-text comments in the Tobacco, Alcohol, Prescription medications,
-    and other Substance Tool part 2 (TAPS-2)
-  type: string
-  constraints:
-    pattern: ''
-    enum: ''
-    maximum: ''
-    minimum: ''
-  enumLabels: ''
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# - name: TAPS2commentsTxt
+#   title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
+#     2 (TAPS-2) comments free-text
+#   description: Free-text comments in the Tobacco, Alcohol, Prescription medications,
+#     and other Substance Tool part 2 (TAPS-2)
+#   type: string
+#   constraints:
+#     enum: ''
+#   enumLabels: ''
+#   standardsMappings:
+#   - item:
+#       source: ''
+#       id: ''
 - name: TAP2tobaccoScore
   title: Tobacco, Alcohol, Prescription medications, and other Substance Tool part
     2 (TAPS-2) Tobacco score
   description: Calculated score for tobacco usage
   type: integer
   constraints:
-    pattern: ''
     enum:
-    - 0 to 3
+    - '0'
+    - '1'
+    - '2'
+    - '3'
     maximum: 3
     minimum: 0
   enumLabels: ''
@@ -653,9 +568,12 @@ fields:
   description: Calculated score for alcohol usage
   type: integer
   constraints:
-    pattern: ''
     enum:
-    - 0 to 4
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
     maximum: 4
     minimum: 0
   enumLabels: ''
@@ -669,9 +587,11 @@ fields:
   description: Calculated score for cannabis/marijuana usage
   type: integer
   constraints:
-    pattern: ''
     enum:
-    - 0 to 3
+    - '0'
+    - '1'
+    - '2'
+    - '3'
     maximum: 3
     minimum: 0
   enumLabels: ''
@@ -686,9 +606,11 @@ fields:
     usage
   type: integer
   constraints:
-    pattern: ''
     enum:
-    - 0 to 3
+    - '0'
+    - '1'
+    - '2'
+    - '3'
     maximum: 3
     minimum: 0
   enumLabels: ''
@@ -702,9 +624,11 @@ fields:
   description: Calculated score for heroin usage
   type: integer
   constraints:
-    pattern: ''
     enum:
-    - 0 to 3
+    - '0'
+    - '1'
+    - '2'
+    - '3'
     maximum: 3
     minimum: 0
   enumLabels: ''
@@ -718,9 +642,11 @@ fields:
   description: Calculated score for opioid usage
   type: integer
   constraints:
-    pattern: ''
     enum:
-    - 0 to 3
+    - '0'
+    - '1'
+    - '2'
+    - '3'
     maximum: 3
     minimum: 0
   enumLabels: ''
@@ -734,9 +660,11 @@ fields:
   description: Calculated score for sedative usage
   type: integer
   constraints:
-    pattern: ''
     enum:
-    - 0 to 3
+    - '0'
+    - '1'
+    - '2'
+    - '3'
     maximum: 3
     minimum: 0
   enumLabels: ''
@@ -750,9 +678,11 @@ fields:
   description: Calculated score for prescription stimulant usage
   type: integer
   constraints:
-    pattern: ''
     enum:
-    - 0 to 3
+    - '0'
+    - '1'
+    - '2'
+    - '3'
     maximum: 3
     minimum: 0
   enumLabels: ''

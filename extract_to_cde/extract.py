@@ -11,6 +11,183 @@ from dotenv import load_dotenv
 from filter import filter_records_events, get_filter_list, reformat_to_cde
 
 
+def extract_taps2(data):
+    t2codes = {"No": 0, "Yes": 1}
+
+    taps = reformat_to_cde(
+        data,
+        drop_if_all_null=[
+            "taps2tobaccoyn",
+            "taps2tobaccogr10yn",
+            "taps2tobaccogr10ycnt",
+            "taps2tobaccowakingyn",
+            "taps2alcoholyn",
+            "taps2alcoholfem4yn",
+            "taps2alcoholmale5yn",
+            "taps2alcoholfailyn",
+            "taps2alcoholconcernyn",
+            "taps2mjuseyn",
+            "taps2mjweeklyyn",
+            "taps2mjconcernyn",
+            "taps2stimulantyn",
+            "taps2stimulantweeklyyn",
+            "taps2stimulntconcernyn",
+            "taps2heroinyn",
+            "taps2heroinfailyn",
+            "taps2heroinconcernyn",
+            "taps2rxopiateyn",
+            "taps2rxopiatefailyn",
+            "taps2rxopiateconcernyn",
+            "taps2anxietyslpmedyn",
+            "taps2anxietyslpweeklyyn",
+            "taps2anxietyslpconcyn",
+            "taps2adhdmedyn",
+            "taps2adhdmedweeklyyn",
+            "taps2adhdmedconcernyn",
+            "taps2otherdrugsyn",
+            "taps2otherdrugstxt",
+            "tap2tobaccoscore",
+            "tap2alcoholscore",
+            "tap2cannabisscore",
+            "tap2stimulantscore",
+            "tap2heroinscore",
+            "tap2opioidscore",
+            "tap2sedativescore",
+            "tap2rxstimscore",
+        ],
+        null_assignments={"instance": None},
+        rename_columns={
+            "pdqassessdate": "date_administered",
+            "brthdtc": "dob",
+            "taps2tobaccoyn": "TAPS2tobaccoYN",
+            "taps2tobaccogr10yn": "TAPS2tobaccoGr10YN",
+            "taps2tobaccowakingyn": "TAPS2tobaccoWakingYN",
+            "taps2alcoholyn": "TAPS2alcoholYN",
+            "taps2alcoholfem4yn": "TAPS2alcoholFem4YN",
+            "taps2alcoholmale5yn": "TAPS2alcoholMale5YN",
+            "taps2alcoholfailyn": "TAPS2alcoholFailYN",
+            "taps2alcoholconcernyn": "TAPS2alcoholConcernYN",
+            "taps2mjuseyn": "TAPS2mjUseYN",
+            "taps2mjweeklyyn": "TAPS2mjWeeklyYN",
+            "taps2mjconcernyn": "TAPS2mjConcernYN",
+            "taps2stimulantyn": "TAPS2stimulantYN",
+            "taps2stimulantweeklyyn": "TAPS2stimulantWeeklyYN",
+            "taps2stimulntconcernyn": "TAPS2stimulntConcernYN",
+            "taps2heroinyn": "TAPS2heroinYN",
+            "taps2heroinfailyn": "TAPS2heroinFailYN",
+            "taps2heroinconcernyn": "TAPS2heroinConcernYN",
+            "taps2rxopiateyn": "TAPS2RxOpiateYN",
+            "taps2rxopiatefailyn": "TAPS2RxOpiateFailYN",
+            "taps2rxopiateconcernyn": "TAPS2RxOpiateConcernYN",
+            "taps2anxietyslpmedyn": "TAPS2anxietySlpMedYN",
+            "taps2anxietyslpweeklyyn": "TAPS2anxietySlpWeeklyYN",
+            "taps2anxietyslpconcyn": "TAPS2anxietySlpConcYN",
+            "taps2adhdmedyn": "TAPS2adhdMedYN",
+            "taps2adhdmedweeklyyn": "TAPS2adhdMedWeeklyYN",
+            "taps2adhdmedconcernyn": "TAPS2adhdMedConcernYN",
+            "taps2otherdrugsyn": "TAPS2otherDrugsYN",
+            "taps2otherdrugstxt": "TAPS2otherDrugsTxt",
+            "tap2tobaccoscore": "TAP2tobaccoScore",
+            "tap2alcoholscore": "TAP2alcoholScore",
+            "tap2cannabisscore": "TAP2cannabisScore",
+            "tap2stimulantscore": "TAP2stimulantScore",
+            "tap2heroinscore": "TAP2heroinScore",
+            "tap2opioidscore": "TAP2opioidScore",
+            "tap2sedativescore": "TAP2sedativeScore",
+            "tap2rxstimscore": "TAP2RXstimScore",
+        },
+        replace_values={
+            "sex": {np.NaN: "Unknown", None: "Unknown"},
+            "TAPS2anxietySlpWeeklyYN": t2codes,
+            # TODO figure out what to do about that text
+            # "TAPS2commentsTxt": t2codes,
+            "TAP2sedativeScore": t2codes,
+            "TAPS2heroinFailYN": t2codes,
+            "TAPS2alcoholFailYN": t2codes,
+            "TAPS2adhdMedWeeklyYN": t2codes,
+            "TAPS2mjConcernYN": t2codes,
+            "TAPS2mjWeeklyYN": t2codes,
+            "TAPS2alcoholMale5YN": t2codes,
+            "TAPS2alcoholYN": t2codes,
+            "TAPS2alcoholFem4YN": t2codes,
+            "TAP2stimulantScore": t2codes,
+            "TAPS2adhdMedYN": t2codes,
+            "TAP2heroinScore": t2codes,
+            "TAPS2tobaccoYN": t2codes,
+            "TAPS2stimulntConcernYN": t2codes,
+            "TAPS2stimulantYN": t2codes,
+            "TAPS2RxOpiateConcernYN": t2codes,
+            "TAP2cannabisScore": t2codes,
+            "TAPS2tobaccoWakingYN": t2codes,
+            "TAPS2otherDrugsTxt": t2codes,
+            "TAPS2heroinConcernYN": t2codes,
+            "TAP2alcoholScore": t2codes,
+            "TAPS2alcoholConcernYN": t2codes,
+            "TAPS2heroinYN": t2codes,
+            "TAPS2anxietySlpMedYN": t2codes,
+            "TAP2tobaccoScore": t2codes,
+            "TAPS2mjUseYN": t2codes,
+            "TAPS2anxietySlpConcYN": t2codes,
+            "TAPS2adhdMedConcernYN": t2codes,
+            "TAPS2otherDrugsYN": t2codes,
+            "TAPS2RxOpiateYN": t2codes,
+            "TAP2opioidScore": t2codes,
+            "TAPS2stimulantWeeklyYN": t2codes,
+            "TAPS2tobaccoGr10YN": t2codes,
+            "TAPS2RxOpiateFailYN": t2codes,
+            "TAP2RXstimScore": t2codes,
+        },
+        output_columns=[
+            "date_administered",
+            "instance",
+            "dob",
+            "sex",
+            "TAPS2tobaccoYN",
+            "TAPS2tobaccoGr10YN",
+            "TAPS2tobaccoWakingYN",
+            "TAPS2alcoholYN",
+            "TAPS2alcoholFem4YN",
+            "TAPS2alcoholMale5YN",
+            "TAPS2alcoholFailYN",
+            "TAPS2alcoholConcernYN",
+            "TAPS2mjUseYN",
+            "TAPS2mjWeeklyYN",
+            "TAPS2mjConcernYN",
+            "TAPS2stimulantYN",
+            "TAPS2stimulantWeeklyYN",
+            "TAPS2stimulntConcernYN",
+            "TAPS2heroinYN",
+            "TAPS2heroinFailYN",
+            "TAPS2heroinConcernYN",
+            "TAPS2RxOpiateYN",
+            "TAPS2RxOpiateFailYN",
+            "TAPS2RxOpiateConcernYN",
+            "TAPS2anxietySlpMedYN",
+            "TAPS2anxietySlpWeeklyYN",
+            "TAPS2anxietySlpConcYN",
+            "TAPS2adhdMedYN",
+            "TAPS2adhdMedWeeklyYN",
+            "TAPS2adhdMedConcernYN",
+            "TAPS2otherDrugsYN",
+            "TAPS2otherDrugsTxt",
+            # "TAPS2commentsTxt",
+            # TO DO: score calculations
+            "TAP2tobaccoScore",
+            "TAP2alcoholScore",
+            "TAP2cannabisScore",
+            "TAP2stimulantScore",
+            "TAP2heroinScore",
+            "TAP2opioidScore",
+            "TAP2sedativeScore",
+            "TAP2RXstimScore",
+        ],
+    )
+
+    # Write to delimited file
+    taps.to_csv("tmp/heal_cde/taps2.csv")
+    return
+
+
 def extract_ace(data):
     codes = {"No": 0, "Yes": 1, np.NaN: -9, None: -9}
 
@@ -625,6 +802,7 @@ def main(arg_vals):
             "Patient Health Questionnaire Depression Scale (PHQ) Scored",
             "PROMIS SF v1.0 - Sleep Disturbance 6a (Sleep I)",
             "Adverse Childhood Experience Questionnaire (ACE)",
+            "TAPS-2",
         ]
     )
 
@@ -653,9 +831,7 @@ def main(arg_vals):
     # Dates and ages are a required field, so we drop anyone who is missing those
     # as they will not validate against NDA
     # TODO: find and fix subjects with missing dates
-    data.dropna(
-        axis=0, how="any", subset=["pdqassessdate", "brthdtc"], inplace=True
-    )
+    data.dropna(axis=0, how="any", subset=["pdqassessdate", "brthdtc"], inplace=True)
 
     # mapping of argument name to function name
     output_methods = {
@@ -667,6 +843,7 @@ def main(arg_vals):
         "phq": extract_phq9,
         "prsleep": extract_prsleep,
         "ace": extract_ace,
+        "taps2": extract_taps2,
     }
 
     if arg_vals["extract_heal"] == "all":
@@ -689,6 +866,7 @@ if __name__ == "__main__":
             "prsupport",
             "koos",
             "taps",
+            "taps2",
             "gad",
             "pcs",
             "phq",
