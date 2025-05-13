@@ -10,6 +10,7 @@ from dataforge.sources.redcap import REDCapProject
 from dotenv import load_dotenv
 from filter import filter_records_events, get_filter_list, reformat_to_cde
 
+
 def extract_taps2(data):
     t2codes = {"No": 0, "Yes": 1}
 
@@ -174,6 +175,7 @@ def extract_taps2(data):
     # Write to delimited file
     taps.to_csv("tmp/heal_cde/taps2.csv")
     return
+
 
 def extract_promis_fatigue(data):
     codes = {
@@ -856,12 +858,9 @@ def main(arg_vals):
             "Patient Health Questionnaire Depression Scale (PHQ) Scored",
             "PROMIS SF v1.0 - Sleep Disturbance 6a (Sleep I)",
             "Adverse Childhood Experience Questionnaire (ACE)",
-<<<<<<< HEAD
             "TAPS-2",
-=======
             "The Big Five Inventory (BFI-2-S)",
             "PROMIS SF v1.0 - Fatigue 7a",
->>>>>>> e7cb447 (add promis-fatigue)
         ]
     )
 
@@ -890,7 +889,9 @@ def main(arg_vals):
     # Dates and ages are a required field, so we drop anyone who is missing those
     # as they will not validate against NDA
     # TODO: find and fix subjects with missing dates
-    data.dropna(axis=0, how="any", subset=["pdqassessdate", "brthdtc"], inplace=True)
+    data.dropna(
+        axis=0, how="any", subset=["pdqassessdate", "brthdtc"], inplace=True
+    )
 
     # mapping of argument name to function name
     output_methods = {
@@ -902,11 +903,8 @@ def main(arg_vals):
         "phq": extract_phq9,
         "prsleep": extract_prsleep,
         "ace": extract_ace,
-<<<<<<< HEAD
         "taps2": extract_taps2,
-=======
         "promis_fatigue": extract_promis_fatigue,
->>>>>>> e7cb447 (add promis-fatigue)
     }
 
     if arg_vals["extract_heal"] == "all":
