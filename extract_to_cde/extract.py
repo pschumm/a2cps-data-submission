@@ -10,7 +10,6 @@ from dataforge.sources.redcap import REDCapProject
 from dotenv import load_dotenv
 from filter import filter_records_events, get_filter_list, reformat_to_cde
 
-
 def extract_taps2(data):
     t2codes = {"No": 0, "Yes": 1}
 
@@ -174,6 +173,72 @@ def extract_taps2(data):
 
     # Write to delimited file
     taps.to_csv("tmp/heal_cde/taps2.csv")
+    return
+
+def extract_promis_fatigue(data):
+    codes = {
+        "Never": 1,
+        "Rarely": 2,
+        "Sometimes": 3,
+        "Often": 4,
+        "Always": 5,
+        "": None,
+    }
+
+    # TODO: add scores (raw and t)
+    # TODO: add fat_se and fat_theta (needed in NDA)
+    cde = reformat_to_cde(
+        data,
+        drop_if_all_null=[
+            "fat7atiredscl",
+            "fat7aexhaustionscl",
+            "fat7anoenergytscl",
+            "fat7aworklimitscl",
+            "fat7athinkclearscl",
+            "fat7abathscl",
+            "fat7aexercisescl",
+        ],
+        null_assignments={"instance": None},
+        rename_columns={
+            "brthdtc": "dob",
+            "pdqassessdate": "date_administered",
+            "fat7atiredscl": "FAT7AtiredScl",
+            "fat7aexhaustionscl": "FAT7AExhaustionScl",
+            "fat7anoenergytscl": "FAT7AnoEnergytScl",
+            "fat7aworklimitscl": "FAT7AworkLimitScl",
+            "fat7athinkclearscl": "FAT7AthinkClearScl",
+            "fat7abathscl": "FAT7AbathScl",
+            "fat7aexercisescl": "FAT7AexerciseScl",
+        },
+        replace_values={
+            "sex": {np.NaN: "Unknown", None: "Unknown"},
+            "FAT7AExhaustionScl": codes,
+            "FAT7AexerciseScl": codes,
+            "FAT7AworkLimitScl": codes,
+            "FAT7aTotalScore": codes,
+            "FAT7aTScore": codes,
+            "FAT7AnoEnergytScl": codes,
+            "FAT7AtiredScl": codes,
+            "FAT7AthinkClearScl": codes,
+            "FAT7AbathScl": codes,
+        },
+        output_columns=[
+            "date_administered",
+            "instance",
+            "dob",
+            "sex",
+            "FAT7AtiredScl",
+            "FAT7AExhaustionScl",
+            "FAT7AnoEnergytScl",
+            "FAT7AworkLimitScl",
+            "FAT7AthinkClearScl",
+            "FAT7AbathScl",
+            "FAT7AexerciseScl",
+        ],
+    )
+    # Write to delimited file
+    Path("tmp/heal_cde").mkdir(exist_ok=True)
+    cde.to_csv("tmp/heal_cde/promis_fatigue.csv")
     return
 
 
@@ -791,7 +856,12 @@ def main(arg_vals):
             "Patient Health Questionnaire Depression Scale (PHQ) Scored",
             "PROMIS SF v1.0 - Sleep Disturbance 6a (Sleep I)",
             "Adverse Childhood Experience Questionnaire (ACE)",
+<<<<<<< HEAD
             "TAPS-2",
+=======
+            "The Big Five Inventory (BFI-2-S)",
+            "PROMIS SF v1.0 - Fatigue 7a",
+>>>>>>> e7cb447 (add promis-fatigue)
         ]
     )
 
@@ -832,7 +902,11 @@ def main(arg_vals):
         "phq": extract_phq9,
         "prsleep": extract_prsleep,
         "ace": extract_ace,
+<<<<<<< HEAD
         "taps2": extract_taps2,
+=======
+        "promis_fatigue": extract_promis_fatigue,
+>>>>>>> e7cb447 (add promis-fatigue)
     }
 
     if arg_vals["extract_heal"] == "all":
@@ -861,6 +935,7 @@ if __name__ == "__main__":
             "phq",
             "prsleep",
             "ace",
+            "promis_fatigue",
         ],
         default="all",
         help="List of HEAL structures to extract, defaults to all, \

@@ -33,26 +33,25 @@ fields:
   - Female
   - Intersex
   - Male
+  - Unknown
   constraints:
     enum:
     - Female
     - Intersex
     - Male
+    - Unknown
 - name: FAT7AtiredScl
   title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a tired scale
   description: 'Scale of extent to which the participant felt   tired within the last
     7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -69,15 +68,12 @@ fields:
     within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -94,15 +90,12 @@ fields:
     7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -119,15 +112,12 @@ fields:
     the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -144,15 +134,12 @@ fields:
     within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -169,15 +156,12 @@ fields:
     shower within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -194,15 +178,12 @@ fields:
     within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '5'
     - '4'
     - '3'
     - '2'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Never
     '4': Rarely
@@ -213,32 +194,22 @@ fields:
   - item:
       source: ''
       id: ''
-- name: FAT7aTotalScore
-  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a overall total score
-  description: 'Calculated total (raw) score for the PROMIS Fatigue - Short Form 7a '
-  type: integer
-  constraints:
-    pattern: ''
-    enum: ''
-    maximum: ''
-    minimum: ''
-  enumLabels: ''
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
-- name: FAT7aTScore
-  title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a normalized t-score
-  description: 'Calculated normalized t-score for the PROMIS Fatigue - Short Form
-    7a '
-  type: integer
-  constraints:
-    pattern: ''
-    enum: ''
-    maximum: ''
-    minimum: ''
-  enumLabels: ''
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# - name: FAT7aTotalScore
+#   title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a overall total score
+#   description: 'Calculated total (raw) score for the PROMIS Fatigue - Short Form 7a '
+#   type: integer
+#   enumLabels: ''
+#   standardsMappings:
+#   - item:
+#       source: ''
+#       id: ''
+# - name: FAT7aTScore
+#   title: PROMIS Item Bank v1.0 - Fatigue - Short Form 7a normalized t-score
+#   description: 'Calculated normalized t-score for the PROMIS Fatigue - Short Form
+#     7a '
+#   type: integer
+#   enumLabels: ''
+#   standardsMappings:
+#   - item:
+#       source: ''
+#       id: ''
