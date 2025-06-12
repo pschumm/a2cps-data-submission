@@ -42,6 +42,20 @@ def print_schema_mappings(schema):
             for i in schema["fields"]
             if i.get("enumLabels") is not None
             and not isinstance(i.get("enumLabels"), str)
+            and not i.get("enumLabels") == ""
         }
     )
+    return
+
+
+def print_lowercase(fields, schema_fields):
+    for i in schema_fields:
+        if i.lower() in fields:
+            print("'" + i.lower() + "':", "'" + i + "',")
+    return
+
+
+def print_code_map(schema, code_names):
+    for i in {i["name"] for i in schema["fields"] if i.get("enumLabels") is not None}:
+        print("'" + i + "'" + ": {},".format(code_names))
     return
