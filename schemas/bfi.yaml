@@ -44,15 +44,12 @@ fields:
     who is reserved ; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -69,15 +66,12 @@ fields:
     who is generally trusting ; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -94,15 +88,12 @@ fields:
     who tends to be lazy ; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -119,15 +110,12 @@ fields:
     who is relaxed, handles stress well ; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -144,15 +132,12 @@ fields:
     who  has few artstic interests ; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -169,15 +154,12 @@ fields:
     who is outgoing, sociable ; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -194,15 +176,12 @@ fields:
     who  tends to find fault in others; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -219,15 +198,12 @@ fields:
     who does a thorough job ; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -244,15 +220,12 @@ fields:
     who gets nervous easily ; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -269,15 +242,12 @@ fields:
     who  has an active imagination; as part of the Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Disagree Strongly
     '2': Disagree a little
@@ -294,7 +264,6 @@ fields:
     Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 10
     minimum: 2
@@ -309,7 +278,6 @@ fields:
     Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 10
     minimum: 2
@@ -324,7 +292,6 @@ fields:
     Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 10
     minimum: 2
@@ -339,7 +306,6 @@ fields:
     Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 10
     minimum: 2
@@ -354,7 +320,6 @@ fields:
     of the  Big Five Inventory-10 (BFI-10)
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 10
     minimum: 2

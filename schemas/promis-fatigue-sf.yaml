@@ -44,15 +44,12 @@ fields:
     7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -69,15 +66,12 @@ fields:
     within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -94,15 +88,12 @@ fields:
     7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -119,15 +110,12 @@ fields:
     the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -144,15 +132,12 @@ fields:
     within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -169,15 +154,12 @@ fields:
     shower within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -194,15 +176,12 @@ fields:
     within the last 7 days as part of the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '5'
     - '4'
     - '3'
     - '2'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Never
     '4': Rarely
@@ -218,10 +197,7 @@ fields:
   description: 'Calculated total (raw) score for the PROMIS Fatigue - Short Form 7a '
   type: integer
   constraints:
-    pattern: ''
     enum: ''
-    maximum: ''
-    minimum: ''
   enumLabels: ''
   standardsMappings:
   - item:
@@ -233,10 +209,7 @@ fields:
     7a '
   type: integer
   constraints:
-    pattern: ''
     enum: ''
-    maximum: ''
-    minimum: ''
   enumLabels: ''
   standardsMappings:
   - item:

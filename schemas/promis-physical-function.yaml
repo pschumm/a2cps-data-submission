@@ -44,15 +44,12 @@ fields:
     the PROMIS Physical Function - Short Form 8b (PFA)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Without any difficulty
     '4': With a little difficulty
@@ -69,15 +66,12 @@ fields:
     PROMIS Physical Function - Short Form 8b (PFA)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Without any difficulty
     '4': With a little difficulty
@@ -94,15 +88,12 @@ fields:
     Short Form 8b (PFA)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Without any difficulty
     '4': With a little difficulty
@@ -119,15 +110,12 @@ fields:
     - Short Form 8b (PFA)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Without any difficulty
     '4': With a little difficulty
@@ -144,15 +132,12 @@ fields:
     Physical Function - Short Form 8b (PFA)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Without any difficulty
     '4': With a little difficulty
@@ -169,15 +154,12 @@ fields:
     Function - Short Form 8b (PFA)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Without any difficulty
     '4': With a little difficulty
@@ -194,15 +176,12 @@ fields:
     - Short Form 8b (PFA)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Without any difficulty
     '4': With a little difficulty
@@ -219,15 +198,12 @@ fields:
     - Short Form 8b (PFA)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Without any difficulty
     '4': With a little difficulty
@@ -244,7 +220,6 @@ fields:
     Form 8b (PFA) items
   type: integer
   constraints:
-    pattern: ''
     enum:
     - 8 to 40
     maximum: 40
@@ -265,10 +240,7 @@ fields:
     Physical Function - Short Form 8b (PFA) items
   type: integer
   constraints:
-    pattern: ''
     enum: ''
-    maximum: ''
-    minimum: ''
   enumLabels:
     '5': Without any difficulty
     '4': With a little difficulty

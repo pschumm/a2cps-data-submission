@@ -46,15 +46,12 @@ fields:
     (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -72,15 +69,12 @@ fields:
     Misuse Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -99,15 +93,12 @@ fields:
     the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -126,15 +117,12 @@ fields:
     Misuse Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -152,15 +140,12 @@ fields:
     (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -178,15 +163,12 @@ fields:
     (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -203,15 +185,12 @@ fields:
     30 days, as a part of Current Opioid Misuse Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -228,15 +207,12 @@ fields:
     in the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -255,15 +231,12 @@ fields:
     (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -282,15 +255,12 @@ fields:
     Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -308,15 +278,12 @@ fields:
     Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -335,15 +302,12 @@ fields:
     of Current Opioid Misuse Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -360,15 +324,12 @@ fields:
     in the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -387,15 +348,12 @@ fields:
     (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -412,15 +370,12 @@ fields:
     someone else in the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -438,15 +393,12 @@ fields:
     (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -463,15 +415,12 @@ fields:
     in the past 30 days, as a part of Current Opioid Misuse Measure (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Never
     '1': Seldom
@@ -488,7 +437,6 @@ fields:
     (COMM).
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 68
     minimum: 0

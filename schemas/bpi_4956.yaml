@@ -44,7 +44,6 @@ fields:
     Pain Inventory (BPI) form.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -73,7 +72,6 @@ fields:
     as part of the Brief Pain Inventory (BPI) form.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -102,7 +100,6 @@ fields:
     subject, as part of the Brief Pain Inventory (BPI) form.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -131,7 +128,6 @@ fields:
     the Brief Pain Inventory (BPI) form.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -159,7 +155,6 @@ fields:
   description: Calculated score for the Brief Pain Inventory (BPI) Pain Severity items
   type: integer
   constraints:
-    pattern: ''
     enum: ''
   enumLabels: ''
   standardsMappings:

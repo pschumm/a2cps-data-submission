@@ -60,7 +60,7 @@ The general process is:
 - transform to match HEAL CDE format
 - validate HEAL format
 - transform to NDA format
-- validate HEAL format
+- validate NDA format
 
 You can extract either a single form, multiple forms, or all if you use no arguments, see `python extract_to_cde/extract.py --help` for details:
 

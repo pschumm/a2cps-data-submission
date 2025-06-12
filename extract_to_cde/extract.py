@@ -738,6 +738,7 @@ def extract_prsleep(data):
             "promistryhardgettoslpscl": "PROMISTryHardGetToSlpScl",
         },
         replace_values={
+            # TO DO: HEAL codes for "PROMISSleepWasRefreshScl" are flipped
             "PROMISSleepWasRefreshScl": codes,
             "PROMISSleepQualityScl": codes,
             "PROMISTryHardGetToSlpScl": codes,

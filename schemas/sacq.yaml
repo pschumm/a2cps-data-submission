@@ -44,12 +44,9 @@ fields:
     the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -63,12 +60,9 @@ fields:
     heart disease as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -82,12 +76,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -101,12 +92,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -120,12 +108,9 @@ fields:
     high blood pressure as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -140,12 +125,9 @@ fields:
     activities as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -159,12 +141,9 @@ fields:
     the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -178,12 +157,9 @@ fields:
     lung disease as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -197,12 +173,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -216,12 +189,9 @@ fields:
     Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -235,12 +205,9 @@ fields:
     diabetes as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -254,12 +221,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -273,12 +237,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -292,12 +253,9 @@ fields:
     ulcer or stomach disease as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -312,12 +270,9 @@ fields:
     activities as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -331,12 +286,9 @@ fields:
     of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -350,12 +302,9 @@ fields:
     kidney disease as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -369,12 +318,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -388,12 +334,9 @@ fields:
     the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -407,12 +350,9 @@ fields:
     liver disease as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -426,12 +366,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -445,12 +382,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -464,12 +398,9 @@ fields:
     anemia or other blood disease as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -483,12 +414,9 @@ fields:
     activities as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -502,12 +430,9 @@ fields:
     Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -521,12 +446,9 @@ fields:
     cancer as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -540,12 +462,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -559,12 +478,9 @@ fields:
     Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -578,12 +494,9 @@ fields:
     depression as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -597,12 +510,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -616,12 +526,9 @@ fields:
     arthritis as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -636,12 +543,9 @@ fields:
     Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -655,12 +559,9 @@ fields:
     the participant's activities as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -674,12 +575,9 @@ fields:
     Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -693,12 +591,9 @@ fields:
     back pain as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -712,12 +607,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -731,12 +623,9 @@ fields:
     part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -750,12 +639,9 @@ fields:
     rheumatoid arthritis as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -770,12 +656,9 @@ fields:
     activities as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -789,12 +672,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire; first problem
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -809,10 +689,7 @@ fields:
     the participant has as part of the Self-Administered Comorbidity Questionnaire
   type: integer
   constraints:
-    pattern: ''
     enum: ''
-    maximum: ''
-    minimum: ''
   enumLabels: ''
   standardsMappings:
   - item:
@@ -825,12 +702,9 @@ fields:
     the first other medical problem as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -845,12 +719,9 @@ fields:
     activities as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -864,12 +735,9 @@ fields:
     as part of the Self-Administered Comorbidity Questionnaire; second problem
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -883,10 +751,7 @@ fields:
     the participant has as part of the Self-Administered Comorbidity Questionnaire
   type: integer
   constraints:
-    pattern: ''
     enum: ''
-    maximum: ''
-    minimum: ''
   enumLabels: ''
   standardsMappings:
   - item:
@@ -899,12 +764,9 @@ fields:
     Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -919,12 +781,9 @@ fields:
     participant's activities as part of the Self-Administered Comorbidity Questionnaire.
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - ' 1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -939,7 +798,6 @@ fields:
     including the two open-ended questions
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 45
     minimum: 0
@@ -955,7 +813,6 @@ fields:
     including only the items with problem listed
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 39
     minimum: 0

@@ -45,12 +45,9 @@ fields:
     (RAPA)'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -65,12 +62,9 @@ fields:
     of Physical Activity (RAPA)'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -85,12 +79,9 @@ fields:
     (RAPA)'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -105,12 +96,9 @@ fields:
     of Physical Activity (RAPA)'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -124,12 +112,9 @@ fields:
     activity, as part of the Rapid Assessment of Physical Activity (RAPA)'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -144,12 +129,9 @@ fields:
     of Physical Activity (RAPA)'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -164,12 +146,9 @@ fields:
     of Physical Activity (RAPA)'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -184,12 +163,9 @@ fields:
     (RAPA)'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -204,12 +180,9 @@ fields:
     (RAPA)'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': 'No'
     '1': 'Yes'
@@ -223,7 +196,6 @@ fields:
     (RAPA)
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 7
     minimum: 1
@@ -238,15 +210,12 @@ fields:
     (RAPA)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': sedentary
     '2': under-active
@@ -263,14 +232,11 @@ fields:
     (RAPA) part 2: Strength & Flexibility'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': strength only
     '2': flexibility only

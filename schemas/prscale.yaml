@@ -47,15 +47,12 @@ fields:
     I will get back out there.'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -73,15 +70,12 @@ fields:
     I still work to accomplish my goals'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -99,15 +93,12 @@ fields:
     I push through it.'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -125,15 +116,12 @@ fields:
     I try to continue working.'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -151,15 +139,12 @@ fields:
     I like to stay active.'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -177,15 +162,12 @@ fields:
     I focus on positive attitude.'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -203,15 +185,12 @@ fields:
     I keep a positive attitude'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -229,15 +208,12 @@ fields:
     \ It doesn\u2019t affect my happiness."
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -255,15 +231,12 @@ fields:
     I still find joy in my life.'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -281,15 +254,12 @@ fields:
     I keep a hopeful attitude.'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -307,15 +277,12 @@ fields:
     \ I don\u2019t let it get me down."
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -333,15 +300,12 @@ fields:
     \ I don\u2019t let it upset me."
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -359,15 +323,12 @@ fields:
     I avoid negative thoughts.'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -385,15 +346,12 @@ fields:
     I try to stay relaxed.'
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
     - '2'
     - '3'
     - '4'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -409,7 +367,6 @@ fields:
   description: 'Calculated total (summed) score for the Pain Resilience Score'
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 56
     minimum: 0
@@ -424,7 +381,6 @@ fields:
     the Pain Resilience Score'
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 20
     minimum: 0
@@ -439,7 +395,6 @@ fields:
     Resilience Score'
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 36
     minimum: 0

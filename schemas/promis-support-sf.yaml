@@ -45,15 +45,12 @@ fields:
     6a (ISSF) '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -70,15 +67,12 @@ fields:
     doctor if needed, as part of the PROMIS Instrumental Support Short Form 6a (ISSF)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -96,15 +90,12 @@ fields:
     Form 6a (ISSF)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -121,15 +112,12 @@ fields:
     part of the PROMIS Instrumental Support Short Form 6a (ISSF) '
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -147,15 +135,12 @@ fields:
     \ Short Form 6a (ISSF) "
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -172,15 +157,12 @@ fields:
     as part of the PROMIS Instrumental Support Short Form 6a (ISSF)
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '1': Never
     '2': Rarely
@@ -197,7 +179,6 @@ fields:
     Form 6a (ISSF) items
   type: integer
   constraints:
-    pattern: ''
     enum: ''
     maximum: 30
     minimum: 6
@@ -212,10 +193,7 @@ fields:
     Instrumental Support Short Form 6a (ISSF) items
   type: integer
   constraints:
-    pattern: ''
     enum: ''
-    maximum: ''
-    minimum: ''
   enumLabels: ''
   standardsMappings:
   - item:

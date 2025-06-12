@@ -43,7 +43,6 @@ fields:
   description: ''
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -56,8 +55,6 @@ fields:
     - '8'
     - '9'
     - '10'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Does not interfere
     '1': '1'
@@ -79,7 +76,6 @@ fields:
   description: ''
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -92,8 +88,6 @@ fields:
     - '8'
     - '9'
     - '10'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Does not interfere
     '1': '1'
@@ -115,7 +109,6 @@ fields:
   description: ''
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -128,8 +121,6 @@ fields:
     - '8'
     - '9'
     - '10'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Does not interfere
     '1': '1'
@@ -151,7 +142,6 @@ fields:
   description: ''
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -164,8 +154,6 @@ fields:
     - '8'
     - '9'
     - '10'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Does not interfere
     '1': '1'
@@ -187,7 +175,6 @@ fields:
   description: ''
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -200,8 +187,6 @@ fields:
     - '8'
     - '9'
     - '10'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Does not interfere
     '1': '1'
@@ -223,7 +208,6 @@ fields:
   description: ''
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -236,8 +220,6 @@ fields:
     - '8'
     - '9'
     - '10'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Does not interfere
     '1': '1'
@@ -259,7 +241,6 @@ fields:
   description: ''
   type: integer
   constraints:
-    pattern: ''
     enum:
     - '0'
     - '1'
@@ -272,8 +253,6 @@ fields:
     - '8'
     - '9'
     - '10'
-    maximum: ''
-    minimum: ''
   enumLabels:
     '0': Does not interfere
     '1': '1'
