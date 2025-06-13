@@ -6,6 +6,16 @@ import os
 from frictionless import Pipeline, Resource
 
 
+def output_sacq(
+    filepath="tmp/uploads/sacq.csv",
+    header="sacq,01\n",
+    descriptor="generate_uploads/sacq01.json",
+    heal_cde="tmp/heal_cde/sacq.csv",
+):
+    output_nda(filepath, header, descriptor, heal_cde)
+    return
+
+
 def output_taps2(
     filepath="tmp/uploads/taps2.csv",
     header="taps,01\n",
@@ -118,6 +128,7 @@ def main(arg_vals):
         "ace": output_ace,
         # TO DO: combine taps1 and taps2
         "taps2": output_taps2,
+        "sacq": output_sacq,
     }
 
     if arg_vals["nda_outputs"] == "all":
@@ -146,6 +157,7 @@ if __name__ == "__main__":
             "prsleep",
             "ace",
             "taps2",
+            "sacq",
         ],
         default="all",
         help="List of NDA structure to output, defaults to all, \

@@ -33,11 +33,13 @@ fields:
   - Female
   - Intersex
   - Male
+  - Unknown
   constraints:
     enum:
     - Female
     - Intersex
     - Male
+    - Unknown
 - name: SCQHeartDx
   title: Self-Administered Comorbidity Questionnaire (SCQ) heart disease
   description: Code indicating whether the participant has heart disease as part of
@@ -70,22 +72,22 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQHeartDxActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) heart disease limits activity
-  description: Code indicating whether heart disease limits the participant's activities
-    as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQHeartDxActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) heart disease limits activity
+# #   description: Code indicating whether heart disease limits the participant's activities
+# #     as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQHtnDx
   title: Self-Administered Comorbidity Questionnaire (SCQ) high blood pressure
   description: Code indicating whether the participant has high blood pressure (hypertension)
@@ -118,23 +120,23 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQHtnActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) high blood pressure limits
-    activity
-  description: Code indicating whether high blood pressure limits the participant's
-    activities as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQHtnActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) high blood pressure limits
+# #     activity
+# #   description: Code indicating whether high blood pressure limits the participant's
+# #     activities as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQLungDx
   title: Self-Administered Comorbidity Questionnaire (SCQ) lung disease
   description: Code indicating whether the participant has lung disease as part of
@@ -167,22 +169,22 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQLungDxActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) lung disease limits activity
-  description: Code indicating whether lung disease limits the participant's activities
-    as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQLungDxActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) lung disease limits activity
+# #   description: Code indicating whether lung disease limits the participant's activities
+# #     as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQDM
   title: Self-Administered Comorbidity Questionnaire (SCQ) diabetes
   description: Code indicating whether the participant has diabetes as part of the
@@ -215,22 +217,22 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQDMActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) diabetes limits activity
-  description: Code indicating whether diabetes limits the participant's activities
-    as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQDMActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) diabetes limits activity
+# #   description: Code indicating whether diabetes limits the participant's activities
+# #     as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQStomachDx
   title: Self-Administered Comorbidity Questionnaire (SCQ) stomach disease
   description: Code indicating whether the participant has ulcer or stomach disease
@@ -263,23 +265,23 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQStomachDxActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) stomach disease limits
-    activity
-  description: Code indicating whether ulcer or stomach disease limits the participant's
-    activities as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQStomachDxActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) stomach disease limits
+# #     activity
+# #   description: Code indicating whether ulcer or stomach disease limits the participant's
+# #     activities as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQKidneyDx
   title: Self-Administered Comorbidity Questionnaire (SCQ) kidney disease
   description: Code indicating whether the participant has kidney disease as part
@@ -312,22 +314,22 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQKidneyDxActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) kidney disease limits activity
-  description: Code indicating whether kidney disease limits the participant's activities
-    as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQKidneyDxActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) kidney disease limits activity
+# #   description: Code indicating whether kidney disease limits the participant's activities
+# #     as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQLiverDx
   title: Self-Administered Comorbidity Questionnaire (SCQ) liver disease
   description: Code indicating whether the participant has liver disease as part of
@@ -360,22 +362,22 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQLiverDxActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) liver disease limits activity
-  description: Code indicating whether liver disease limits the participant's activities
-    as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQLiverDxActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) liver disease limits activity
+# #   description: Code indicating whether liver disease limits the participant's activities
+# #     as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQBloodDx
   title: Self-Administered Comorbidity Questionnaire (SCQ) blood disease
   description: Code indicating whether the participant has anemia or other blood disease
@@ -408,22 +410,22 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQBloodDxActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) blood disease limits activity
-  description: Code indicating whether anemia or other blood disease limits the participant's
-    activities as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQBloodDxActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) blood disease limits activity
+# #   description: Code indicating whether anemia or other blood disease limits the participant's
+# #     activities as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQCancer
   title: Self-Administered Comorbidity Questionnaire (SCQ) cancer
   description: Code indicating whether the participant has cancer as part of the Self-Administered
@@ -456,22 +458,22 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQCancerActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) cancer limits activity
-  description: Code indicating whether cancer limits the participant's activities
-    as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQCancerActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) cancer limits activity
+# #   description: Code indicating whether cancer limits the participant's activities
+# #     as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQDepressn
   title: Self-Administered Comorbidity Questionnaire (SCQ) depression
   description: Code indicating whether the participant has depression as part of the
@@ -504,71 +506,71 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQDepressnActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) depression limits activity
-  description: Code indicating whether depression limits the participant's activities
-    as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
-- name: SCQOA
-  title: Self-Administered Comorbidity Questionnaire (SCQ) osteoarthritis
-  description: Code indicating whether the participant has osteoarthritis, degenerative
-    arthritis as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
-- name: SCQOAtreat
-  title: Self-Administered Comorbidity Questionnaire (SCQ) osteoarthritis treatment
-  description: Code indicating whether the participant is receiving treatment for
-    osteoarthritis, degenerative arthritis as part of the Self-Administered Comorbidity
-    Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
-- name: SCQOAActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) osteoarthritis limits activity
-  description: Code indicating whether osteoarthritis, degenerative arthritis limits
-    the participant's activities as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQDepressnActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) depression limits activity
+# #   description: Code indicating whether depression limits the participant's activities
+# #     as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
+# - name: SCQOA
+#   title: Self-Administered Comorbidity Questionnaire (SCQ) osteoarthritis
+#   description: Code indicating whether the participant has osteoarthritis, degenerative
+#     arthritis as part of the Self-Administered Comorbidity Questionnaire.
+#   type: integer
+#   constraints:
+#     enum:
+#     - '0'
+#     - ' 1'
+#   enumLabels:
+#     '0': 'No'
+#     '1': 'Yes'
+#   standardsMappings:
+#   - item:
+#       source: ''
+#       id: ''
+# - name: SCQOAtreat
+#   title: Self-Administered Comorbidity Questionnaire (SCQ) osteoarthritis treatment
+#   description: Code indicating whether the participant is receiving treatment for
+#     osteoarthritis, degenerative arthritis as part of the Self-Administered Comorbidity
+#     Questionnaire.
+#   type: integer
+#   constraints:
+#     enum:
+#     - '0'
+#     - ' 1'
+#   enumLabels:
+#     '0': 'No'
+#     '1': 'Yes'
+#   standardsMappings:
+#   - item:
+#       source: ''
+#       id: ''
+# # - name: SCQOAActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) osteoarthritis limits activity
+# #   description: Code indicating whether osteoarthritis, degenerative arthritis limits
+# #     the participant's activities as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQBackPain
   title: Self-Administered Comorbidity Questionnaire (SCQ) back pain
   description: Code indicating whether the participant has back pain as part of the
@@ -585,38 +587,38 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQBackPainTreat
-  title: Self-Administered Comorbidity Questionnaire (SCQ) back pain treatment
-  description: Code indicating whether the participant is receiving treatment for
-    back pain as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
-- name: SCQBackPainActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) back pain limits activity
-  description: Code indicating whether back pain limits the participant's activities
-    as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQBackPainTreat
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) back pain treatment
+# #   description: Code indicating whether the participant is receiving treatment for
+# #     back pain as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
+# # - name: SCQBackPainActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) back pain limits activity
+# #   description: Code indicating whether back pain limits the participant's activities
+# #     as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQRA
   title: Self-Administered Comorbidity Questionnaire (SCQ) rheumatoid arthritis
   description: Code indicating whether the participant has rheumatoid arthritis as
@@ -649,23 +651,23 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQRAActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) rheumatoid arthritis limits
-    activity
-  description: Code indicating whether rheumatoid arthritis limits the participant's
-    activities as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQRAActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) rheumatoid arthritis limits
+# #     activity
+# #   description: Code indicating whether rheumatoid arthritis limits the participant's
+# #     activities as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQOther1
   title: Self-Administered Comorbidity Questionnaire (SCQ) other medical problem 1
   description: Code indicating whether the participant has any other medical problems
@@ -687,10 +689,7 @@ fields:
     name
   description: The free-text field for the name of the first other medical problem
     the participant has as part of the Self-Administered Comorbidity Questionnaire
-  type: integer
-  constraints:
-    enum: ''
-  enumLabels: ''
+  type: string
   standardsMappings:
   - item:
       source: ''
@@ -712,23 +711,23 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQOther1ActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) other medical problem 1
-    limits activity
-  description: Code indicating whether the first other medical problem limit the participant's
-    activities as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQOther1ActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) other medical problem 1
+# #     limits activity
+# #   description: Code indicating whether the first other medical problem limit the participant's
+# #     activities as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
 - name: SCQOther2
   title: Self-Administered Comorbidity Questionnaire (SCQ) other medical problem 2
   description: Code indicating whether the participant has any other medical problems
@@ -749,10 +748,7 @@ fields:
   title: Self-Administered Comorbidity Questionnaire (SCQ) other medical problem 2  name
   description: The free-text field for the name of the second other medical problem
     the participant has as part of the Self-Administered Comorbidity Questionnaire
-  type: integer
-  constraints:
-    enum: ''
-  enumLabels: ''
+  type: string
   standardsMappings:
   - item:
       source: ''
@@ -774,50 +770,50 @@ fields:
   - item:
       source: ''
       id: ''
-- name: SCQOther2ActivLmt
-  title: Self-Administered Comorbidity Questionnaire (SCQ) other medical problem 2  limits
-    activity
-  description: Code indicating whether the second other medical problem limit the
-    participant's activities as part of the Self-Administered Comorbidity Questionnaire.
-  type: integer
-  constraints:
-    enum:
-    - '0'
-    - ' 1'
-  enumLabels:
-    '0': 'No'
-    '1': 'Yes'
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
-- name: SCQtotalAllScore
-  title: Self-Administered Comorbidity Questionnaire (SCQ) total score with open ended
-    items
-  description: Calculated total score for the Self-Administered Comorbidity Questionnaire,
-    including the two open-ended questions
-  type: integer
-  constraints:
-    enum: ''
-    maximum: 45
-    minimum: 0
-  enumLabels: ''
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
-- name: SCQtotalListedScore
-  title: Self-Administered Comorbidity Questionnaire (SCQ) total score listed items
-    only
-  description: Calculated total score for the Self-Administered Comorbidity Questionnaire,
-    including only the items with problem listed
-  type: integer
-  constraints:
-    enum: ''
-    maximum: 39
-    minimum: 0
-  enumLabels: ''
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# # - name: SCQOther2ActivLmt
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) other medical problem 2  limits
+# #     activity
+# #   description: Code indicating whether the second other medical problem limit the
+# #     participant's activities as part of the Self-Administered Comorbidity Questionnaire.
+# #   type: integer
+# #   constraints:
+# #     enum:
+# #     - '0'
+# #     - ' 1'
+# #   enumLabels:
+# #     '0': 'No'
+# #     '1': 'Yes'
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
+# # - name: SCQtotalAllScore
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) total score with open ended
+# #     items
+# #   description: Calculated total score for the Self-Administered Comorbidity Questionnaire,
+# #     including the two open-ended questions
+# #   type: integer
+# #   constraints:
+# #     enum: ''
+# #     maximum: 45
+# #     minimum: 0
+# #   enumLabels: ''
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
+# # - name: SCQtotalListedScore
+# #   title: Self-Administered Comorbidity Questionnaire (SCQ) total score listed items
+# #     only
+# #   description: Calculated total score for the Self-Administered Comorbidity Questionnaire,
+# #     including only the items with problem listed
+# #   type: integer
+# #   constraints:
+# #     enum: ''
+# #     maximum: 39
+# #     minimum: 0
+# #   enumLabels: ''
+# #   standardsMappings:
+# #   - item:
+# #       source: ''
+# #       id: ''
