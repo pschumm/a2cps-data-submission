@@ -10,6 +10,79 @@ from dataforge.sources.redcap import REDCapProject
 from dotenv import load_dotenv
 from filter import filter_records_events, get_filter_list, reformat_to_cde
 
+def extract_rapa(data):
+    codes = {
+        "No":0,
+        "Yes":1,
+    }
+    rapa = reformat_to_cde(
+        data,
+        drop_if_all_null=[
+            #'rapa_dt_1',
+            'rapa_rarly',
+            'rapa_light',
+            'rapa_lightweekly',
+            'rapa_mod',
+            'rapa_vig',
+            'rapa_modweekly',
+            'rapa_vigweekly',
+            'rapa_strength',
+            'rapa_flex',
+            'rapa_1score',
+            'rapa_1cat',
+            'rapa_2score',
+            # 'rapid_assessment_of_physical_activity_v10_rapa_complete'
+        ],
+        null_assignments={
+            "instance": None,
+            "PROMISSlpDist6TotalScore": None,
+            "PROMISSlpDist6TScore": None,
+        },
+        rename_columns={
+            "pdqassessdate": "date_administered",
+            "brthdtc": "dob",
+            'rapa_1score': 'rapa_1Score',
+            'rapa_1cat': 'rapa_1Cat',
+            'rapa_2score': 'rapa_2Score'
+        },
+        replace_values={
+            # TO DO: HEAL codes for "PROMISSleepWasRefreshScl" are flipped
+            'rapa_1Cat': codes,
+            'rapa_mod': codes,
+            'rapa_1Score': codes,
+            'rapa_vig': codes,
+            'rapa_flex': codes,
+            'rapa_2Score': codes,
+            'rapa_lightweekly': codes,
+            'rapa_light': codes,
+            'rapa_vigweekly': codes,
+            'rapa_modweekly': codes,
+            'rapa_rarly': codes,
+            'rapa_strength': codes,
+        },
+        output_columns=[
+            'date_administered',
+            'instance',
+            'dob',
+            'sex',
+            'rapa_rarly',
+            'rapa_light',
+            'rapa_lightweekly',
+            'rapa_mod',
+            'rapa_vig',
+            'rapa_modweekly',
+            'rapa_vigweekly',
+            'rapa_strength',
+            'rapa_flex',
+            'rapa_1Score',
+            'rapa_1Cat',
+            'rapa_2Score',
+        ],
+    )
+    # Write to delimited file
+    rapa.to_csv("tmp/heal_cde/rapa.csv")
+    return
+
 
 def extract_sacq(data):
     codes = {"No": 0, "Yes": 1}
@@ -67,7 +140,7 @@ def extract_sacq(data):
             "scqother2treat",
             #'selfadministered_comorbidity_questionnaire_v4_scq_complete'
         ],
-        null_assignments={"instance": None, "rev_headseizure": "NK"},
+       null_assignments={"instance": None, "rev_headseizure": "NK"},
         rename_columns={
             "pdqassessdate": "date_administered",
             "brthdtc": "dob",
@@ -1070,6 +1143,7 @@ def main(arg_vals):
             "The Big Five Inventory (BFI-2-S)",
             "PROMIS SF v1.0 - Fatigue 7a",
             "Self-Administered Comorbidity Questionnaire v4 (SCQ)",
+            "Rapid Assessment of Physical Activity v1.0 (RAPA)"           
         ]
     )
 
@@ -1113,6 +1187,7 @@ def main(arg_vals):
         "taps2": extract_taps2,
         "promis_fatigue": extract_promis_fatigue,
         "sacq": extract_sacq,
+        "rapa": extract_rapa,
     }
 
     if arg_vals["extract_heal"] == "all":
@@ -1143,6 +1218,7 @@ if __name__ == "__main__":
             "ace",
             "promis_fatigue",
             "sacq",
+            "rapa",
         ],
         default="all",
         help="List of HEAL structures to extract, defaults to all, \

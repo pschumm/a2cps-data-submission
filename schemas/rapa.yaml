@@ -2,10 +2,10 @@ fieldsMatch: subset
 missingValues:
 - ''
 uniqueKeys:
-- - participant_id
-  - event
-  - date_administered
-  - instance
+# - - participant_id
+#   - event
+#   - date_administered
+#   - instance
 fields:
 - name: participant_id
   type: string
@@ -33,11 +33,13 @@ fields:
   - Female
   - Intersex
   - Male
+  - Unknown
   constraints:
     enum:
     - Female
     - Intersex
     - Male
+    - Unknown
 - name: rapa_rarly
   title: Rapid assesment of physical activity Rarely
   description: 'Scale to assess physical activity of the patient or participant: rarely
@@ -196,10 +198,23 @@ fields:
     (RAPA)
   type: integer
   constraints:
-    enum: ''
-    maximum: 7
-    minimum: 1
-  enumLabels: ''
+    enum:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+  enumLabels:
+    '0': unknown
+    '1': ''
+    '2': ''
+    '3': ''
+    '4': ''
+    '5': ''
+
   standardsMappings:
   - item:
       source: ''
@@ -209,14 +224,17 @@ fields:
   description: Overall categorical score for the Rapid Assessment of Physical Activity
     (RAPA)
   type: integer
+  # ADDED 0:unknown to the enum list. there are multiple participants in the csv with 0s for rapa_1cat, rapa_1score
   constraints:
     enum:
+    - '0'
     - '1'
     - '2'
     - '3'
     - '4'
     - '5'
   enumLabels:
+    '0': unknown
     '1': sedentary
     '2': under-active
     '3': under-active regular-light activity
@@ -237,7 +255,9 @@ fields:
     - '1'
     - '2'
     - '3'
+    - '4'
   enumLabels:
+    '0': unknown
     '1': strength only
     '2': flexibility only
     '3': both
