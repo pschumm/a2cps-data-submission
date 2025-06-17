@@ -28,9 +28,9 @@ def extract_rapa(data):
             'rapa_vigweekly',
             'rapa_strength',
             'rapa_flex',
-            'rapa_1score',
-            'rapa_1cat',
-            'rapa_2score',
+            # 'rapa_1score',
+            # 'rapa_1cat',
+            # 'rapa_2score',
             # 'rapid_assessment_of_physical_activity_v10_rapa_complete'
         ],
         null_assignments={
@@ -47,18 +47,17 @@ def extract_rapa(data):
         },
         replace_values={
             # TO DO: HEAL codes for "PROMISSleepWasRefreshScl" are flipped
-            'rapa_1Cat': codes,
             'rapa_mod': codes,
-            'rapa_1Score': codes,
             'rapa_vig': codes,
             'rapa_flex': codes,
-            'rapa_2Score': codes,
             'rapa_lightweekly': codes,
             'rapa_light': codes,
             'rapa_vigweekly': codes,
             'rapa_modweekly': codes,
             'rapa_rarly': codes,
             'rapa_strength': codes,
+            'rapa_1Cat': {'0':1},
+            'rapa_1Score': {'0':1}
         },
         output_columns=[
             'date_administered',
