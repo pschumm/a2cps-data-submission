@@ -35,24 +35,19 @@ fields:
   - Female
   - Intersex
   - Male
+  - Unknown
   constraints:
     enum:
     - Female
     - Intersex
     - Male
+    - Unknown
 - name: PRSbackOutScl
   title: Pain Resilience Scale get back out scale
   description: 'Pain Resilience Scale question regarding extent to which the statement
     describes how participant responds when faced with intense or prolonged pain:
     I will get back out there.'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -69,13 +64,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I still work to accomplish my goals'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -92,13 +80,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I push through it.'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -115,13 +96,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I try to continue working.'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -138,13 +112,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I like to stay active.'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -161,13 +128,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I focus on positive attitude.'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -184,13 +144,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I keep a positive attitude'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -207,13 +160,6 @@ fields:
     \ describes how participant responds when faced with intense or prolonged pain:\
     \ It doesn\u2019t affect my happiness."
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -230,13 +176,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I still find joy in my life.'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -253,13 +192,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I keep a hopeful attitude.'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -276,13 +208,6 @@ fields:
     \ describes how participant responds when faced with intense or prolonged pain:\
     \ I don\u2019t let it get me down."
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -297,15 +222,8 @@ fields:
   title: Pain Resilience Scale not upset scale
   description: "Pain Resilience Scale question regarding extent to which the statement\
     \ describes how participant responds when faced with intense or prolonged pain:\
-    \ I don\u2019t let it upset me."
+    \ I dont let it upset me."
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -322,13 +240,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I avoid negative thoughts.'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -345,13 +256,6 @@ fields:
     describes how participant responds when faced with intense or prolonged pain:
     I try to stay relaxed.'
   type: integer
-  constraints:
-    enum:
-    - '0'
-    - '1'
-    - '2'
-    - '3'
-    - '4'
   enumLabels:
     '0': Not at all
     '1': To a slight degree
@@ -366,10 +270,6 @@ fields:
   title: Pain Resilience Scale total score
   description: 'Calculated total (summed) score for the Pain Resilience Score'
   type: integer
-  constraints:
-    enum: ''
-    maximum: 56
-    minimum: 0
   enumLabels: ''
   standardsMappings:
   - item:
@@ -380,10 +280,6 @@ fields:
   description: 'Calculated subscale score for Behavioral Perserverence, as part of
     the Pain Resilience Score'
   type: integer
-  constraints:
-    enum: ''
-    maximum: 20
-    minimum: 0
   enumLabels: ''
   standardsMappings:
   - item:
@@ -394,10 +290,6 @@ fields:
   description: 'Calculated subscale score for Cognitive/Affective, as part of the Pain
     Resilience Score'
   type: integer
-  constraints:
-    enum: ''
-    maximum: 36
-    minimum: 0
   enumLabels: ''
   standardsMappings:
   - item:

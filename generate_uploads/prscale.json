@@ -1,6 +1,5 @@
 {
      "steps": [
-              {"type": "prscale"},
               {"type": "nda-required-fields",
                "guids": "ids/guids.csv",
                "nda_cols": ["subjectkey",

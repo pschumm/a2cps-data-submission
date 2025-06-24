@@ -10,6 +10,116 @@ from dataforge.sources.redcap import REDCapProject
 from dotenv import load_dotenv
 from filter import filter_records_events, get_filter_list, reformat_to_cde
 
+
+def extract_prscale(data):
+    codes = {
+        '0 - Not at all': '0',
+        '1 - To a slight degree': '1',
+        '2 - To a moderate degree': '2',
+        '3 - To a great degree': '3',
+        '4 - All the time': '4'
+    }
+
+    prscale = reformat_to_cde(
+        data,
+        drop_if_all_null=[
+            # 'prs_dt_1',
+            'prsbackoutscl',
+            'prsworkgoalsscl',
+            'prspushthroughscl',
+            'prscontworkscl',
+            'prsstayactivescl',
+            'prsfocuspositivescl',
+            'prsposattitudescl',
+            'prsnotaffecthappyscl',
+            'prsfindjoyscl',
+            'prshopefulscl',
+            'prsnotgetdownscl',
+            'prsnotupsetscl',
+            'prsavoidnegativescl',
+            'prsstayrelaxscl',
+            'prsscore',
+            'prsbehpersscore',
+            'prscognitivescore',
+            # 'pain_resilience_scale_prs_complete'
+        ],
+        null_assignments={
+            "instance": None,
+            "PROMISSlpDist6TotalScore": None,
+            "PROMISSlpDist6TScore": None,
+        },
+        rename_columns={
+            "pdqassessdate": "date_administered",
+            "brthdtc": "dob",
+            'prsbackoutscl': 'PRSbackOutScl',
+            'prsworkgoalsscl': 'PRSworkGoalsScl',
+            'prspushthroughscl': 'PRSpushThroughScl',
+            'prscontworkscl': 'PRScontWorkScl',
+            'prsstayactivescl': 'PRSStayActiveScl',
+            'prsfocuspositivescl': 'PRSfocusPositiveScl',
+            'prsposattitudescl': 'PRSposAttitudeScl',
+            'prsnotaffecthappyscl': 'PRSnotAffectHappyScl',
+            'prsfindjoyscl': 'PRSfindJoyScl',
+            'prshopefulscl': 'PRShopefulScl',
+            'prsnotgetdownscl': 'PRSNotGetDownScl',
+            'prsnotupsetscl': 'PRSNotUpsetScl',
+            'prsavoidnegativescl': 'PRSavoidNegativeScl',
+            'prsstayrelaxscl': 'PRSStayRelaxScl',
+            'prsscore': 'PRSscore',
+            'prsbehpersscore': 'PRSBehPersScore',
+            'prscognitivescore': 'PRSCognitiveScore',
+        },
+        replace_values={
+            # TO DO: HEAL codes for "PROMISSleepWasRefreshScl" are flipped
+            "sex": {np.NaN: "Unknown", None: "Unknown"},
+            'PRSworkGoalsScl': codes,
+            'PRSStayActiveScl': codes,
+            'PRShopefulScl': codes,
+            'PRScontWorkScl': codes,
+            'PRSbackOutScl': codes,
+            'PRSpushThroughScl': codes,
+            'PRSNotGetDownScl': codes,
+            'PRSposAttitudeScl': codes,
+            'PRSfindJoyScl': codes,
+            'PRSavoidNegativeScl': codes,
+            'PRSStayRelaxScl': codes,
+            'PRSscore': codes,
+            'PRSfocusPositiveScl': codes,
+            'PRSCognitiveScore': codes,
+            'PRSnotAffectHappyScl': codes,
+            'PRSNotUpsetScl': codes,
+            'PRSBehPersScore': codes,
+        },
+        output_columns=[
+            "date_administered",
+            "instance",
+            "dob",
+            "sex", 
+            'PRSbackOutScl',
+            'PRSworkGoalsScl',
+            'PRSpushThroughScl',
+            'PRScontWorkScl',
+            'PRSStayActiveScl',
+            'PRSfocusPositiveScl',
+            'PRSposAttitudeScl',
+            'PRSnotAffectHappyScl',
+            'PRSfindJoyScl',
+            'PRShopefulScl',
+            'PRSNotGetDownScl', 
+            'PRSNotUpsetScl',
+            'PRSavoidNegativeScl', 
+            'PRSStayRelaxScl', 
+            'PRSscore',
+            'PRSBehPersScore',
+            'PRSCognitiveScore'
+        ],
+    )
+
+    # Write to delimited file
+    prscale.to_csv("tmp/heal_cde/prscale.csv")
+    return
+
+
 def extract_rapa(data):
     codes = {
         "No":0,
@@ -56,7 +166,7 @@ def extract_rapa(data):
             'rapa_modweekly': codes,
             'rapa_rarly': codes,
             'rapa_strength': codes,
-            'rapa_1Cat': {'0':1},
+            'rapa_1Cat': {0:1},
             'rapa_1Score': {'0':1}
         },
         output_columns=[
@@ -1142,7 +1252,8 @@ def main(arg_vals):
             "The Big Five Inventory (BFI-2-S)",
             "PROMIS SF v1.0 - Fatigue 7a",
             "Self-Administered Comorbidity Questionnaire v4 (SCQ)",
-            "Rapid Assessment of Physical Activity v1.0 (RAPA)"           
+            "Rapid Assessment of Physical Activity v1.0 (RAPA)",
+            "Pain Resilience Scale (PRS)",           
         ]
     )
 
@@ -1187,6 +1298,7 @@ def main(arg_vals):
         "promis_fatigue": extract_promis_fatigue,
         "sacq": extract_sacq,
         "rapa": extract_rapa,
+        "prscale": extract_prscale,
     }
 
     if arg_vals["extract_heal"] == "all":
@@ -1218,6 +1330,7 @@ if __name__ == "__main__":
             "promis_fatigue",
             "sacq",
             "rapa",
+            "prscale",
         ],
         default="all",
         help="List of HEAL structures to extract, defaults to all, \
