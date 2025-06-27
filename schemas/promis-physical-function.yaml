@@ -19,9 +19,9 @@ fields:
   type: date
   format: '%Y-%m-%d'
   title: Shifted date on which questionnaire was administered
-# - name: instance
-#   type: string
-#   title: Name of instance when repeated within event and/or date
+- name: instance
+  type: string
+  title: Name of instance when repeated within event and/or date
 - name: dob
   type: date
   format: '%Y-%m-%d'
