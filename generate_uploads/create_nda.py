@@ -5,7 +5,14 @@ import os
 
 from frictionless import Pipeline, Resource
 
-
+def output_promis_physical_function(
+    filepath="tmp/uploads/promis_physical_function.csv",
+    header="promis5701\n",
+    descriptor="generate_uploads/promis-physical-function.json",
+    heal_cde="tmp/heal_cde/promis_physical_function.csv",
+):
+    output_nda(filepath, header, descriptor, heal_cde)
+    return
 
 def output_prscale(
     filepath="tmp/uploads/prscale.csv",
@@ -150,6 +157,7 @@ def main(arg_vals):
         "sacq": output_sacq,
         "rapa": output_rapa,
         "prscale": output_prscale,
+        "promis_physical_function": output_promis_physical_function,
     }
 
     if arg_vals["nda_outputs"] == "all":
@@ -181,6 +189,7 @@ if __name__ == "__main__":
             "sacq",
             "rapa",
             "prscale",
+            "promis-physical-function",
         ],
         default="all",
         help="List of NDA structure to output, defaults to all, \

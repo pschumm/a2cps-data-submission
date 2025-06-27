@@ -10,6 +10,87 @@ from dataforge.sources.redcap import REDCapProject
 from dotenv import load_dotenv
 from filter import filter_records_events, get_filter_list, reformat_to_cde
 
+def extract_promis_physical_function(data):
+    codes = {
+        'Unable to do': 1,
+        'With much difficulty': 2,
+        'With some difficulty': 3,
+        'With a little difficulty': 4,
+        'Without any difficulty': 5,
+        'Cannot do': 1,
+        'Quite a lot': 2,
+        'Somewhat': 3,
+        'Very little': 4,
+        'Not at all': 5,
+        "": None,
+    }
+    promis_physical_function = reformat_to_cde(
+        data,
+        drop_if_all_null=[
+            'pfadochoresscl',
+            'pfastairsscl',
+            'pfawalkscl',
+            'pfarunerrandsscl',
+            'pfaphyslaborlimitscl',
+            'pfamodwrklimitscl',
+            'pfagrocliftlimitscl',
+            'pfaheavyworklimitscl',
+            'pfatotalscore',
+            # 'promis_sf_v12_physical_function_8b_complete'
+        ],
+        null_assignments={
+            "instance": None,
+            "PROMISSlpDist6TotalScore": None,
+            "PROMISSlpDist6TScore": None,
+        },
+        rename_columns={
+            "pdqassessdate": "date_administered",
+            "brthdtc": "dob",
+            'pfadochoresscl': 'PFADoChoresScl',
+            'pfastairsscl': 'PFAstairsScl',
+            'pfawalkscl': 'PFAWalkScl',
+            'pfarunerrandsscl': 'PFARunErrandsScl',
+            'pfaphyslaborlimitscl': 'PFAPhysLaborLimitScl',
+            'pfamodwrklimitscl': 'PFAModWrkLimitScl',
+            'pfagrocliftlimitscl': 'PFAGrocLiftLimitScl',
+            'pfaheavyworklimitscl': 'PFAHeavyWorkLimitScl',
+            'pfatotalscore': 'PFATotalScore',
+        },
+        replace_values={
+            "sex": {np.NaN: "Unknown", None: "Unknown"},
+            'PFARunErrandsScl': codes,
+            'PFATScore': codes,
+            'PFAWalkScl': codes,
+            'PFATotalScore': codes,
+            'PFADoChoresScl': codes,
+            'PFAModWrkLimitScl': codes,
+            'PFAHeavyWorkLimitScl': codes,
+            'PFAGrocLiftLimitScl': codes,
+            'PFAPhysLaborLimitScl': codes,
+            'PFAstairsScl': codes,
+        },
+        output_columns=[
+            "date_administered",
+            # "instance",
+            "dob",
+            "sex", 
+            'PFADoChoresScl',
+            'PFAstairsScl',
+            'PFAWalkScl',
+            'PFARunErrandsScl',
+            'PFAPhysLaborLimitScl',
+            'PFAModWrkLimitScl',
+            'PFAGrocLiftLimitScl',
+            'PFAHeavyWorkLimitScl',
+            'PFATotalScore',
+            # 'PFATScore',
+        ],
+    )
+
+    # Write to delimited file
+    promis_physical_function.to_csv("tmp/heal_cde/promis_physical_function.csv")
+    return
+
 
 def extract_prscale(data):
     codes = {
@@ -1253,7 +1334,8 @@ def main(arg_vals):
             "PROMIS SF v1.0 - Fatigue 7a",
             "Self-Administered Comorbidity Questionnaire v4 (SCQ)",
             "Rapid Assessment of Physical Activity v1.0 (RAPA)",
-            "Pain Resilience Scale (PRS)",           
+            "Pain Resilience Scale (PRS)",
+            "PROMIS SF v1.2 - Physical Function 8b",      
         ]
     )
 
@@ -1299,6 +1381,7 @@ def main(arg_vals):
         "sacq": extract_sacq,
         "rapa": extract_rapa,
         "prscale": extract_prscale,
+        "promis_physical_function": extract_promis_physical_function,
     }
 
     if arg_vals["extract_heal"] == "all":
@@ -1331,6 +1414,7 @@ if __name__ == "__main__":
             "sacq",
             "rapa",
             "prscale",
+            "promis_physical_function",
         ],
         default="all",
         help="List of HEAL structures to extract, defaults to all, \

@@ -19,9 +19,9 @@ fields:
   type: date
   format: '%Y-%m-%d'
   title: Shifted date on which questionnaire was administered
-- name: instance
-  type: string
-  title: Name of instance when repeated within event and/or date
+# - name: instance
+#   type: string
+#   title: Name of instance when repeated within event and/or date
 - name: dob
   type: date
   format: '%Y-%m-%d'
@@ -33,11 +33,13 @@ fields:
   - Female
   - Intersex
   - Male
+  - Unknown
   constraints:
     enum:
     - Female
     - Intersex
     - Male
+    - Unknown
 - name: PFADoChoresScl
   title: PROMIS Physical Function - Short Form 8b (PFA) do chores scale
   description: Scale of difficulty doing chores such as vacuuming or yard work, in
@@ -219,9 +221,7 @@ fields:
   description: Calculated raw total score for the PROMIS Physical Function - Short
     Form 8b (PFA) items
   type: integer
-  constraints:
-    enum:
-    - 8 to 40
+  enum: 
     maximum: 40
     minimum: 8
   enumLabels:
@@ -234,20 +234,20 @@ fields:
   - item:
       source: ''
       id: ''
-- name: PFATScore
-  title: PROMIS Physical Function - Short Form 8b (PFA)  item total t-score
-  description: Normalized t-score corresponding to the raw total score for the PROMIS
-    Physical Function - Short Form 8b (PFA) items
-  type: integer
-  constraints:
-    enum: ''
-  enumLabels:
-    '5': Without any difficulty
-    '4': With a little difficulty
-    '3': With some difficulty
-    '2': With much difficulty
-    '1': Unable to do
-  standardsMappings:
-  - item:
-      source: ''
-      id: ''
+# - name: PFATScore
+#   title: PROMIS Physical Function - Short Form 8b (PFA)  item total t-score
+#   description: Normalized t-score corresponding to the raw total score for the PROMIS
+#     Physical Function - Short Form 8b (PFA) items
+#   type: integer
+#   constraints:
+#     enum: ''
+#   enumLabels:
+#     '5': Without any difficulty
+#     '4': With a little difficulty
+#     '3': With some difficulty
+#     '2': With much difficulty
+#     '1': Unable to do
+#   standardsMappings:
+#   - item:
+#       source: ''
+#       id: ''
